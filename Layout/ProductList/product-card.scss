@@ -1,0 +1,21 @@
+//
+// Component:       Product List Cover
+//
+// ========================================================================
+
+.ems-prd-list{
+            
+}
+
+/*
+ * Desktop
+ *  
+ ========================================================================== */
+ @supports(grid-area: auto) {
+    @media screen and (min-width: $breakpoint-medium) {
+        .ems-prd-list{
+
+        }
+       
+    }
+}

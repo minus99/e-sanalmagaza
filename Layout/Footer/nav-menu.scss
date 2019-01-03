@@ -1,0 +1,65 @@
+// Name:            Footer Nav Menu
+// Description:
+// ========================================================================
+.site-footer-menu{
+    > ul{
+        > li{
+            > a{
+                font-family: $medium;
+                font-size: $small-13;
+                color: $very-dark-gray;
+                letter-spacing: 1px;
+                display: inline-block;
+                margin-bottom: 15px;
+            }
+            >ul{
+                >li{
+                    >a{
+                        display: inline-block;
+                        padding: 6px 0;
+                        color: $very-dark-g;
+                        font-size: $small-16;
+                    }
+                }
+            }
+        }
+    }
+    > ul:nth-child(2){
+        text-align: right;
+        > li > a{
+            font-family: $bold;
+            font-size: $small-18;
+            i, span{
+                display: inline-block;
+                vertical-align: middle;
+            }
+            span{ line-height: 1; margin-top: -2px; }
+            i{
+                width: 40px;
+                height: 40px;
+                line-height: 40px;
+                text-align: center;
+                margin-right: 5px;
+            }
+            i,i:before{
+                font-size: 29px;
+                color: $vivid-orange;
+            }
+        }
+    }
+}
+
+
+@supports(grid-area: auto) {
+    @media screen and (min-width: $breakpoint-medium) {
+        .site-footer-menu{
+            @include grid;
+            @include grid-columns(0, 2fr 1fr);
+            margin-top: 80px;
+            > ul:nth-child(1){
+                @include grid;
+                @include grid-columns(10px, .5fr 1fr 1fr);
+            }
+        }
+    }
+}

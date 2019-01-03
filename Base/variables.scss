@@ -1,0 +1,64 @@
+//
+// Component:       Variables
+//
+// ========================================================================
+
+
+// Breakpoints
+// ========================================================================
+$breakpoint-small:                              640px !default;  // Phone landscape
+$breakpoint-medium:                             960px !default;  // Tablet Landscape
+$breakpoint-large:                              1200px !default; // Desktop
+$breakpoint-xlarge:                             1600px !default; // Large Screens
+
+$breakpoint-xsmall-max:                         ($breakpoint-small - 1) !default;
+$breakpoint-small-max:                          ($breakpoint-medium - 1) !default;
+$breakpoint-medium-max:                         ($breakpoint-large - 1) !default;
+$breakpoint-large-max:                          ($breakpoint-xlarge - 1) !default;
+
+// Test Url
+// ========================================================================
+$baseHref: '';
+
+
+// Default Fonts
+// ========================================================================
+$roboto:                                          'roboto' ;
+
+
+// Layout
+// ========================================================================
+$defaultMaxWidth:                               960px;
+$containerWidth:                                1136px;
+$siteContainerWidthFull:                        1366px;
+
+
+
+// Backgrounds
+// ========================================================================
+$global-background:                              #fff !default;
+
+$global-success-background:                      #32d296 !default;
+$global-warning-background:                      #faa05a !default;
+$global-danger-background:                       #f0506e !default;
+
+
+// Reguler Font-size
+// ========================================================================
+$global-regular:                                  22px !default;
+$global-small-regular:                            15px !default;
+$global-medium-regular:                           24px !default;
+$global-large-regular:                            38px !default;
+
+// Cursor
+// ========================================================================
+$cursor-pointer:                                 pointer;
+
+
+/*
+* Width default!
+========================================================================== */
+$width25:                                         25%;
+$width50:                                         50%;
+$width75:                                         75%;
+$width100:                                        100%;

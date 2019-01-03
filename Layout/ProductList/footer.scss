@@ -1,0 +1,28 @@
+//
+// Component:       Product List Footer
+//
+// ========================================================================
+.ems-prd-list-footer{
+    
+}
+
+
+
+/*
+ * Desktop
+ *  
+ ========================================================================== */
+@supports(grid-area: auto) {
+    @media screen and (min-width: $breakpoint-medium) {
+
+        .ems-prd-list-footer{
+
+        }
+
+
+        .ems-prd-list-paging{
+            
+        }
+
+    }
+}

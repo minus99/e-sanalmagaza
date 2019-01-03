@@ -1,0 +1,113 @@
+// Name:            Button
+// Description:     Styles for buttons
+//
+// ========================================================================
+
+
+// Variables
+// ========================================================================
+
+$default-font-size:                     15px;
+$default-font-weight:                   600;
+$default-line-height:                   18px;
+$default-border-radius:                 5px;
+$alternate-border-radius:               3px;
+$default-padding:                       11px 5px;
+
+$big-font-size:                         16px;
+$big-font-weight:                       bold;
+$big-letter-spacing:                    .5px;
+$big-line-height:                       23px;
+$big-padding:                           16px 5px;
+
+
+
+/* Style modifiers
+ ========================================================================== */
+
+/*
+ * Default
+ */
+
+.btnDefault{
+    font-family: $bold;
+    border-radius: $alternate-border-radius;
+    font-size: $big-font-size;
+    padding: $default-padding;
+    background: $vivid-orange;
+    color: $white;
+    text-align: center;
+    &:hover, &:focus{
+
+    }
+}
+
+/*
+ * Primary
+ */
+.btn-primary{
+    
+}
+
+/*
+ * Primary Light
+ */
+ .btn-primary-light{
+
+}
+
+/*
+ * Secondary
+ */
+.btn-secondary{
+    background: none;
+    padding: 0;
+    border-radius: 0;
+    color: inherit;
+    font-size: inherit;
+}
+
+/*
+ * Secondary Dark
+ */
+.btn-secondary-dark{
+    font-family: $bold;
+    background: $doveGray;
+    border-radius: $default-border-radius;
+    color: $white;
+    padding: $big-padding;
+    font-size: $big-font-size;
+    text-align: center;
+}
+/*
+ * Alternative
+ */
+.btn-alternative{
+    background: $white;
+    color: $very-dark-gray;
+    font-size: $default-font-size;
+}
+
+/*
+ * Inactive
+ */
+.btn-inactive{
+    
+}
+
+
+/*
+ * Big Type
+ */
+.btn-big{
+
+}
+
+.btnLogin,
+.btnYeniUyeKaydet{
+
+}
+
+.btnFacebookLogin{
+    
+}

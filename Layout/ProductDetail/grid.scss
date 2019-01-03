@@ -1,0 +1,16 @@
+/* Reset in Items */
+.ems-prd-detail-inner > *{
+    grid-area: nnn;
+}
+
+
+/*
+ * Media Query
+ ========================================================================== */
+ @supports(grid-area: auto) {
+    @media screen and (min-width: $breakpoint-medium) {
+        
+       
+        
+    }
+}

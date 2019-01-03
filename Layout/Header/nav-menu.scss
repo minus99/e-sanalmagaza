@@ -1,0 +1,80 @@
+//
+// Static:       Nav 
+//
+// ========================================================================
+.aside-menu {
+    position: fixed;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    .navbar-main {
+        ul {
+            li {
+                position: relative;
+                > a{
+                    display: block;
+                    font-family: $regular;
+                    font-size: $small-15;
+                    padding: 16px 15px;
+                    position: relative;
+                    color: $very-dark-gray-two;
+                }
+                &.dark-link{
+                    > a{
+                        font-family: $medium;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+/*
+ * Navbar Holder
+ ========================================================================== */
+@supports(grid-area: auto) {
+    @media screen and (min-width: $breakpoint-medium) {
+        .aside-menu {
+            position: inherit;
+            top: inherit;
+            left: inherit;
+            width: inherit;
+            height: inherit;
+            .navbar-main {
+                ul {
+                    display: flex;
+                    margin: 0 auto;
+                    max-width: 1200px;
+                    li {
+                        display: inline-block;
+                        vertical-align: middle;
+                        overflow: hidden;
+                        > a{
+                            @include grid;
+                            text-align: center;
+                            align-items: center;
+                            height: 100%;
+                        }
+                        &:after{
+                            content:'';
+                            position: absolute;
+                            left: 0;
+                            bottom: -5px;
+                            width: 100%;
+                            height: 3px;
+                            background: $vivid-orange;
+                            @include transition(all .2s ease);
+                        }
+                        &:hover{
+                            &:after{
+                                bottom: 0;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

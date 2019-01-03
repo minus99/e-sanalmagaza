@@ -1,0 +1,109 @@
+.main-wrapper>* {
+    grid-area: NNN;
+}
+
+/* Header */
+header {
+    grid-area: HDR !important;
+}
+
+/* Aside Left Menü */
+aside {
+    grid-area: ASD !important;
+}
+
+/* Main */
+main {
+    grid-area: MAI !important;
+}
+
+/* Footer */
+footer {
+    grid-area: FTR !important;
+}
+
+/* Main Defalut! */
+.main-wrapper {
+    max-width: 1200px;
+    @include m-auto;
+}
+
+/* Defalut Double Box */
+.double-box {
+    display: inline-block;
+    vertical-align: middle;
+    width: $width50;
+}
+
+@supports(grid-area: auto) {
+    @media screen and (min-width: $breakpoint-medium) {
+
+        .grid-wrapper,
+        .grid-box,
+        .grid-column {
+            @include grid;
+        }
+
+        /* Defalut Double Box */
+        .double-box {
+            display: inherit;
+            vertical-align: inherit;
+            width: inherit;
+        }
+
+        .main-wrapper {
+            max-width: inherit;
+            margin: inherit;
+            @include grid;
+            grid-template-columns: 1fr minmax(auto, 1200px) 1fr;
+            grid-template-rows: auto auto minmax(calc(100vh - 70px), auto) minmax(0, auto);
+            grid-template-areas:
+                "HDR HDR HDR"
+                "ASD ASD ASD"
+                "MAI MAI MAI"
+                "FTR FTR FTR";
+        }
+
+        .site-pages {
+            grid-template-columns: 1fr minmax(auto, 1200px) 1fr;
+            grid-template-rows: minmax(0, auto);
+            grid-template-areas:
+                ". A ."
+                ". B ."
+                ". C ."
+                ". D ."
+                ". E ."
+                ". F ."
+                ". G ."
+            ;
+
+            .grid-colmn-a {
+                grid-area: A;
+            }
+
+            .grid-colmn-b {
+                grid-area: B;
+            }
+
+            .grid-colmn-c {
+                grid-area: C;
+            }
+
+            .grid-colmn-d {
+                grid-area: D;
+            }
+
+            .grid-colmn-e {
+                grid-area: E;
+            }
+
+            .grid-colmn-f {
+                grid-area: F;
+            }
+
+            .grid-colmn-g {
+                grid-area: G;
+            }
+        }
+    }
+}

@@ -1,0 +1,33 @@
+// Static:
+// ========================================================================
+.hp-img {
+    picture{
+        font-size: 0;
+    }
+    position: relative;
+}
+.mt-10{
+    @include mt-10 ;
+}
+
+.mt-15{
+    @include mt-15 ;
+}
+
+.mt-50{
+    @include mt-50 ;
+}
+.m-auto{
+    @include m-auto ;
+}
+
+/*
+ * Media Query
+ ========================================================================== */
+@supports(grid-area: auto) {
+    @media screen and (min-width: $breakpoint-medium) {
+        .mt-30 {
+            @include mt-30;
+        }
+    }
+}

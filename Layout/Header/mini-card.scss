@@ -1,0 +1,148 @@
+//
+// Static:       Mini Cart 
+// ========================================================================
+
+.mod-mini-cart {
+    .ems-cart-info {
+        position: relative;
+        cursor: $cursor-pointer;
+
+        >span[id$="lbfKUTU_SEPET"] {
+            display: block;
+        }
+
+        span[id$="lblUrunAdet"] {
+            position: absolute;
+            right: 0;
+            top: 0;
+            width: 30px;
+            height: 30px;
+            text-align: center;
+            line-height: 37px;
+            display: inline-block;
+            font-family: $regular;
+            font-size: $small-14;
+            color: $white;
+        }
+    }
+
+    &-body {
+        @include Position(fixed, top 0 right 0);
+        width: 0;
+        background: transparent;
+        height: 100vh;
+        font-size: 0;
+        overflow: hidden;
+        z-index: 20;
+        transition: width 333ms ease-in;
+        &-inner{
+            @include Position(absolute, top 0 left 0);
+            width: 350px;
+            height: 100%;
+            @include setTransform(translateX(350px));
+            transition: transform 333ms ease-in;
+            background: #fff;
+        }
+    }
+    &-img{
+        @include m-auto;
+        margin-top: 85px;
+        width: 122px;
+        height: 141px;
+        background: url(/images/frontend/card-empty.svg) center center no-repeat;
+    }
+    &-col-products{
+        @include Position(absolute, top 0 left 0);
+        width: 350px;
+        height: calc(100% - 150px);
+        overflow-y: auto;
+    }
+    &-col-label{
+        > span{
+            width: 50%;
+            @extend .ib-el;
+            vertical-align: middle;
+            &:first-child{
+                text-align: left;
+                > *{
+                    @extend .b-el;
+                }
+                .fs-13{color: $light-grey;}
+                .fs-20{color: $very-dark-gray;}
+            }
+            &:last-child{
+                @extend .fs-20;
+                font-family: $bold;
+                text-align: right;
+                &:after{
+                    content:'TL';
+                    @extend .fs-20;
+                    font-family: $bold;
+                    margin-left: 5px;
+                }
+            }
+        }
+    }
+    &-col-link{
+        > a{
+            @extend .b-el;
+            @extend .btn-secondary-dark;
+            line-height:$default-line-height; 
+        }
+    }
+    &-col-total{
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        background: $very-light-gray;
+        @include space(padding, all, $large);
+    }
+    .kutuSepet_urunYok{
+        > span{
+            max-width: 230px;
+            @include m-auto;
+            text-align: center;
+            display: block;
+            .fs-18{color: $dustyGray; display: block; margin-top: 25px;}
+        }
+    }
+    &.opened{
+        .mod-mini-cart-body{
+            width: 350px;
+            font-size: inherit;
+            overflow: visible;
+        }
+        .mod-mini-cart-body-inner{
+            transform: translateX(0);
+        }
+    }
+}
+
+/*
+ * Body no overflow
+ ========================================================================== */
+body.anaBody.mini-cart-ready{overflow: hidden;}
+
+/*
+ * Media Query
+ ========================================================================== */
+@supports(grid-area: auto) {
+    @media screen and (min-width: $breakpoint-medium) {
+        .mod-mini-cart{
+            .ems-cart-info{
+                span[id$="lblUrunAdet"] {
+                    font-family: $regular;
+                    font-size: $small-15;
+                    color: $vivid-orange;
+                }
+            }
+        }
+        body.anaBody.mini-cart-ready{
+            .vailCart{
+                opacity: 1;
+                visibility: visible;
+            }
+        }
+    }
+}

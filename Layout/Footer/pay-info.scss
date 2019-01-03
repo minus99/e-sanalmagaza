@@ -1,0 +1,56 @@
+// Name:            Pay Info
+// Description:     
+// ========================================================================
+.grid-info-box {
+    .grid-info-box-boxes {
+        li {
+            text-align: center;
+            padding: 20px 10px;
+            border:1px solid $gray;
+            border-radius: $alternate-border-radius;
+            >* {
+                display: block;
+            }
+
+            i {
+                width: 60px;
+                height: 60px;
+                line-height: 60px;
+                text-align: center;
+                display: inline-block;
+            }
+
+            i,
+            i:before {
+                font-size: 40px;
+            }
+
+            i:before {
+                color: $vivid-orange;
+            }
+
+            .fm-r,
+            .fm-m {
+                margin-top: 10px;
+            }
+
+            .fm-r {
+                color: #5a5a5a;
+            }
+        }
+    }
+}
+
+
+@supports(grid-area: auto) {
+    @media screen and (min-width: $breakpoint-medium) {
+        .grid-info-box {
+            padding-left: 30px;
+            padding-right: 30px;
+            .grid-info-box-boxes {
+                @include grid;
+                @include grid-columns(20px, 1fr 1fr 1fr 1fr);
+            }
+        }
+    }
+}

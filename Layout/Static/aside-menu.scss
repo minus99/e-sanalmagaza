@@ -1,0 +1,16 @@
+//
+// Static:       Aside Menu
+//
+// ========================================================================
+
+
+/*
+ * Media Query
+ ========================================================================== */
+ @supports(grid-area: auto) {
+    @media screen and (min-width: $breakpoint-medium) {
+        .aside-menu{
+            background: $very-light-gray;
+        }
+    }
+}
