@@ -1,106 +1,61 @@
-//
 // Component:       Product List Header
-//
 // ========================================================================
-.ems-prd-list-header{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 10px;
-    border-bottom: 1px solid $alto;
-}
-.ems-prd-list-filter-button{
-    .btn-filter{
 
+.navigasyon {
+    background: $very-light-gray;
+    > span{
+        &:first-child{
+            display: block;
+            @include space(padding, all, $xMedium $large);
+            &:empty{display: none;}
+        }
+        > a{
+            display: none;
+            font-size: $small-13;
+            color: $very-dark-g;
+            &.navigasyonSeviye1,
+            &.navigasyonSeviye2{display: inline-block;}
+            &.navigasyonSeviye2{
+                &:before{
+                    content:'/';
+                    font-size: $small-13;
+                    color: $very-dark-g;
+                }
+            }
+        }
+    }
+    span[id$="lblNAVIGATION_SEPERATOR"]{display: none;}
+}
+
+.pnlUrunKiyasSecim{
+    .urunKiyaslamaOzellik_secimbaslik{display: none;}
+    .urunKiyaslamaOzellik_secimler{
+        a{
+            display: inline-block;
+            vertical-align: middle;
+            border-radius: 15px;
+            border:1px solid $pinkish-grey;
+        }
     }
 }
 
-/* List Product Count */
-.ems-list-prd-count{
-    display: inline-flex;
-    align-items: center;
-    cursor: default;
-    font-size: 13px;
-    line-height: 16px;
-    color: $dustyGray;
-    .count{
-        margin-right: 3px;
+.grid-colmn {
+    &-mobile-filter{
+        @include Position(relative, null);
+        .btn-filter{
+            @include Position(absolute, top 50% right $xMedium);
+            @include setTransform(translateY(-50%));
+            font-size: $small-13;
+            color: $very-dark-g;
+            text-decoration: underline;
+            @include space(padding, all, $xs);
+        }
     }
 }
 
-.ems-prd-list-view{
-
-}
-
-
-/*
- * Desktop
+/* Desktop
  *  
  ========================================================================== */
 @supports(grid-area: auto) {
-    @media screen and (min-width: $breakpoint-medium) {
-        .ems-prd-list-header{
-            margin: 15px 0 25px;
-            border-bottom: 0;
-        }
-
-        /* List Filter Button */
-        .ems-prd-list-filter-button{
-            .btn-filter{
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                width: 116px;
-                padding: 10px 0;
-                border-radius: 5px;
-                background: $black;
-
-                
-                font-size: 13px;
-                font-weight: 700;
-                line-height: 16px;
-                color: $white;
-                i{
-                    font-size: 14px;
-                    margin-right: 12px;
-                }
-            }
-        }
-
-        /* List Product Count */
-        .ems-list-prd-count{
-            margin-left: 20px;
-        }
-        
-
-        /* List Sort */
-        .ems-prd-list-sort {
-            display: inline-flex;
-            align-items: center;
-            ul{
-                display: flex;
-                align-items: center;
-                li{
-                    a{
-                        
-                        font-size: 13px;
-                        line-height: 16px;
-                        color: $dustyGray;
-
-                        padding: 6px 13px;
-                        border: 1px solid $white;
-                        border-radius: 15px;
-                        transition: all .200s ease-in-out;
-                    }
-                    &:hover,
-                    &.selected{
-                        a{
-                            border-color: $alto;
-                            color: $black;
-                        }
-                    }
-                }
-            }
-        }
-    }
+    @media screen and (min-width: $breakpoint-medium) { }
 }

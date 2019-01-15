@@ -16,9 +16,10 @@
  }
  
  /* Tablet landscape and bigger */
- @media (min-width: $breakpoint-medium) {
+
+ /*@media (min-width: $breakpoint-medium) {
     .hidden\@m { display: none !important; }
- }
+ }*/
  
  /* Desktop and bigger */
  @media (min-width: $breakpoint-large) {
@@ -59,3 +60,12 @@
  /* Visibility
   ========================================================================== */
  .invisible { visibility: hidden !important; }
+
+ /*
+ * Media Query
+ ========================================================================== */
+ @supports(grid-area: auto) {
+   @media screen and (min-width: $breakpoint-medium) {
+      .hidden\@m { display: none !important; }
+   }
+}

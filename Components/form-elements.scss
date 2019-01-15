@@ -3,22 +3,23 @@
 //-------------------------------------------//
 input, textarea, select{
     outline: 0 !important;
-    box-shadow: 0 !important;
-    color: $emperor;
-    font-size: 14px;
+    box-shadow:none !important;
+    color: $very-dark-gray ;
+    font-size: 15px;
     width: 100%;
     display: inline-block;
     vertical-align: middle;
+    -webkit-appearance: none;
 }
 
 //-------------------------------------------//
 //----- INPUT STYLE
 //-------------------------------------------//
 input:not([type="checkbox"]):not([type="radio"]){
-    height: 46px;
+    height: 44px;
     padding: 10px 15px;
     border-radius: 3px;
-    border: 1px solid $emperor;
+    border: 1px solid $pinkish-grey;
     background-color: $white;
     /*&:focus{
         border: 1px solid $emperor;
@@ -37,7 +38,7 @@ textarea{
     height: 240px;
     padding: 15px;
     border-radius: 3px;
-    border: 1px solid $emperor;
+    border: 1px solid $pinkish-grey;
     background-color: $white;
     resize: none;
     /*&:focus{
@@ -49,7 +50,7 @@ textarea{
 //----- SELECT STYLE
 //-------------------------------------------//
 select{
-    border: 1px solid $emperor;
+    border: 1px solid $pinkish-grey;
     background-color: $white;
     &:not(.ui-datepicker-month):not(.ui-datepicker-year){
         padding: 10px 15px;
@@ -70,8 +71,8 @@ select{
     .sStylerWrp{
         position: relative;
         width: 100%;
-        height: 46px;
-        border: 1px solid $emperor;
+        height: 44px;
+        border: 1px solid $pinkish-grey;
         background-color: $white;
         padding: 10px 36px 10px 16px;
         display: flex;
@@ -97,7 +98,7 @@ select{
         left: 0;
         bottom: 0;
         opacity: 0;
-        height: 46px;
+        height: 44px;
         width: 100% !important;
     }
 }
@@ -107,28 +108,31 @@ select{
     align-items: center;
     margin-right: 10px;
     .cStyler{
-        border: 1px solid $emperor;
+        border: 1px solid $very-dark-g;
         border-radius: 3px;
-        width: 18px;
-        height: 18px;
+        width: 17px;
+        height: 17px;
         position: relative;
         transition: all .333s ease-in-out;
         &::before{
+            font-family:'icomoon';
             content: "";
             width: 10px;
             height: 10px;
-            border-radius: 3px;
-            background: $white;
             position: absolute;
             left: 50%;
             top: 50%;
             transform: translate(-50%, -50%);
             transition: all .333s ease-in-out;
+            font-size: 10px;
+            color: $white;
         }
         &.checked{
-            border-color: $frenchRose;
-            &::before{
-                background: $frenchRose;
+            border-radius: 2px;
+            border: none;
+            background: $vivid-orange;
+            &:before{
+                content:'\e90b';
             }
         }
     }
@@ -139,7 +143,7 @@ select{
 //-------------------------------------------//
 input[type="checkbox"], input[type="radio"]{
     -webkit-appearance: none;
-    border: 1px solid $emperor;
+    border: 1px solid $pinkish-grey;
     border-radius: 3px;
     background-color: $white;
     transition: background .2s ease;
@@ -178,16 +182,15 @@ input[type="radio"]:checked{
 .ems-form-inner{
     .ems-field{
         + .ems-field{
-            margin-top: 15px;
+            margin-top: 20px;
         }
     }
 }
 .ems-form-label{
     pointer-events: none;
-    font-size: 12px;
-    font-weight: 600;
-    color: $dustyGray;
-    margin-bottom: 6px;
+    font-size: $small-13;
+    color: $light-grey;
+    @include space(margin, bottom, $small);
     &:empty{
         display: none;
     }
@@ -204,10 +207,8 @@ input[type="radio"]:checked{
             position: relative;
         }
         > span:last-child{
-            font-size: 16px;
-            color: $emperor;
-            line-height: 1.44;
-            //margin-top: 5px;
+            font-size: 15px;
+            line-height: 1.33;
             a{
                 text-decoration: underline !important;
             }
@@ -269,6 +270,8 @@ input[type="radio"]:checked{
         #imgCaptcha{
             order: 1;
             width: initial;
+            margin-left: auto;
+            margin-right: auto;
         }
 
         [id$="lbfUYE_KONTROLKODU"]{
@@ -276,18 +279,15 @@ input[type="radio"]:checked{
             width: 100%;
             margin-top: 15px;
             @extend .ems-form-label;
+            color: $very-dark-gray;
+            text-align: center;
         }
 
         [id$="txtUYE_KONTROLKODU"]{
             order: 4;
-        }
-
-        .captchaYenile{
-            order: 2;
-            display: inline-flex;
-            align-items: center;
-            margin-left: 20px;
-            font-size: 20px;
+            max-width: 240px;
+            margin-left: auto;
+            margin-right: auto;
         }
     }
 }

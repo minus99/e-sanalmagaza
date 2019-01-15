@@ -1,35 +1,17 @@
-/*
- * Icomoon
- ========================================================================== */
+/* Icomoon
+ =================================== */
 @include fontFace('icomoon', '/styles/fonts/icomoon/icomoon', normal, normal);
 
-/*
-* Font size default!
-========================================================================== */
-$small-13:                                        13px;
-$small-14:                                        14px;
-$small-15:                                        15px;
-$small-16:                                        16px;
-$small-18:                                        18px;
-$small-20:                                        20px;
-$small-22:                                        22px;
-$small-24:                                        24px;
-$small-38:                                        38px;
 
-
-/*
- * Font Family
- ========================================================================== */
- /* Regular */
+/* Font Family
+ =================================== */
 @include fontFace('regular', '/styles/fonts/roboto/roboto-regular', 400, normal);
-/* Medium */
 @include fontFace('medium', '/styles/fonts/roboto/roboto-medium', 500, normal);
-/* Bold */
 @include fontFace('bold', '/styles/fonts/roboto/roboto-bold', 600, normal);
 
 
-// Font variables
-// ========================================================================
+/* Font variables
+=================================== */
 $regular:                                        'regular';
 $medium:                                         'medium';
 $bold:                                           'bold';

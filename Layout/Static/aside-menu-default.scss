@@ -1,0 +1,26 @@
+/* Static:       Aside Menu
+======================================*/
+.aside-menu {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 100%;
+    max-width: 325px;
+    height: 100%;
+    z-index: 20;
+    display: none;
+    @include transition(transform 333ms ease);
+    @include setTransform(translateX(325px));
+    background: $white;
+}
+
+.mobi-menu-ready{
+    .aside-menu{
+        display: block;
+    }
+}
+.mobi-menu-animate{
+    .aside-menu{
+        @include setTransform(translateX(0));
+    }
+}

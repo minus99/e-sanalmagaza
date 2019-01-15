@@ -34,8 +34,23 @@
 	transform: $value;
 }
 
-/*
-* Set Valign
+/* Set Box-Shadow
+========================================================================== */
+@mixin box-shadow($top, $left, $blur, $color, $inset: false) {
+	@if $inset {
+		-webkit-box-shadow: inset $top $left $blur $color;
+		-moz-box-shadow: inset $top $left $blur $color;
+		box-shadow: inset $top $left $blur $color;
+	}
+
+	@else {
+		-webkit-box-shadow: $top $left $blur $color;
+		-moz-box-shadow: $top $left $blur $color;
+		box-shadow: $top $left $blur $color;
+	}
+}
+
+/* Set Valign
 ========================================================================== */
 @mixin vAlign {
 	position: relative;
@@ -69,6 +84,9 @@
 
 @mixin relative($args: '') {
 	@include position(relative, $args);
+}
+@mixin sticky($args: '') {
+	@include position(sticky, $args);
 }
 
 /*
@@ -167,7 +185,47 @@ $xxlarge: 30px;
 	margin-top: 50px;
 }
 
+@mixin mt-100 {
+	margin-top: 100px;
+}
+
 @mixin grid {
 	display: -ms-grid;
 	display: grid;
+}
+
+@mixin column-double {
+	display: inline-block;
+	vertical-align: middle;
+	width: 50%;
+}
+
+@mixin column-reset {
+	display: inherit;
+	vertical-align: inherit;
+	width: inherit;
+}
+
+@mixin table-row {
+	display: table;
+	width: 100%;
+	position: relative;
+}
+
+@mixin mobi-body-render {
+	position: fixed;
+    overflow: hidden;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+@mixin mobi-body-reset {
+	position: inherit;
+    overflow: inherit;
+    top: inherit;
+    left: inherit;
+    width: inherit;
+    height: inherit;
 }

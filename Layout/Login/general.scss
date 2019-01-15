@@ -1,230 +1,208 @@
-//
-// Static:       Login
-//
-// ========================================================================
-
-.page-login{
-    margin-bottom: 40px;
-}
-
-.page-login-cover{
-    font-size: 0;
-    margin-bottom: 20px;
-}
-
-.page-login-content{
-
-}
-
-
-
-
-.member-login-content{
-
-    /*  */
-    .member-login-box{
-
+/* Default
+=================================== */
+.site-pages-login{
+    @include space(padding, top, $xlarge);
+    @include space(padding, bottom, 70px);
+    background-image: linear-gradient(rgba(254,240,235,0) 1% ,rgba(254,240,235,1) 50%);
+    .login-title{
+        @include space(padding, left, $small);
+        @include space(padding, right, $small);
+        h2,h3{
+            font-weight: normal;
+        }
+        h2{
+            font-size:$small-17;
+            @include space(margin, bottom, $small);
+            @include space(margin, top, $xxlarge);
+        }
+        h3{
+            font-size:$small-12;
+        }
     }
-
-    .ems-login{
-
+    .member-login-body{
+        @include space(margin, left, auto);
+        @include space(margin, right, auto);
+        @include space(padding, left, $large);
+        @include space(padding, right, $large);
+        max-width: 350px;
     }
-    .ems-signup{
+    .ems-form-inner{
+        .sign-or{
+            > span{
+                display: block;
+                @include space(margin, top, 30px);
+                &:empty{display: none;}
+            }
+        }
+    }
+    .ems-form-obj{
+        position: relative;
+        .password-change-btn{
+            @include Position(absolute, top 8px right 7px);
+            width: 30px;
+            height: 30px;
+            line-height: 30px;
+            text-align: center;
+            i{
+                line-height:30px; 
+            }
+            i:before{
+                color: $gray;
+                font-size: 20px;
+            }
+        }
+    }
+    .logo{
+        text-align: center;
+        img{
+            max-width: 100px;
+        }
+    }
+    .column-double{
+        @include column-double;
+    }
+    .ems-message{
+        @include marginTop0;
+    }
+}
+
+.member-login-header{
+    border-top: 1px solid $pinkish-grey;
+    > span{
+        @extend .fm-b;
+        font-size: 24px;
+        display: block;
+        @include space(padding, top, $large);
+        @include space(padding, bottom, $xxlarge);
+        @include space(padding, left, $large);
+        @include space(padding, right, $large);
+        @include space(margin, left, auto);
+        @include space(margin, right, auto);
+        max-width: 350px;
+    }
+}
+
+.ems-signup-header{
+    .btn-login-page{
+        @extend .btn-inactive;
+    }
+}
+.member-login-box{
+    @include space(padding, top, $xxlarge);
+    @include space(padding, bottom, $xxlarge);
+    .btnLogin,
+    .btn-primary-light,
+    .btnYeniUyeKaydet{
+        @extend .btn-big;
+        @extend .b-el;
+    }
+    &.ems-signup{
         display: none;
     }
 }
 
-.member-login-inner{
-    .member-login-header{
-        .ems-login-tab{
-            display: flex;
-            justify-content: center;
-            border-bottom: 1px solid $alto;
-            > span{
-                border-width: 1px 1px 2px 1px;
-                border-color: $alto $alto $white $alto;
-                border-style: solid;
-                border-radius: 5px 5px 0 0;
-                font-weight: 600;
-                color: $frenchRose;
-            }
-            > *{
-                display: inline-flex;
-                align-items: center;
-                justify-content: center;
-                width: 165px;
-                height: 50px;
-                font-size: 14px;
-                color: $emperor;
-                line-height: 2.5;
-                position: relative;
-                bottom: -2px;
-            }
-        }
-    }
-    .member-login-body{
-        padding: 30px 30px 0 30px;
-        .ems-form{
-            max-width: 375px;
-            margin: 0 auto;
-        }
-        .ems-field{
-            &.submit{
-                margin-top: 20px;
-            }
-        }
-        
-        /* Login Button*/
-        .ems-submit{
-            text-align: center;
-            .btnLogin{
-                height: 40px;
-                line-height: 10px;
-                width: 240px;
-            }
-        }
-        
-
-        .ems-forgot-password{
-            margin-top: 15px;
-            text-align: center;
-            #lnkSifremiUnuttum{
-                font-size: 14px;
-                color: $dustyGray;
-                text-decoration: underline;
-            }
-        }
-
-        .sign-or{
-            position: relative;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin: 20px 0;
-            &:before,
-            &:after{
-                content: "";
-                display: block;
-                height: 1px;
-                background: $alto;
-                flex: 1;
-                max-width: 116px;
-            }
-            > span{
-                padding: 0 20px;
-                font-size: 14px;
-                font-weight: 600;
-                letter-spacing: 0.5px;
-                color: $emperor;
-            }
-        }
-
-        /* Facebook Login */
-        .ems-fb-sign{
-            .pageLogin_btnFacebookLogin{
-                table {
-                    display: table!important;
-                    width: 100%;
-                    .btnFacebookLogin {
-                        color: $facebook;
-                        width: 240px;
-                        height: 40px;
-                        padding-top: 10px;
-                        padding-bottom: 10px;
-                        > span{
-                            display: inline-flex;
-                            align-items: center;
-                            i{
-                                margin-right: 15px;
-                            }
-                            span{
-                                font-size: 13px;
-                                font-weight: 600;
-                            }
-                        }
-                    }
-                }
-            }
-        }
-        
-    }
-}
-
-
-/* New User Active */
-.ems-signup-body{
-    .ems-page-member-login{
-        .ems-login{
-            display: none;
-        }
-        .ems-signup{
+body.ems-signup-body{
+    .member-login-box{
+        &.ems-signup{
             display: block;
         }
+        &.ems-login{
+            display: none;
+        }
     }
 }
 
-
-
-/*
- * Media Query
- ========================================================================== */
- @supports(grid-area: auto) {
+/* Media Query
+=================================== */
+@supports(grid-area: auto) {
     @media screen and (min-width: $breakpoint-medium) {
-        .page-login{
-            display: flex;
-        }
-        
-        .page-login-cover{
-            width: 50%;
-            margin-bottom: 0;
-        }
-        
-        .page-login-content{
-            width: 50%;
-        }
-        
-
-        .member-login-inner{
-            margin: 35px 40px 0 40px;
-            .member-login-header{
+        .site-pages-login{
+            background-image: linear-gradient(rgba(254, 240, 235, 0) 15%,rgba(254,240,235,1) 50%);
+            grid-template-columns: 1fr minmax(auto, 430px) 4% minmax(auto, 625px) 1fr;
+            grid-template-areas:
+            ". A A A ."
+            ". . . B ."
+            ". D . C .";
+            @include space(padding, top, 70px);
+            @include space(padding, left, $small);
+            @include space(padding, right, $small);
+            @include space(padding, bottom, 50px);
+            .logo{
+                height: 50px;
+            }
+            .login-title{
+                max-width: 380px;
+                position: relative;
+                z-index: 2;
+                @include space(margin, top, 70px);
+                @include space(margin, left, auto);
+                @include space(margin, right, auto);
+                @include space(padding, left, $reset);
+                @include space(padding, right, $reset);
+                h2{
+                    width: 80%;
+                    font-size:$small-27;
+                    @include space(margin, top, 40px);
+                    @include space(margin, bottom, $xSmall);
+                    @include space(margin, left, auto);
+                    @include space(margin, right, auto);
+                }
+                h3{
+                    font-size:$small-18;
+                }
+            }
+            .ems-signup-header{
+                > span{
+                    @include grid();
+                    grid-template-areas: ". BTN";
+                    grid-template-columns: 1fr 1fr;
+                    align-items: center;
+                }
                 .ems-login-tab{
-                    justify-content: initial;
-                    > *:first-child{
-                        margin-left: 20px;
-                    }
+                    text-align: right;
                 }
             }
-
+            .swiper-container{
+                @include space(margin, top, -45px);
+            }
+            .ems-page-member-login{
+                @include space(margin, top, -85px);
+            }
             .member-login-body{
-                padding-left: 0;
-                padding-right: 0;
-
-                .ems-form{
-                    max-width: 315px;
-                    margin-left: 0;
-                }
-
-                .ems-submit,
-                .ems-forgot-password{
-                    text-align: left;
-                }
-
-                .sign-or{
-                    justify-content: initial;
-                    &:before{
-                        content: none;
-                    }
-                    > span{
-                        padding-left: 0;
-                    }
-                }
-
-                /* Facebook Login */
-                .ems-fb-sign{
-                    width: 240px;
-                }
-                
+                @include space(padding, left, $small);
+                @include space(padding, right, $small);
             }
+            .ems-form-inner{
+                .sign-or{
+                    > span{
+                        @include space(margin, top, 40px);
+                    }
+                }
+            }
+            .logo{
+                text-align: left;
+                img{
+                    max-width: 147px;
+                }
+            }
+            .column-double{
+                width: inherit;
+            }
+        }
+        .member-login-header {
+            border-top: none;
+            > span{
+                font-size: 32px;
+                @include space(padding, top, $reset);
+                @include space(padding, left, $small);
+                @include space(padding, right, $small);
+                font-size: $small-24;
+            }
+        }
+        .member-login-box{
+            background: $white;
+            border: 1px solid $da-light-gray;
+            border-radius: 3px;
         }
     }
 }

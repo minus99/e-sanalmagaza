@@ -1,0 +1,42 @@
+.site-header{
+    background: $vivid-orange;
+    width: 100%;    
+    position: -webkit-sticky;
+    @include Position(sticky, top 0);
+    z-index: 20;
+    .medium-small{
+        font-family: $medium;
+        font-size: $small-15;
+        color: $white;
+        display: inline-block;
+        vertical-align: middle;
+        margin-right: 10px;
+    }
+
+    .xs-icons{
+        width: 30px;
+        height: 30px;
+        text-align: center;
+        line-height: 30px;
+        display: inline-block;
+        vertical-align: middle;
+        &:before{
+            color: $white;
+            font-size: $small-20;
+        }
+        &.icon-mini-bag:before{
+            content:'\e918';
+        }
+    }
+    .navbar-item-logo{
+        width: 40%;
+        @include space(padding, all, $xMedium $xs $xMedium $xs);
+        vertical-align: middle;
+        h1 img{height:30px;}
+    }
+    .navbar-item-mini-member{
+        width: 60%;
+        vertical-align: middle;
+        @include space(padding, all, $xMedium $xMedium $xMedium $reset);
+    }
+}

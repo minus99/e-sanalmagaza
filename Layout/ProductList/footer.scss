@@ -2,10 +2,24 @@
 // Component:       Product List Footer
 //
 // ========================================================================
-.ems-prd-list-footer{
-    
+.urunListePagingAlt{
+    > table,
+    #page-nav{display: none;}
 }
-
+.icerikBlogListe_dahaFazla{
+    @include space(padding, top, 40px);
+    > table{
+        display: table !important;
+        width: 100%;
+        max-width: 230px;
+        @include space(margin, left, auto);
+        @include space(margin, right, auto);
+    }
+    .btnDahaFazla{
+        display: block;
+        @extend .btn-primary-light;
+    }
+}
 
 
 /*
@@ -14,15 +28,6 @@
  ========================================================================== */
 @supports(grid-area: auto) {
     @media screen and (min-width: $breakpoint-medium) {
-
-        .ems-prd-list-footer{
-
-        }
-
-
-        .ems-prd-list-paging{
-            
-        }
 
     }
 }

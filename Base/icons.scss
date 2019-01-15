@@ -1,4 +1,5 @@
-[class^="icon-"], [class*=" icon-"] {
+[class^="icon-"],
+[class*=" icon-"] {
   /* use !important to prevent issues with browser extensions that change fonts */
   font-family: 'icomoon' !important;
   speak: none;
@@ -14,6 +15,27 @@
 }
 
 
+.icon-box-2:before {
+  content: "\e92a";
+}
+.icon-pages-1:before {
+  content: "\e92b";
+}
+.icon-timer:before {
+  content: "\e92c";
+}
+.icon-view-3:before {
+  content: "\e92d";
+}
+.icon-view-4:before {
+  content: "\e92e";
+}
+.icon-triangle-bottom:before {
+  content: "\e928";
+}
+.icon-triangle-top:before {
+  content: "\e929";
+}
 .icon-airplane:before {
   content: "\e900";
 }

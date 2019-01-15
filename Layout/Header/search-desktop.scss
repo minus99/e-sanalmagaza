@@ -1,0 +1,201 @@
+.mod-mini-search {
+    @include space(padding, top, 12px);
+    @include space(padding, bottom, 12px);
+
+    &-body {
+        position: relative;
+        height: inherit;
+        overflow: visible;
+        background: inherit;
+        z-index: 20;
+        left: 0;
+        right: 0;
+        top: 0;
+        max-width: 940px;
+        @include space(margin, left, auto);
+        @include space(margin, right, auto);
+        display: block;
+
+        .ems-search-header {
+            background: none;
+        }
+    }
+
+    .ems-form-inner {
+        width: inherit;
+        @include space(padding, left, $reset);
+    }
+
+    .ems-field {
+        @include space(padding, all, $reset);
+
+        input {
+            border: none;
+        }
+    }
+
+    .ems-field.submit {
+        top: 8px;
+        right: 10px;
+    }
+
+    .ems-search-body {
+        border-top: 2px solid $color-6;
+        top: 42px;
+        @include space(padding, all, $xxlarge $large);
+        border-radius: 0 0 3px 3px;
+    }
+}
+
+.ems-page-home {
+    .mod-mini-search-header {
+        display: none;
+    }
+}
+
+.searchSuggestDiv {
+    top: 42px;
+    border-radius: 0 0 3px 3px;
+    position: absolute;
+    height: auto;
+    overflow-y: inherit;
+}
+
+.searchSuggestDivHolder {
+    @include grid;
+    grid-template-columns: 2fr 1fr;
+    grid-template-areas:
+        "PRD CAT"
+        "PRD WRD"
+        "BTN .";
+    background: $very-light-gray;
+
+    h3 {
+        font-family: $regular;
+        font-size: $small-15;
+        color: $black;
+        @include space(margin, bottom, $xs);
+        @include space(padding, all, $reset);
+        background: none;
+    }
+
+    .prd,
+    .cat {
+        @include space(padding, all, $xxlarge);
+    }
+
+    .prd,
+    .dvTumunuGoster {
+        background: $white;
+    }
+
+    .cat,
+    .wordSearch {
+        .suggest_link {
+            >a {
+                @include transition(all .2s ease);
+
+                &:hover {
+                    color: $color-8;
+                }
+            }
+        }
+    }
+
+    .prd {
+        grid-area: PRD;
+        border-top: 2px solid $pinkish-grey;
+    }
+
+    .cat {
+        grid-area: CAT;
+    }
+
+    .dvTumunuGoster {
+        grid-area: BTN;
+    }
+
+    .wordSearch {
+        grid-area: WRD;
+    }
+
+    .sHolder {
+        .suggest_link {
+            >a {
+                display: inline-block;
+                font-size: $small-13;
+                color: $very-dark-g;
+                @include space(padding, all, $xSmall $reset);
+                border-top: none;
+            }
+        }
+    }
+
+    .sHolder table tr {
+        @include space(padding, top, $small);
+        @include space(padding, left, $xs);
+        @include space(padding, right, $xs);
+        @include space(padding, bottom, $small);
+        min-height: auto;
+        @include grid;
+        grid-template-columns: 70px 2fr 1fr 1fr;
+        grid-gap: 10px;
+        grid-template-areas:
+            "THI TD2 TD6 TD4";
+        align-items: center;
+
+        td:nth-child(2) {
+            display: inherit;
+
+            span {
+                @include space(margin, bottom, $reset);
+            }
+        }
+    }
+
+    .sHolder table tr th {
+        grid-area: THI;
+        left: 0;
+        position: static;
+        top: 0;
+        left: 0;
+        margin-top: 0;
+    }
+
+    .sHolder table tr td:nth-child(2) {
+        grid-area: TD2;
+    }
+
+    .sHolder table tr td:nth-child(4) {
+        grid-area: TD4;
+    }
+
+    .sHolder table tr td:nth-child(6) {
+        grid-area: TD6;
+    }
+
+    .dvTumunuGoster {
+        display: block !important;
+        @include space(padding, bottom, $xxlarge);
+    }
+}
+
+/* Body search keyup animation
+=================================== */
+body {
+    &.search-focused {
+        .mod-mini-search-body {
+            width: 50%;
+            @include Position(fixed, top 12px);
+        }
+
+        .vailSearch {
+            opacity: 1;
+            visibility: visible;
+        }
+    }
+
+    &.search-ready {
+        @include mobi-body-reset;
+    }
+}

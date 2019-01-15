@@ -1,9 +1,9 @@
 //-------------------------------------------//
 //----- BASE
 //-------------------------------------------//
+
 @import 'Base/variables';
 @import 'Base/mixins';
-@import 'Base/grid-mixin';
 @import 'Base/typography';
 @import 'Base/color-palette';
 @import 'Base/shared';
@@ -24,3 +24,55 @@
 //----- LAYOUTS
 //-------------------------------------------//
 @import 'Layout/_import';
+
+// Header Static Default
+@import 'Layout/Static/aside-menu-default';
+
+// Header Default
+@import 'Layout/Header/navbar-default';
+@import 'Layout/Header/nav-menu-default';
+@import 'Layout/Header/mini-card-default';
+@import 'Layout/Header/mini-login-default';
+@import 'Layout/Header/search-default';
+
+// Home Page Default
+@import 'Layout/Homepage/grid-default';
+@import 'Layout/Homepage/homepage-banner-default';
+@import 'Layout/Homepage/bnr-featured-prd-default';
+@import 'Layout/Homepage/categories-default';
+
+// Footer Default
+@import 'Layout/Footer/general-default';
+@import 'Layout/Footer/pay-info-default';
+@import 'Layout/Footer/nav-menu-default';
+
+//-------------------------------------------//
+//----- Media Query
+//-------------------------------------------//
+
+ @supports(grid-area: auto) {
+    @media screen and (min-width: $breakpoint-medium) {
+
+        // Header Static Desktop
+        @import 'Layout/Static/general-grid';
+        @import 'Layout/Static/aside-menu-desktop';
+
+        // Header Desktop
+        @import 'Layout/Header/navbar-desktop';
+        @import 'Layout/Header/nav-menu-desktop';
+        @import 'Layout/Header/mini-card-desktop';
+        @import 'Layout/Header/mini-login-desktop';
+        @import 'Layout/Header/search-desktop';
+
+        // Home Page Desktop
+        @import 'Layout/Homepage/grid-desktop';
+        @import 'Layout/Homepage/homepage-banner-desktop';
+        @import 'Layout/Homepage/bnr-featured-prd-desktop';
+        @import 'Layout/Homepage/categories-desktop';
+        
+        // Footer Desktop
+        @import 'Layout/Footer/general-desktop';
+        @import 'Layout/Footer/pay-info-desktop';
+        @import 'Layout/Footer/nav-menu-desktop';
+    }
+}

@@ -1,6 +1,5 @@
-/*
- * General settings
- ========================================================================== */
+/* General settings
+=================================== */
 * {
     margin: 0;
     padding: 0;
@@ -16,12 +15,12 @@ body{
     text-rendering: optimizeLegibility!important;
     -moz-osx-font-smoothing: grayscale!important;
     -webkit-tap-highlight-color: rgba(0,0,0,.05);
-
     font-size: 14px;
     overflow-y: auto;
     overflow-x: hidden;
     font-weight: 400;
     font-family: $regular;
+    color: #1f1f1f;
     &.anaBody{
         overflow-y: scroll;
     }
@@ -65,24 +64,21 @@ img {
 }
 
 
-/*
- * e-Mos helper class
- ========================================================================== */
+/* e-Mos helper class
+=================================== */
 .ems-hidden{ display: none; }
 .ems-none{ display: none !important; }
 
 
-/*
- * ui-datapicker
- ========================================================================== */
+/* ui-datapicker
+=================================== */
 #ui-datepicker-div{
     display: none;
 }
 
 
-/*
- * Helper Class
- ========================================================================== */
+/* Helper Class
+=================================== */
 .img-responsive{ width: 100%; }
 .scroll-hidden { overflow: hidden !important; }
 .relative{
@@ -115,13 +111,19 @@ img {
 .text-align-right{
     text-align: right;
 }
+.text-align-center{
+    text-align: center;
+}
 
-/*
- * Editable reset
- ========================================================================== */
+/* Editable reset
+ =================================== */
 .admin-wrapper{
     z-index: 5000 !important;
 }
 [editabletype="editable-block-script"]{
     margin-left: 0;
+}
+
+.pb1{
+    display: none;
 }

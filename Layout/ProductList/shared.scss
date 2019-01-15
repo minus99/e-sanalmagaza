@@ -1,18 +1,168 @@
-.ems-product-list{
-    .ems-prd-list-paging{
-        display: none;
+/*  Component:  Product List Filter
+=================================== */
+
+.kutuOzellikFiltre {
+    position: relative;
+}
+
+.kutuHeaderOzellikFiltre,
+.urunKiyaslamaOzellik_temizle,
+.ayiracOzellik {
+    display: none;
+}
+.urunKiyaslamaOzellik_ozellikAd {
+    font-size: $small-15;
+    @include space(padding, all, 16px 15px);
+    @include Position(relative, null);
+    background: $white;
+    cursor: pointer;
+    &:after {
+        font-family: 'icomoon';
+        content:'\e905';
+        @include Position(absolute, top 15px right 15px);
+        width: 20px;
+        height: 20px;
+        text-align: center;
+        line-height: 21px;
+        background: $very-dark-gray;
+        color: $white;
+        border-radius: 100%;
+        font-size: 8px;
+        font-weight: normal;
+        display: block;
+    }
+    &.kapali{
+        background: none;
+        &:after{
+            content: '\e902';
+        }
+    }
+}
+
+.urunKiyaslamaOzellik_ozellik {
+
+    .urunKiyaslamaOzellik_ozellikIcerik {
+        ::-webkit-scrollbar {
+            width: 2px;
+        }
+        ::-webkit-scrollbar-track {
+            background: $pinkish-grey;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: $very-dark-gray;
+        }
+        ::-webkit-scrollbar-thumb:window-inactive {
+            background: $very-dark-gray;
+        }
+        @include space(padding, all, $small);
+        >table {
+            width: 100%;
+            overflow-x: hidden;
+            max-height: 270px;
+            display: block;
+            tbody{
+                display:block;
+                @include space(padding, left, $xs);
+                @include space(padding, right, $xs);
+                tr, tr td{
+                    display: block;
+                }
+            }
+        }
+    }
+}
+
+.urunKiyaslamaOzellik_ozellikIcerik{
+    a.urunKiyaslamaOzellik{
+        display: block;
+        font-size: $small-15;
+        color: $very-dark-g;
+        @include space(padding, all, 9px 15px 9px 30px);
+        @include Position(relative, null);
+        &:before{
+            content:'';
+            position: absolute;
+            top: 50%;
+            left: 0;
+            margin-top: -9px;
+            width: 17px;
+            height: 17px;
+            line-height: 18px;
+            text-align: center;
+            border-radius: 3px;
+            border: 1px solid #252424;
+        }
+        &.link_selected{
+            &:before{
+                font-family:'icomoon';
+                content:'\e90b';
+                border-radius: 3px;
+                background: $vivid-orange;
+                border:none;
+                color: $white;
+                font-size: $small-10;
+            }
+        }
+    }
+}
+
+.kutuBodyOzellikFiltre {
+    >table {
+        width: 100%;
     }
 }
 
 
-/*
- * Media Query
- ========================================================================== */
+/* Media Query
+ =================================== */
 @supports(grid-area: auto) {
     @media screen and (min-width: $breakpoint-medium) {
-        .ems-product-list{
-            .ems-prd-list-paging{
-                display: block;
+        .urunKiyaslamaOzellik_ozellikAd {
+            &.kapali{
+                &:before{
+                    content:'';
+                    @include Position(absolute, top 9px right 0);
+                    width: 1px;
+                    height: 32px;
+                    background: #d5d6dc;
+                }
+            }
+        }
+
+        .kutuBodyOzellikFiltre {
+            >table {
+                >tbody {
+                    display: table;
+                    width: 100%;
+                    table-layout: fixed;
+                    >tr {
+                        display: table-cell;
+                        vertical-align: middle;
+                        min-width: 50%;
+                        >td {
+                            display: block;
+                            position: relative;
+                        }
+                    }
+                }
+            }
+        }
+
+        .urunKiyaslamaOzellik_ozellik {
+
+            .urunKiyaslamaOzellik_ozellikIcerik {
+                >table {
+                    width: 100%;
+                }
+                @include Position(absolute, top 50px left 0);
+                z-index: 2;
+                width: $width100;
+                background: $white;
+                a.urunKiyaslamaOzellik{
+                    color: $very-dark-gray;
+                    @include space(padding, top, 7px);
+                    @include space(padding, bottom, 7px);
+                }
             }
         }
     }

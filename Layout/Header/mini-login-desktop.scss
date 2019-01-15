@@ -1,0 +1,85 @@
+.mod-mini-login {
+    position: relative;
+
+    &-header {
+        @include space(padding, all, $large);
+        cursor: $cursor-pointer;
+        font-family: $medium;
+        font-size: $small-15;
+        color: $white;
+        vertical-align: middle;
+        @include transition(all .2s ease);
+        position: relative;
+        z-index: 11;
+
+        &:after {
+            @include transition(all .2s ease);
+            font-family: 'icomoon';
+            content: '\e91a';
+            width: 30px;
+            height: 30px;
+            color: $white;
+            text-align: center;
+            line-height: 30px;
+            font-size: 20px;
+            display: inline-block;
+            vertical-align: middle;
+        }
+
+        span {
+            position: relative;
+            z-index: 11;
+            display: inline-block;
+            vertical-align: middle;
+            margin-right: 10px;
+        }
+    }
+
+    &-body {
+        @include Position(absolute, top 70px left 0 right inherit);
+        width: 275px;
+        max-width: 275px;
+        transform: none;
+        @include transition(max-height .2s ease);
+        max-height: 0;
+        height: inherit;
+        overflow: hidden;
+    }
+    .mod-mini-login-name{
+        width: 65%;
+    }
+    .ems-user-pages{
+        position: relative;
+        .ems-col {
+            a {
+                @include space(padding, all, 11px 20px);
+                @include transition(all .2s ease);
+                border-bottom: none;
+                &:hover{
+                    color: $vivid-orange;
+                }
+            }
+            .btnKutuLogout {
+                @include Position(absolute, top 19px right 15px);
+                @include space(padding, all, $xs);
+            }
+        }
+    }
+}
+
+/*Opened*/
+.mod-mini-login.opened {
+    .mod-mini-login-header {
+        background: $white;
+
+        span,
+        &:after {
+            color: $vivid-orange;
+        }
+    }
+
+    .mod-mini-login-body {
+        max-height: 365px;
+        overflow: visible;
+    }
+}

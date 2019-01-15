@@ -1,17 +1,16 @@
-//
-// Color Palette
-// ========================================================================
+/* Color Palette
+===================================*/
 
 $carmine            : #A10014;
 $light-peach        : #fcd5c4;
 $light-grey         : #8E8E8E;
 $greyish-brown      : #e8e5e0;
-$pinkish-grey       : #e8e5e0;
+$pinkish-grey       : #E7E7E7;
 $light-grey-two     : #e8e5e0;
 $white-two          : #d8d8d8;
 $charcoal-grey      : #2a2d37;
 $vivid-yellow       : #F9D423;
-$strong-blue        : #1659c7;
+$strong-blue        : #044291;
 $very-light-gray    : #F5F5F5;
 $bright-blue        : #2874f0;
 $dark-violet        : #5A1EA5;
@@ -24,10 +23,26 @@ $very-dark-g        : #5A5A5A;
 $gray               : #BEBEBE;
 $dustyGray          : #464646;
 $doveGray           : #B8B8B8;
+$vivid-pink         : #E20972;
+$e9-Gray            : #E9E9E9;
+$pink               : #f9deef;
+$pink               : #f9deef;
+$da-light-gray      : #DADADA;
+
+$color-1            : #1F1F1F;
+$color-2            : #FFFFFF;
+$color-5            : #350060;
+$color-6            : #E7E7E7;
+$color-7            : #000000;
+$color-8            : #F36F3C;
+$color-10           : #9B9B9B;
+$color-13           : #2874f0;
+$color-14           : #5a1ea5;
+$color-15           : #FFCDBD;
 
 /* Silinecek */ 
-$alto : red;
 $white : #fff;
+$alto : red;
 $frenchRose : red;
 $black : black;
 $wildSand:red;
@@ -40,3 +55,23 @@ $alabaster:red;
 $dodgerBlue:blue;
 $maroonFlush:red;
 $facebook:blue;
+
+/*Color Class Variables*/
+.color-1{
+    color: $color-1;
+}
+.color-2{
+    color: $color-2;
+}
+.color-7{
+    color: $color-7;
+}
+.color-10{
+    color: $color-10;
+}
+.color-13{
+    color: $color-13;
+}
+.color-14{
+    color: $color-14;
+}

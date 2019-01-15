@@ -1,11 +1,125 @@
 /*
+ * Default
+ ========================================================================== */
+ .site-pages-listpage{
+    .grid-colmn-filter-wrapper{
+        position: fixed;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        max-width: 640px;
+        background: #fff;
+        z-index: 20;
+        right: 0;
+        display: none;
+        @include transition(transform .2s ease);
+        @include setTransform(translateX(640px));
+    }
+    .mobile-filter-btn {
+        @include space(padding, all, $large $small);
+        background: $very-light-gray;
+        .mobile-filter-clear{
+            padding: 7px 0;
+            color: #9b9b9b;
+            text-decoration: underline;
+        }
+    }
+}
+
+.filter-popup-ready{
+    @include mobi-body-render;
+    .grid-colmn-filter-wrapper{
+        display: block;        
+    }
+}
+.filter-popup-animate{
+    .grid-colmn-filter-wrapper{
+        @include setTransform(translateX(0));
+    }
+}
+
+
+/*
  * Media Query
  ========================================================================== */
- @supports(grid-area: auto) {
+@supports(grid-area: auto) {
     @media screen and (min-width: $breakpoint-medium) {
-       
+        .site-pages-listpage {
+            .urnList{
+                @include space(padding, top, $xxlarge);
+                @include space(padding, left, 8%);
+            }
+            grid-template-columns: 1fr 220px minmax(auto, 980px) 1fr;
+            grid-template-areas:
+                "CVR CVR CVR CVR"
+                "FLW FLW FLW FLW"
+                ". FFT FFT ."
+                ". CAT LST ."
+                ". FTR FTR ."
+                ". NON NON .";
 
-      
-        
+            .grid-colmn {
+                &-cover {
+                    grid-area: CVR;
+                }
+                &-filter-wrapper {
+                     /*Reset Default*/
+                     position: inherit;
+                     left: inherit;
+                     top: inherit;
+                     right: inherit;
+                     width: inherit;
+                     height: inherit;
+                     background: none;
+                     z-index: inherit;
+                     transform: none;
+                     display: block;
+                     max-width: inherit;
+                     /*Reset Default*/
+
+                    grid-area: FLW;
+                    background: $very-light-gray;
+                    min-height: 50px;
+                }
+                &-feature-filter{
+                    grid-area: FFT;
+                }
+                &-filter {
+                    
+                    @include grid;
+                    grid-template-columns: 1fr 1fr 1fr 1fr 260px;
+                    grid-template-areas:
+                    "FEA FEA SRL . VIW";
+                    max-width: $containerWidth;
+                    @include space(margin, left, auto);
+                    @include space(margin, right, auto);
+                }
+                &-feature{
+                    grid-area: FEA;
+                }
+                &-sortlist{
+                    grid-area: SRL;
+                }
+                &-view{
+                    grid-area: VIW;
+                }
+                &-categori {
+                    grid-area: CAT;
+                }
+
+                &-list {
+                    grid-area: LST;
+                }
+
+                &-footer {
+                    grid-area: FTR;
+                }
+
+                &-none {
+                    grid-area: NON;
+                }
+            }
+        }
     }
 }

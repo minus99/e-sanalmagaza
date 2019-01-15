@@ -1,0 +1,261 @@
+/* Static: Mini Search
+=================================== */
+.mod-mini-search{
+    &-header{
+        @include space(padding, all, $xSmall);
+        background: $white;
+        @include box-shadow(0, 2px, 2px, rgba(155, 155, 155, 0.3));
+        display: none;
+        > span{
+            @extend .b-el;
+            border-radius: $alternate-border-radius;
+            background: $white;
+            @include space(padding, all, $xMedium);
+            position: relative;
+            height: 46px;
+            line-height: $small-15;
+            font-size: $small-15;
+            color: $dark-gray;
+            border:2px solid rgba(155, 155, 155, 0.30);
+            cursor: pointer;
+        }
+        .btnSearch{
+            @extend .b-el;
+            @include Position(absolute, top 5px right 10px);
+            width: 30px;
+            height: 30px;
+            text-align: center;
+            i:before{color: $very-dark-gray;}
+        }
+    }
+    &-body{
+        display: none;
+        position: fixed;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+        background: $white;
+        z-index: 20;
+        .ems-search-header{
+            background: $very-light-gray;
+        }
+        .ems-form{
+            position: relative;
+        }
+    }
+    .ems-search-prev{
+        @include Position(absolute, top 15px left 15px);
+        z-index: 1;
+        i:before{color:$dark-gray; font-size:$small-13;}
+    }
+    .ems-form-inner{
+        position: relative;
+        @include space(padding, left, 60px);
+    }
+    .ems-field{
+        @include space(padding, all, $xSmall);
+        input{
+            font-size: $small-15;
+            color: $dark-gray;
+            border-color: rgba(155, 155, 155,0.30);
+        }
+    }
+    .ems-field.submit{
+        @include Position(absolute, top 15px right 15px);
+        @include marginTop0;
+        @include space(padding, all, $reset);
+        
+        .clear-search{display: none;}
+
+        .btnArama{
+            @extend .btn-secondary ;
+            i, i:before{
+                font-size: $small-18;
+            }
+            i{
+                @include marginLeft0;
+                &:before{
+                    color: $very-dark-gray;
+                }
+            }
+        }
+    }
+    .ems-search-body{
+        background: $white;
+        width: $width100;
+        @include Position(absolute, top 58px left 0);
+        @include space(padding, all, $large $small);
+        display: none;
+
+        > div{
+            &:empty{display: none;}
+        }
+    }
+    .ems-search-title{
+        @include space(padding, bottom, $xs);
+        @include space(margin, left, $small);
+    }
+    .last-search ul{
+        @include space(margin, bottom, $xxlarge);
+        &:empty{display: none;}
+    }
+    .populer-words-list, .last-search ul{
+        @include table-row;
+        li{
+            display: inline-block;
+            vertical-align: middle;
+            @include space(margin, left, $small);
+            a{
+                border-radius: 15px;
+                font-size: $small-12;
+                border: 1px solid $color-6;
+                @include space(padding, all, 7px 20px);
+                @include space(margin, top, $small);
+            }
+        }
+    }
+}
+
+.ems-page-home{
+    .mod-mini-search-header{ display: block; }
+    .navbar-item-mbsearch{ display: none; }
+}
+
+/* Search Suggest
+=================================== */
+.searchSuggestDiv{
+    width: 100%;
+    height: calc(100% - 58px);
+    background: $white;
+    overflow-y: auto;
+    @include Position(fixed, top 58px left 0);
+}
+.searchSuggestDivHolder{
+    h3{
+        font-weight: normal;
+        font-family: $medium;
+        font-size: $small-16;
+        color: $black;
+        @include space(padding, all, 20px);
+        background: $very-light-gray;
+    }
+    .prd{
+        h3{
+            background: none;
+            @include space(padding, bottom, $reset);
+        }
+    }
+    .sHolder{
+        .suggest_link{
+            > a{
+                display: block;
+                font-size: $small-15;
+                color: $very-dark-gray-two;
+                @include space(padding, all, $xMedium $xxlarge);
+                border-top: 1px solid #eaeaea;
+            }
+            &:first-child{
+                border-top: none;
+            }
+        }
+        table{
+            width: 100%;
+            tr{
+                position: relative;
+                border-bottom: 1px solid $pinkish-grey;
+                @include space(padding, top, $xMedium);
+                @include space(padding, right, $xMedium);
+                @include space(padding, left, 100px);
+                @include space(padding, bottom, $xMedium);
+                @include table-row;
+                min-height: 100px;
+                th{
+                    position: absolute;
+                    top: 50%;
+                    margin-top: -35px;
+                    left: 20px;
+                }
+                td{
+                    .suggest_urnprice{
+                        font-family: $bold;
+                        font-size: $small-16;
+                    }
+                    .suggest_urnnormalprice{
+                        font-size: $small-12;
+                        text-decoration: line-through;
+                    }
+                    .suggest_urnprice,
+                    .suggest_urnnormalprice{
+                        display: inline-block;
+                        &:empty{display: none;}
+                        &:before{
+                            content:'₺';
+                        }
+                    }
+                    &:empty{display: none;}
+                }
+                td:nth-child(2){
+                    display: block;
+                    span{
+                        font-size: $small-15;
+                        display: block;
+                        @include space(margin, bottom, $small);
+                    }
+                    span b{font-weight: normal;}
+                }
+                td:nth-child(3),
+                td:nth-child(5){display: none;}
+                td:nth-child(4),
+                td:nth-child(6){
+                    display: block;
+                }
+            }
+        }
+    }
+    .btnArama{
+        display: block;
+        @extend .btn-primary-light;
+        @include space(margin, left, auto);
+        @include space(margin, right, auto);
+        max-width: 230px;
+    }
+    .suggest_link,
+    .suggest_link_over{
+        img{max-width: 70px;}
+    }
+    .wordSearch{display: none;}
+}
+
+body{
+    &.search-focused,
+    &.search-keyup{
+        .mod-mini-search{
+            .ems-search-body{display: block;}
+        }
+    }
+}
+
+body {    
+    &.search-ready{
+        @include mobi-body-render;
+        .mod-mini-search-body{display: block;}
+    }
+}
+
+body.search-animate{
+    .mod-mini-search{
+        .ems-search-body{
+            display: block;
+        }
+    }
+}
+
+body.search-result{
+    .mod-mini-search{
+        .ems-search-body{
+            display: none;
+        }
+    }
+}
