@@ -1,12 +1,41 @@
-
-
-
-/*
- * Media Query
- ========================================================================== */
-@supports(grid-area: auto) {
-    @media screen and (min-width: $breakpoint-medium) {
-
-
+.site-pages-detailpage{
+    .navigasyon {
+        display: none;
+        background: none;
+        > span{
+            &:first-child{
+                @include space(padding, left, $reset);
+                @include space(padding, right, $reset);
+            }
+        }
+        a, .nav-prd-name{
+            display: inline-block;
+            font-size: $small-12;
+            color: $color-3;
+            &:before{
+                font-size: $small-12;
+                color: $color-3;
+                @include space(margin, left, $xs);
+                @include space(margin, right, $xs);
+            }
+        }
+        .nav-prd-name{
+            margin-left: $reset;
+            &:before{
+                content:'/';
+                font-size: $small-12;
+                color: $color-3;
+                @include space(margin, left, $xs);
+            }
+        }
     }
+}
+
+.ratingOzet{
+    width: 85px;
+    height: 17px;
+    position: relative;   
+}
+.urunDetay_btnAboneOl.emos_invisible{
+    display: block;
 }

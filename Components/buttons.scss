@@ -1,6 +1,5 @@
 // Name:            Button
 // Description:     Styles for buttons
-//
 // ========================================================================
 
 
@@ -18,14 +17,13 @@ $big-font-size:                         16px;
 $big-font-weight:                       bold;
 $big-letter-spacing:                    .5px;
 $big-line-height:                       23px;
-$normal-padding:                        13px 5px;
+$normal-padding:                        12px 5px;
 $big-padding:                           16px 5px;
 
 
 
 /* Style modifiers
  ========================================================================== */
-
 /*
  * Default
  */
@@ -34,10 +32,11 @@ $big-padding:                           16px 5px;
     font-family: $bold;
     border-radius: $alternate-border-radius;
     font-size: $default-font-size;
-    padding: $normal-padding;
+    padding: $default-padding;
     background: $vivid-orange;
     color: $white;
     text-align: center;
+    border: 2px solid transparent;
 }
 
 /* Primary */
@@ -54,7 +53,7 @@ $big-padding:                           16px 5px;
 /* Primary Light */
  .btn-primary-light{
     font-size: $default-font-size;
-    border: 1px solid $pinkish-grey;
+    border: 2px solid $pinkish-grey;
     color: $very-dark-gray;
     background: $white;
 }
@@ -187,6 +186,32 @@ $big-padding:                           16px 5px;
     i{
         &:before{
             content:'\e90e';
+        }
+    }
+}
+
+@media screen and (min-width: $breakpoint-medium) {
+    a.btnDefault{
+        @include transition(all .2s ease);
+        &:hover{
+            background: $color-9;
+        }
+    }
+    .btnBannerDefault,
+    .btn-primary-light,
+    .btnSubMenuLink{
+        @include transition(all .2s ease);
+    }
+
+    a.btn-primary-light{
+        &:hover{
+            background: none;
+            border-color: $color-8;
+        }
+    }
+    .btnBannerDefault, .btnSubMenuLink{
+        &:hover{
+            background: #E9E9E9;
         }
     }
 }

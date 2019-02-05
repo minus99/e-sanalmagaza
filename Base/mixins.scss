@@ -173,8 +173,18 @@ $xxlarge: 30px;
 	margin-top: 15px;
 }
 
+@mixin mt-20 {
+	margin-top: 20px;
+}
+
 @mixin mt-30 {
 	margin-top: 30px;
+}
+@mixin mt-40 {
+	margin-top: 40px;
+}
+@mixin mt-70 {
+	margin-top: 70px;
 }
 
 @mixin m-auto {
@@ -212,6 +222,15 @@ $xxlarge: 30px;
 	position: relative;
 }
 
+@mixin table-cell {
+	display: table;
+	width: 100%;
+	> *{
+		display: table-cell;
+		vertical-align: middle;
+	}
+}
+
 @mixin mobi-body-render {
 	position: fixed;
     overflow: hidden;
@@ -228,4 +247,14 @@ $xxlarge: 30px;
     left: inherit;
     width: inherit;
     height: inherit;
+}
+
+@mixin btnReset{
+	background: none;
+	padding: $reset;
+	border: none;
+	border-radius: 0;
+	&:hover{
+		background: none !important;
+	}
 }

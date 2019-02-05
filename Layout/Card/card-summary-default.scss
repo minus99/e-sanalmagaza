@@ -1,0 +1,115 @@
+.pnlDipToplamTable {
+    border-collapse: collapse;
+
+    tbody {
+        tr {
+            width: 100%;
+            display: table;
+            &.emos_invisible{display: none;}
+            th,
+            td {
+                @include space(padding, all, $xs $small);
+                display: table-cell;
+                vertical-align: middle;
+            }
+
+            th {
+                text-align: left;
+                font-weight: normal;
+                font-size: $small-15;
+            }
+
+            td {
+                text-align: right;
+                font-size: $small-15;
+
+                .pb1 {
+                    display: inline-block;
+                    padding-left: $small-5;
+                }
+            }
+        }
+
+        .pnlDipToplam_sipToplam {
+            border-top: 1px solid $color-6;
+            margin-top: $small-20;
+            th,
+            td {
+                vertical-align: bottom;
+                font-size: $small-20;
+                font-family: $bold;
+                padding-top: $small-15;
+            }
+
+            small {
+                font-family: $regular;
+                font-size: $small-13;
+                color: $color-26;
+            }
+        }
+    }
+}
+.ems-cart-summary{
+    padding: $small-20;
+    background: $color-17;
+    margin-top: $small-30;
+}
+
+.ems-cart-summary-coupon {
+    >span {
+        font-size: $small-18;
+        color: $color-26;
+        cursor: pointer;
+        display: block;
+        @include space(padding, all, $small);
+    }
+}
+
+.ems-cart-summary-coupon-body {
+    position: relative;
+
+    input {
+        width: 100% !important;
+    }
+
+    table {
+        position: absolute;
+        top: 2px;
+        right: 5px;
+        display: block !important;
+    }
+
+    .btnHediyeCekiKullan {
+        background: none;
+
+        i:before {
+            font-size: $small-14;
+            color: #8E8E8E;
+        }
+
+        &:hover {
+            background: none;
+        }
+    }
+    span[id$="lblHCK_HATA"]{
+        color:$alert-error-color;
+        background-color: $alert-error-background;
+        border:1px solid $alert-error-color;
+        display: block;
+        padding: 12px;
+        margin-top: 15px;
+        border-radius: 3px;
+        &:empty{display: none;}
+    }
+}
+
+.ems-cart-summarybottom {
+    a.btnDefault {
+        display: block;
+        @include space(padding, top, $small-14);
+        @include space(padding, bottom, $small-14);
+        @include space(margin, top, $small-15);
+        border-radius: 5px;
+    }
+}
+

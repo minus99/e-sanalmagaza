@@ -1,0 +1,52 @@
+.site-pages-member {
+    .ems-page-default-member-order {
+        padding: 0 115px 0 0;
+    }
+    .ems-grid-default-order{
+        .ems-grid-header:first-child {
+            @include grid;
+            grid-template-columns: 1.5fr 1fr 1fr 1.5fr 1.5fr 0.5fr;
+            grid-template-rows: minmax(0, auto);
+            >div {
+                &.ems-grid-img,
+                &.ems-grid-remove {
+                    span {
+                        display: none;
+                    }
+                }
+            }
+        }
+        .ems-grid-row{
+            display: grid; 
+            grid-template-columns: 1.5fr 1fr 1fr 1.5fr 1.5fr 0.5fr;
+            min-height: 55px;
+            .ems-grid-date{
+                color: #000000;
+            }
+            .ems-grid-order-no{
+                font-weight: normal;
+            }
+            .ems-grid-status,
+            .ems-grid-cargo-no,
+            .ems-grid-date,
+            .ems-grid-total{
+                margin-top: 0;
+            }
+            .ems-grid-add-to-cart{
+                position: inherit;
+                top: inherit;
+                right: inherit;
+                z-index: inherit;
+                margin-top: inherit;
+                a{
+                    color: $color-36;
+                    font-size: 12px;
+                    @include transition(all .2s ease);
+                    &:hover{
+                        color: $color-8;
+                    }
+                }
+            }
+        }
+    }
+}

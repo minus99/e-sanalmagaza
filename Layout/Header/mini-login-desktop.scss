@@ -31,7 +31,11 @@
             z-index: 11;
             display: inline-block;
             vertical-align: middle;
-            margin-right: 10px;
+            margin-right: $small-10;
+            text-overflow: ellipsis;
+            width: 65%;
+            overflow: hidden;
+            white-space: nowrap
         }
     }
 
@@ -52,7 +56,7 @@
         position: relative;
         .ems-col {
             a {
-                @include space(padding, all, 11px 20px);
+                @include space(padding, all, 6px 20px);
                 @include transition(all .2s ease);
                 border-bottom: none;
                 &:hover{
@@ -62,6 +66,7 @@
             .btnKutuLogout {
                 @include Position(absolute, top 19px right 15px);
                 @include space(padding, all, $xs);
+                color: $color-5;
             }
         }
     }
@@ -79,7 +84,7 @@
     }
 
     .mod-mini-login-body {
-        max-height: 365px;
+        max-height: 420px;
         overflow: visible;
     }
 }

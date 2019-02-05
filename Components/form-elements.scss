@@ -19,15 +19,18 @@ input:not([type="checkbox"]):not([type="radio"]){
     height: 44px;
     padding: 10px 15px;
     border-radius: 3px;
-    border: 1px solid $pinkish-grey;
+    border: 2px solid $pinkish-grey;
     background-color: $white;
-    /*&:focus{
-        border: 1px solid $emperor;
-    }*/
 
     &[id$="txtUYM_TELEFON"]{
         width: 100% !important;
     }
+}
+//-------------------------------------------//
+//----- INPUT STYLE DISABLED
+//-------------------------------------------//
+input[type="email"]:disabled {
+    background: #ebebeb !important;
 }
 
 //-------------------------------------------//
@@ -36,11 +39,12 @@ input:not([type="checkbox"]):not([type="radio"]){
 textarea{
     width: 100% !important;
     height: 240px;
-    padding: 15px;
+    padding: 10px 15px;
     border-radius: 3px;
-    border: 1px solid $pinkish-grey;
+    border: 2px solid $pinkish-grey;
     background-color: $white;
     resize: none;
+    font-family: $regular;
     /*&:focus{
         border: 1px solid #003a5c;
     }*/
@@ -54,9 +58,6 @@ select{
     background-color: $white;
     &:not(.ui-datepicker-month):not(.ui-datepicker-year){
         padding: 10px 15px;
-        /*&:focus{
-            border: 1px solid $emperor;
-        }*/
     }
 }
 
@@ -72,22 +73,28 @@ select{
         position: relative;
         width: 100%;
         height: 44px;
-        border: 1px solid $pinkish-grey;
+        border: 2px solid $pinkish-grey;
         background-color: $white;
         padding: 10px 36px 10px 16px;
         display: flex;
         align-items: center;
         white-space: nowrap;
         overflow: hidden;
-
+        border-radius: 3px;
+        
         &:after{
             position: absolute;
-            right: 16px;
+            right: 7px;
             top:50%;
             transform: translateY(-50%);
             @extend [class^="icon-"];
-            //@extend .icon-arrowdown:before;
-            font-size: 8px;
+            @extend .icon-arrow-bottom:before;
+            font-size: 13px;
+            color: $color-10;
+            width: 32px;
+            height: 32px;
+            text-align: center;
+            line-height: 35px;
         }
         .sStyleHolder{
             overflow: hidden;
@@ -107,14 +114,15 @@ select{
     display: inline-flex;
     align-items: center;
     margin-right: 10px;
+    cursor: pointer;
     .cStyler{
         border: 1px solid $very-dark-g;
         border-radius: 3px;
         width: 17px;
         height: 17px;
         position: relative;
-        transition: all .333s ease-in-out;
-        &::before{
+        transition: all .2s ease;
+        &:before{
             font-family:'icomoon';
             content: "";
             width: 10px;
@@ -123,7 +131,7 @@ select{
             left: 50%;
             top: 50%;
             transform: translate(-50%, -50%);
-            transition: all .333s ease-in-out;
+            transition: all .2s ease;
             font-size: 10px;
             color: $white;
         }
@@ -149,6 +157,11 @@ input[type="checkbox"], input[type="radio"]{
     transition: background .2s ease;
 }
 
+.sRadio{
+    opacity: 0;
+    visibility: hidden;
+}
+
 //-------------------------------------------//
 //----- CHECKBOX STYLE
 //-------------------------------------------//
@@ -161,6 +174,10 @@ input[type="checkbox"]:checked{
     border-color: $frenchRose;
     background-color: $frenchRose;
 }
+.sRadio{display: none;}
+
+/*Styler*/
+input.sCheckbox { display: none !important; }
 
 //-------------------------------------------//
 //----- RADIO STYLE
@@ -181,8 +198,10 @@ input[type="radio"]:checked{
 //-------------------------------------------//
 .ems-form-inner{
     .ems-field{
+        &:empty{display: none;}
         + .ems-field{
             margin-top: 20px;
+            &:empty{display: none;}
         }
     }
 }
@@ -230,19 +249,12 @@ input[type="radio"]:checked{
     .ems-form-label{
         color: $black;
     }
-    .ems-form-obj{
-        /*input:not([type="checkbox"]):not([type="radio"]),
-        select,
-        textarea{
-            border: 1.35px solid $frenchRose;
-        }*/
-    }
 }
 
 .zorunluFont{
-    &:before{
+    &:after{
         content: "*";
-        margin-right: 2px;
+        margin-left: 2px;
     }
 }
 
@@ -298,17 +310,17 @@ input[type="radio"]:checked{
 //----- ERROR STYLE
 //-------------------------------------------//
 
-$alert-error-color:                 #721c24;
-$alert-error-background:            #f8d7da;
-$alert-error-border:                #f5c6cb;
+$alert-error-color:                 $color-34;
+$alert-error-background:            $color-35;
+$alert-error-border:                $color-34;
 
-$alert-success-color:               #155724;
-$alert-success-background:          #d4edda;
-$alert-success-border:              #c3e6cb;
+$alert-success-color:               $color-31;
+$alert-success-background:          $color-33;
+$alert-success-border:              $color-31;
 
-$alert-info-color:                  #155724;
-$alert-info-background:             #d4edda;
-$alert-info-border:                 #c3e6cb;
+$alert-info-color:                  $color-9;
+$alert-info-background:             $color-8;
+$alert-info-border:                 $color-9;
 .ems-message{
     width: 100%;
     
@@ -320,8 +332,8 @@ $alert-info-border:                 #c3e6cb;
     border-width: 1px;
     border-style: solid;
     margin: 15px 0;
-    padding: 15px;
-    border-radius: 5px;
+    padding: 10px;
+    border-radius: 3px;
     &:empty{
         display: none;
     }

@@ -1,6 +1,4 @@
-//
 // Component:       Variables
-//
 // ========================================================================
 
 
@@ -56,7 +54,11 @@ $global-large-regular:                            38px !default;
 * Font size default!
 ========================================================================== */
 $small-5:                                         5px;
+$small-6:                                         6px;
+$small-7:                                         7px;
+$small-8:                                         8px;
 $small-10:                                        10px;
+$small-11:                                        11px;
 $small-12:                                        12px;
 $small-13:                                        13px;
 $small-14:                                        14px;
@@ -66,14 +68,20 @@ $small-17:                                        17px;
 $small-18:                                        18px;
 $small-19:                                        19px;
 $small-20:                                        20px;
+$small-21:                                        21px;
 $small-22:                                        22px;
 $small-24:                                        24px;
+$small-25:                                        25px;
 $small-26:                                        26px;
 $small-27:                                        27px;
+$small-28:                                        28px;
 $small-30:                                        30px;
 $small-32:                                        32px;
 $small-34:                                        34px;
+$small-35:                                        35px;
 $small-38:                                        38px;
+$small-40:                                        40px;
+$small-50:                                        50px;
 
 
 // Cursor
@@ -194,4 +202,16 @@ $width100:                                        100%;
 
 .relative-el{
     position: relative;
+}
+.padding-5{
+    padding: $small-5;
+}
+.padding-10{
+    padding: $small-10;
+}
+.padding-20{
+    padding: $small-20;
+}
+.padding-10-0{
+    padding: $small-10 0;
 }

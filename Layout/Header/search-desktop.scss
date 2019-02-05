@@ -35,10 +35,15 @@
     }
 
     .ems-field.submit {
-        top: 8px;
+        top: 7px;
         right: 10px;
+        .btnArama{
+            &:hover{
+                background: none;
+            }
+        }
     }
-
+    
     .ems-search-body {
         border-top: 2px solid $color-6;
         top: 42px;
@@ -56,19 +61,36 @@
 .searchSuggestDiv {
     top: 42px;
     border-radius: 0 0 3px 3px;
-    position: absolute;
+    position: absolute !important;
     height: auto;
     overflow-y: inherit;
 }
 
 .searchSuggestDivHolder {
     @include grid;
-    grid-template-columns: 2fr 1fr;
+    grid-template-columns: 1fr 300px;
     grid-template-areas:
         "PRD CAT"
-        "PRD WRD"
+        "PRD BRN"
         "BTN .";
+    grid-template-rows: minmax(0,auto);
     background: $very-light-gray;
+    overflow-x:inherit;
+    overflow-y: inherit;
+
+    /*Webkit scrolling*/
+    ::-webkit-scrollbar {
+        width: 2px;
+    }
+    ::-webkit-scrollbar-track {
+        background: $pinkish-grey;
+    }
+    ::-webkit-scrollbar-thumb {
+        background: $very-dark-gray;
+    }
+    ::-webkit-scrollbar-thumb:window-inactive {
+        background: $very-dark-gray;
+    }
 
     h3 {
         font-family: $regular;
@@ -80,7 +102,8 @@
     }
 
     .prd,
-    .cat {
+    .cat,
+    .brand {
         @include space(padding, all, $xxlarge);
     }
 
@@ -105,18 +128,38 @@
     .prd {
         grid-area: PRD;
         border-top: 2px solid $pinkish-grey;
+        max-height: 331px;
+        overflow-y: auto;
+        overflow-x: hidden;
+        padding-top: 50px;
     }
 
     .cat {
         grid-area: CAT;
     }
-
     .dvTumunuGoster {
         grid-area: BTN;
     }
+    .brand {
+        grid-area: BRN;
+        padding-top: 0;
+        .spnBrand{
+            a{
+                display: inline-block;
+                font-size: $small-13;
+                color: $very-dark-g;
+                @include space(padding, all, $xSmall $reset);
+                @include transition(all .2s ease);
+                border-top: none;
+                &:hover {
+                    color: $color-8;
+                }
+            }
+        }
+    }
 
     .wordSearch {
-        grid-area: WRD;
+        display: none;
     }
 
     .sHolder {
@@ -133,22 +176,38 @@
 
     .sHolder table tr {
         @include space(padding, top, $small);
-        @include space(padding, left, $xs);
-        @include space(padding, right, $xs);
+        @include space(padding, left, $reset);
+        @include space(padding, right, $reset);
         @include space(padding, bottom, $small);
         min-height: auto;
         @include grid;
-        grid-template-columns: 70px 2fr 1fr 1fr;
+        grid-template-columns: 70px 2fr .5fr 1fr 1fr;
         grid-gap: 10px;
         grid-template-areas:
-            "THI TD2 TD6 TD4";
+        "THI TD2 TD6 TD4 TD7";
+        grid-template-rows: minmax(0,auto);
         align-items: center;
+        border-bottom-width:2px; 
 
         td:nth-child(2) {
             display: inherit;
 
             span {
                 @include space(margin, bottom, $reset);
+                min-height: inherit;
+                max-height: inherit;
+                overflow: visible;
+            }
+        }
+        td:nth-child(4),
+        td:nth-child(6){
+            width: auto;
+        }
+        td{
+            .suggest_urnsubscriptionprice{
+                position: relative;
+                bottom: inherit;
+                right: inherit;
             }
         }
     }
@@ -173,10 +232,21 @@
     .sHolder table tr td:nth-child(6) {
         grid-area: TD6;
     }
+    .sHolder table tr td:nth-child(7) {
+        grid-area: TD7;
+    }
 
     .dvTumunuGoster {
         display: block !important;
         @include space(padding, bottom, $xxlarge);
+        .btnArama{
+            @include space(padding, all, 12px $xs);
+            @include space(margin, top, $xxlarge);
+            border:2px solid $color-6;
+            &:hover{
+                border-color: $color-8;
+            }
+        }
     }
 }
 
@@ -184,9 +254,12 @@
 =================================== */
 body {
     &.search-focused {
-        .mod-mini-search-body {
-            width: 50%;
-            @include Position(fixed, top 12px);
+        .mod-mini-search {
+            &-body{
+                width: 50%;
+                @include Position(absolute, top 12px);
+            }
+            .ems-search-body{display: block;}
         }
 
         .vailSearch {
@@ -194,7 +267,6 @@ body {
             visibility: visible;
         }
     }
-
     &.search-ready {
         @include mobi-body-reset;
     }

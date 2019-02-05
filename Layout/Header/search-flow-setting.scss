@@ -1,0 +1,6 @@
+.searchSuggestDivHolder{
+    grid-template-columns: 1fr;
+    .cat,
+    .brand{display: none;}
+    .dvTumunuGoster .btnArama{margin-top: $reset;}
+}

@@ -32,7 +32,7 @@
         height: 100vh;
         font-size: 0;
         overflow: hidden;
-        z-index: 20;
+        z-index: 21;
         transition: width 333ms ease-in;
         &-inner{
             @include Position(absolute, top 0 left 0);
@@ -46,9 +46,9 @@
     &-img{
         @include m-auto;
         @include space(margin, top, 45px);
-        width: 181px;
-        height: 181px;
-        background: url(/images/frontend/card-empty.svg) center center no-repeat;
+        width: 230px;
+        height: 230px;
+        background: url(/images/frontend/card-empty.png) center center no-repeat;
     }
     &-title{
         > span{
@@ -153,7 +153,7 @@
         }
         span{
             font-size: $small-12;
-            color: $strong-blue;
+            color: $black;
             margin-right: 10px;
         }
         a{
@@ -166,13 +166,20 @@
                 display: inline-block;
                 line-height: 10px;
                 &:before{
-                    color: $strong-blue;
+                    color: $black;
                     font-size: 6px;
                 }
             }
         }
     }
     .cart-prd-price{
+        display: table;
+        width: 100%;
+        table-layout: fixed;
+        > div{
+            display: inline-block;
+            vertical-align: middle;
+        }
         .first,
         .last{
             &:empty{
@@ -192,6 +199,23 @@
             font-family: $bold;
             font-size: $small-16;
             color: $black;
+        }
+    }
+    .cart-prd-price-left{
+        width: 60%;
+    }
+    .cart-subscriber{
+        border: 1px solid $color-18;
+        border-radius: 3px;
+        text-align: left;
+        @include space(padding, all, $small-5);
+        &:empty{
+            display: none;
+        }
+        > span{
+            display: block;
+            font-size: $small-12;
+            color: $color-18;
         }
     }
     .prdItem{

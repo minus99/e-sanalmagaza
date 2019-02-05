@@ -1,0 +1,49 @@
+/*
+==================== Grid Layout Default
+*/
+.ems-grid-default-referances{
+    .ems-grid-header{
+        grid-template-columns:1fr 1fr 1fr 2fr;
+        .ems-grid-use{
+            span{display: none;}
+        }
+    }
+    .ems-grid-row{
+        grid-template-columns:1fr 1fr 1fr 2fr;
+        .ems-grid-use{
+            text-align: right;
+            a.btnDefault{
+                i{
+                    display: inline-block;
+                    vertical-align: middle;
+                    margin-right: 10px;  
+                }
+                i.icon-check-small:before{
+                    font-size: $small-10;
+                }
+                i.icon-close-1:before{
+                    font-size: $small-14;
+                }
+            }
+        }
+    }
+    .ems-grid-use{
+        > div{
+            display: inline-block;
+            vertical-align: middle;
+        }
+        a.btnDefault{
+            background: none;
+            border-radius: 0;
+            border: none;
+            font-size: $small-14;
+            font-family: $regular;
+        }
+        a.btnUyeRefOnayla{
+            color: $color-31;
+        }
+        a.btnUyeRefReddet{
+            color: $color-37;
+        }
+    }
+}

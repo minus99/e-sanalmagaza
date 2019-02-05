@@ -1,0 +1,22 @@
+.markaLogolar{
+    @include space(margin, top, $reset);
+    @include space(margin, right, $reset);
+    ul{
+        @include space(padding, left, $xs);
+        @include space(padding, right, $xs);
+        li{
+            display: inline-block;
+            vertical-align: top;
+            width: 50%;
+            text-align: center;
+            @include space(margin, top, 25px);
+            @include space(padding, left, $small);
+            @include space(padding, right, $small);
+            a{display: block;}
+        }
+    }
+}
+
+.markaAlfabeBaslik{
+    display: none;
+}

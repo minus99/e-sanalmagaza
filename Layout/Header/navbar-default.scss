@@ -28,6 +28,9 @@
             content:'\e918';
         }
     }
+    .icon-mb-card{
+        small{display: none;}
+    }
     .navbar-item-logo{
         width: 40%;
         @include space(padding, all, $xMedium $xs $xMedium $xs);

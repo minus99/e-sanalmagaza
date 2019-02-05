@@ -4,6 +4,7 @@
     }
 
     .hp-img {
+        overflow: hidden;
         >a {
             @extend .b-el;
             width: 100%;
@@ -96,10 +97,5 @@
 .grid-banner-box-double-thn {
     .btnBannerDefault {
         @include space(margin, top, 40px);
-        @extend .btn-primary;
-    }
-
-    .btn-primary-alternate {
-        @extend .btn-primary-alternate;
     }
 }

@@ -1,0 +1,23 @@
+.swiper-container-brands{
+    @include space(margin, top, $xxlarge);
+    .swiper-slide{
+        width: auto;
+        a{
+            font-size: $small-20;
+            letter-spacing: 8px;
+            color: #535353;
+        }
+    }
+}
+
+.swiper-container-corporate {
+    border-bottom: 1px solid $color-6 ;
+    .swiper-slide{
+        width: auto;
+        a{
+            font-size: $small-15;
+            color: #535353;
+            @include space(padding, all, 15px);
+        }
+    }
+}

@@ -1,46 +1,4 @@
-/*
- * Default
- ========================================================================== */
-.ems-member-page {
-    .same-address, .ems-page-new-address > .page-top-title {
-        display: none;
-    }
-
-    .ems-page-default-address {
-        padding:10px 20px 50px 20px;
-        .ems-page-new-address{
-            padding:20px 0 0 0;
-        }
-        .ems-address-form{
-            div[id$="plhAdresYokLabel1"]{                
-                border:none;
-                background: none;
-                margin: 0;
-                padding: 0;
-                > span{
-                    min-height: 250px;
-                    padding: 40px 0 0 0;
-                    display: block;
-                    color: $black;
-                    font-size: 22px;
-                    padding-bottom: 40px;
-                    border-bottom: 1px solid $alto;
-                    &:before{
-                        content:'';
-                        background: url(/images/frontend/adress-empty.svg) center center no-repeat;
-                        display: block;
-                        width: 200px;
-                        height: 200px;
-                        margin: 0 auto;
-                    }
-                }
-                > span:empty{display: none;}
-            }
-        }
-    }
-}
-
-.ems-grid-default-address {
+ .ems-grid-default-address {
     .ems-grid-row {
         position: relative;
         padding-top: 20px;
@@ -91,6 +49,8 @@
         }
     }
 }
+
+
 
 /*
  * Media Query

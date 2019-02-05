@@ -9,6 +9,10 @@ span[id$="lbfKUTU_URUN"] {
 
 .tr-TR {
     //$lbf_EkleBtn            : "Ekle" !global;
+
+    //$Bundle Urun
+    .tableBagliUrun .sStylerWrp_checkbox .cStyler:before{content:'Ekle';}
+    .tableBagliUrun .sStylerWrp_checkbox .cStyler.checked:before{content:'Eklendi';}
 }
 
 /* English */

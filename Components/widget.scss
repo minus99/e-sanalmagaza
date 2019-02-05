@@ -5,14 +5,6 @@
         display: none;
     }
 
-    .ems-tab-header {
-        span {
-            font-size: $small-18;
-            display: block;
-            @include space(margin, bottom, 20px);
-        }
-    }
-
     .content-js {
         >li {
             >a {
@@ -31,6 +23,7 @@
                 display: block;
                 width: 100%;
                 height: 100%;
+                font-size: inherit;
                 overflow: visible;
                 visibility: visible;
                 opacity: 1;
@@ -40,6 +33,13 @@
             }
         }
     }
+}
+
+.ems-tab-header span, .widget-header span {
+    font-family: $medium;
+    font-size: $small-18;
+    display: block;
+    @include space(margin, bottom, 20px);
 }
 
 .widget {
@@ -55,6 +55,9 @@
     }
     .swiper-inner{
         overflow: visible;
+    }
+    &-alternate{
+        .swiper-inner{overflow: visible !important;}
     }
 }
 
@@ -108,14 +111,11 @@
             }
         }
 
-        .ems-tab {
-            .ems-tab-header {
-                span {
-                    font-size: $small-24;
-                    @include space(margin, bottom, 30px);
-                }
-            }
+        .ems-tab-header span, .widget-header span {
+            font-size: $small-24;
+            @include space(margin, bottom, 30px);
         }
+
         .all-view-button {
             max-width: 230px;
         }

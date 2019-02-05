@@ -1,0 +1,28 @@
+/*
+==================== Grid Layout Desktop
+*/
+.ems-grid-default-referances{
+    .ems-grid-header{
+        grid-template-columns:1fr 1fr 1fr 1.2fr;
+    }
+    .ems-grid-row{
+        grid-template-columns:1fr 1fr 1fr 1.2fr;
+        .ems-grid-use{
+            text-align: right;
+        }
+    }
+    .ems-grid-use{
+        > div{
+            display: inline-block;
+            vertical-align: middle;
+        }
+        a.btnUyeRefOnayla{
+            margin-right: $small-30;
+        }
+        a.btnDefault{
+            &:hover{
+                background: none;
+            }
+        }
+    }
+}

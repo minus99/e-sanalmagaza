@@ -1,0 +1,44 @@
+.ems-grid-default-cart{
+    border-top: none;
+    .ems-grid-row {
+        @include grid;
+        grid-template-columns:70px 1.5fr minmax(0,60px) 1fr 1fr 30px;
+        grid-template-rows: minmax(0, auto);
+        align-items: center;
+        grid-gap: 10px;
+        @include space(padding, all, $small-10);
+    }
+
+    .ems-grid-img {
+        position: relative;
+        top: inherit;
+        left: inherit;
+        width: inherit;
+        height: inherit;
+        margin-top: inherit;
+    }
+
+    .ems-grid-price-total {
+        width: auto;
+        margin-top: $reset;
+    }
+    .ems-grid-subscriptions {
+
+        float: none;
+        margin-top: $reset;
+        &:empty{
+            display: inherit;
+        }
+    }
+
+    .ems-grid-delete{
+        position: relative;
+        top: inherit;
+        right: inherit;
+    }
+}
+
+.page-card-title{
+    @include space(padding, top, $reset);
+    @include space(padding, left, $reset);
+}

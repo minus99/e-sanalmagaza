@@ -1,0 +1,24 @@
+.user-info{
+    background: $color-17;
+    @include space(padding, all, 21px 20px);
+    span{
+        color: $very-dark-g;
+        font-size: $small-15;
+        strong{
+            font-family: $medium;
+            font-weight: normal;
+        }
+    }
+    a{
+        display: block;
+        font-size: 13px;
+        color: #5a5a5a;
+        float: right;
+    }
+}
+
+.site-pages-corporate{
+    .ems-content-wrapper{
+        padding: $small-10;
+    }
+}

@@ -14,7 +14,22 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-
+.icon-hearth-active:before {
+  content: "\e933";
+  color: none;
+}
+.icon-hand-clear:before {
+  content: "\e932";
+}
+.icon-call:before {
+  content: "\e92f";
+}
+.icon-clock:before {
+  content: "\e930";
+}
+.icon-face:before {
+  content: "\e931";
+}
 .icon-box-2:before {
   content: "\e92a";
 }
@@ -155,4 +170,13 @@
 }
 .icon-support:before {
   content: "\e927";
+}
+
+.icon-32x32{
+  text-align: center;
+  width: 32px;
+  height: 32px;
+  line-height: 32px;
+  display: inline-block;
+  vertical-align: middle;
 }
