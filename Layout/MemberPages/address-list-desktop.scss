@@ -2,6 +2,6 @@
  ===================================== */
 .site-pages-member{
     .add-new-address{
-        @include Position(absolute, top $small-7 right 120px);
+        @include Position(absolute, top $small-7 right 0);
     }
 }

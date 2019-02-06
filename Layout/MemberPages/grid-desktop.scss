@@ -23,12 +23,25 @@
         margin-bottom: $small-10;
     }
 
-    div[id$="plhFavoriKayitYok1"],
-    div[id$="plhSiparisYokLabel1"],
+    /*Member Pages Empty Message reset div*/
+    div[id$="plhFavoriKayitYok"],
+    div[id$="plhSiparisYokLabel"],
     span[id$="lbfKAYITYOK_FIYATHABERCI"]>.ems-message,
     span[id$="lbfKAYITYOK_STOKHABERCI"]>.ems-message,
     .ems-page-coupon-empty{
-        
+        font-size: $small-24;
+        text-align: left;
+    }
+    /*Member Pages Message*/
+    .ems-page-favorites-empty,
+    .ems-page-order-empty,
+    .ems-page-coupon-empty,
+    .ems-page-follow-list-empty{
+        display: none;
+        .img{
+            margin-right: $small-50;
+            margin-bottom: $reset;
+        }
     }
 }
 
@@ -39,11 +52,10 @@
 */
 .site-pages-member{
     .ems-grid-default{
-        border-radius: 5px;
-        max-width: 790px;
+        border-radius: 5px; 
        .ems-grid-header{
            display: none;
-           @include space(padding, all, $small-6 $small-20);
+           @include space(padding, all, $small-8 $small-20);
            border-bottom:1px solid $color-6;
            > div{
                font-family: $regular;
@@ -57,7 +69,7 @@
        .ems-grid-row{
            @include grid;
            align-items: center;
-           @include space(padding, all, $small-5 $small-20);
+           @include space(padding, all, $small-10 $small-20);
            border-bottom:1px solid $color-6;
            min-height: 50px;
        }
@@ -66,25 +78,6 @@
        }
    }    
 }
- 
-
-
-.ems-member-page {
-
-    .ems-form {
-        margin-top: 20px;
-        margin-left: 0;
-
-        .ems-field {
-            &.button {
-                max-width: 240px;
-                margin-right: auto;
-                margin-left: 0;
-            }
-        }
-    }
-}
-
 
 .ems-member-page-left {
     position: relative;

@@ -45,7 +45,7 @@ footer {
 .main-wrapper {
     @include grid;
     grid-template-columns: 1fr minmax(auto, 1200px) 1fr;
-    grid-template-rows: auto auto minmax(calc(100vh - 70px), auto) minmax(0, auto);
+    grid-template-rows:minmax(0, auto);
     grid-template-areas:
         "HDR HDR HDR"
         "ASD ASD ASD"

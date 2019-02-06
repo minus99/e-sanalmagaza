@@ -1,0 +1,45 @@
+.pageFavoriGrupListemWrp{
+    .ems-new-favorite-group{
+        text-align: right;
+        a{
+            display: inline-block;
+            font-size: $small-15;
+            padding-top:$small-12;
+            padding-bottom:$small-12;
+            &:before{
+                font-family: 'icomoon';
+                content: '\e90c';
+                font-weight: normal;
+                width: 32px;
+                height: 32px;
+                text-align: center;
+                line-height: 32px;
+                font-size: $small-10;
+                color: $color-10;
+                display: inline-block;
+                vertical-align: middle;
+                margin-right: $small-5;
+            }
+            span{
+                vertical-align: middle;
+            }
+        }
+    }
+}
+
+/*====================
+    Grid Row Layout
+====================*/
+
+.ems-grid-default-favorite-group{
+    .uk-accordion-content{display: none;}
+    .uk-accordion-title{
+        .ems-grid-links{
+            a{
+                color: $color-36;
+                font-size: $small-14;
+                text-decoration: underline;
+            }
+        }
+    }   
+}

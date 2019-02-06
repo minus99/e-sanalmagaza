@@ -11,11 +11,15 @@ span[id$="lbfKUTU_URUN"] {
     //$lbf_EkleBtn            : "Ekle" !global;
 
     //$Bundle Urun
-    .tableBagliUrun .sStylerWrp_checkbox .cStyler:before{content:'Ekle';}
-    .tableBagliUrun .sStylerWrp_checkbox .cStyler.checked:before{content:'Eklendi';}
-}
+    .tableBagliUrun .sStylerWrp_checkbox .cStyler:before {
+        content: 'Ekle';
+    }
 
-/* English */
-.en-US {
-    //$lbf_EkleBtn            : "Ekle" !global;
+    .tableBagliUrun .sStylerWrp_checkbox .cStyler.checked:before {
+        content: 'Eklendi';
+    }
+
+    .site-pages-member .ems-grid-default-favorites .ems-grid-row .ems-grid-piece-wrapper:after {
+        content:'Ad.';;
+    }
 }

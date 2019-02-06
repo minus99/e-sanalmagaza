@@ -105,12 +105,15 @@ a.btnAdresEkle {
         letter-spacing: 0.5px;
         font-size: $small-13;
         padding: 9px 2px;
-        width: 100%;
+        width: 48%;
         max-width: 160px;
         margin-top: $small-10;
 
         &:first-child {
-            margin-right: $small-20;
+            margin-right: 2%;
+        }
+        &:last-child {
+            margin-left: 2%;
         }
 
         &.emos_selected {
@@ -217,7 +220,7 @@ a.btnAdresEkle {
 .ems-cargo-tab{
     margin-top: $small-30;
 }
-.ems-delivery-tab-header{display: none;}
+
 .divTeslimatKargo{
     ul{
         display: table;

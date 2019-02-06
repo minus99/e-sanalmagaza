@@ -1,4 +1,4 @@
-/* Description : Page Mamber Hidden Objects
+/* Description : Page Member Hidden Objects
  ===================================== */
 
  .kutuBosluk{display: none;}
@@ -11,6 +11,7 @@
         display: none;
     }
     span[id$="lbfURN_KDVDAHIL"],
+    span[id$="lbfURN_ILKKDVDAHIL"],
     span.pb1 {
         display: none;
     }
@@ -25,35 +26,34 @@
         border-radius: 0;
         border:none;
         font-family: $bold;
-        font-size: $small-24;
+        font-size: $small-18;
         color: $color-25;
         margin-top: 0;
-        padding-top: 40px;
-        padding-bottom: 40px;
-        text-align: left;
+        padding: $small-40 $reset;
+        text-align: center;
     }
 
     /*Member Pages Message*/
     .ems-page-favorites-empty,
     .ems-page-order-empty,
-    .ems-page-coupon-empty{
+    .ems-page-coupon-empty,
+    .ems-page-follow-list-empty{
         display: none;
         .img{
             display: inline-block;
             vertical-align: middle;
-            margin-right: $small-30;
+            margin-bottom: $small-20;
         }
         img{
             width: auto;
         }
     }
-
     .ems-page-default-favorites-empty{
         .ems-page-favorites-empty {
             display: block;
         }
+        .select-cfg{display: none;} 
     }
-
     .ems-page-default-member-order-empty {
         .ems-page-order-empty {
             display: block;
@@ -64,7 +64,6 @@
             display: block;
         }
     }
-
 }
 
 /*
@@ -83,11 +82,69 @@
                 font-size: $small-14;
                 color: black;
             }
+            .discount{
+                > span  {
+                    display: inline-block;
+                    vertical-align: middle;
+                    background: $color-8;
+                    border-radius: 3px;
+                    font-family: $bold;
+                    font-size: $small-14;
+                    color: $white;
+                    padding: 3px 5px;
+                    max-width: 25px;
+                    text-align: left;
+                    margin-right: $small-10;
+                    &:empty{
+                        display: none;
+                    }
+                }
+                &:empty{
+                    display: none;
+                }
+            }
+            .ems-grid-price-wrp{
+                display: inline-block;
+                vertical-align: middle;
+                > span{
+                    display: block;
+                    &:before {
+                        content: "₺";
+                    }
+                    &:empty{display: none;}
+                }
+            }
+            .ems-grid-price{
+                .first{
+                    font-family: $regular;
+                    font-size: $small-12;
+                    text-decoration: line-through;
+                }
+                .last{
+                    font-family: $bold;
+                    font-size: $small-16;
+                }
+            }
+            .ems-grid-remove{
+                text-align: center;
+                a.btnDefault{
+                    background: none;
+                    border: none;
+                    border-radius: 0;
+                    padding: $small-5;
+                    i{
+                        &:before{
+                            font-size: $small-8;
+                            color: $color-10;
+                        }
+                    }
+                }
+            }
         }
     }
  }
 
-.ems-member-page {
+ .site-pages-member {
 
     .urunPaging {
         table>tbody>tr>td {
@@ -114,137 +171,6 @@
 
         .tumunuGoster {
             display: none !important;
-        }
-    }
-
-    .sStylerWrp_checkbox {
-        cursor: pointer;
-    }
-
-    input.sCheckbox {
-        display: none !important;
-    }
-
-    .ems-form {
-        max-width: 312px;
-        margin-left: auto;
-        margin-right: auto;
-        margin-top: 0;
-
-        .ems-form-obj {
-            position: relative;
-            &:empty{display: none !important;}
-            &.obj-check {
-                >span:last-child {
-                    line-height: 1.33;
-                }
-            }
-        }
-
-        .ems-field {
-            &.adresTip {
-                display: none;
-            }
-
-            &.button {
-                margin-top: 30px;
-
-                .btnDefault {
-                    display: block;
-                    text-align: center;
-                    background: #000000;
-                    border-radius: 5px;
-                    padding: 12px 5px;
-
-                    span {
-                        color: #ffffff;
-                    }
-                }
-            }
-
-            &.password {
-                .password-change-btn {
-                    position: absolute;
-                    top: 7px;
-                    right: 7px;
-                    width: 30px;
-                    height: 30px;
-                    line-height: 30px;
-                    text-align: center;
-
-                    i {
-                        line-height: 30px;
-                    }
-
-                    i,
-                    i:before {
-                        font-size: 15px;
-                        color: $dustyGray;
-                    }
-                }
-            }
-
-            &.ems-readonly {
-                .ems-form-obj {
-                    &:before {
-                        content: "";
-                        display: block;
-                        z-index: 2;
-                        position: absolute;
-                        top: 0;
-                        right: 0;
-                        left: 0;
-                        bottom: 0;
-                    }
-                }
-            }
-
-            &.date {
-                .ems-form-obj {
-                    &:after {
-                        font-family: 'icomoon';
-                        content: '\e911';
-                        position: absolute;
-                        top: 7px;
-                        right: 7px;
-                        width: 30px;
-                        height: 30px;
-                        line-height: 30px;
-                        text-align: center;
-                        font-size: 16px;
-                        color: $gray;
-                    }
-                }
-
-                .datepick {
-                    padding-right: 45px;
-                }
-            }
-
-            .cepTelAlan {
-                width: 52px !important;
-            }
-
-            .cepTelNo {
-                width: calc(100% - 65px) !important;
-                margin-left: 10px;
-            }
-
-            textarea {
-                height: 75px;
-            }
-
-        }
-
-        .ems-field.ems-field-full.button {
-            max-width: 100%;
-            >div {
-                &:last-child {
-                    .btnAdresIptal{
-                        margin-top: 10px;
-                    }
-                }
-            }
         }
     }
 }

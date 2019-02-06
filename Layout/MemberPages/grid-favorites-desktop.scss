@@ -1,86 +1,67 @@
-.ems-member-page {
-    @media screen and (min-width: $breakpoint-medium) {
-        .ems-page-default-favorites {
-            padding: 0 30px 0 30px;
-
-            .select-cfg {
-                max-width: 440px;
-                margin-left: 0;
-                margin-right: auto;
-            }
-
-            .add-selected,
-            .remove-selected {
-                .btnDefault {
-                    &.btnFavoriSil {
-                        margin-left: 10px;
-                        background: none;
-
-                        span {
-                            color: #000000;
-                        }
-                    }
-
-                    &.btnFavSepeteAt {
-                        margin-right: 10px;
-                        background: #000000;
-
-                        span {
-                            color: #ffffff;
-                        }
-                    }
-
-                    &:hover {
-                        background: $frenchRose;
-
-                        span {
-                            color: #ffffff;
-                        }
-                    }
-                }
-            }
+.ems-page-default-favorites {
+    .select-cfg{
+        @include grid;
+        grid-template-areas:
+        "AA . CC BB";
+        grid-template-columns: minmax(0,190px) 1fr minmax(0,190px) minmax(0,190px);
+        grid-gap: 15px;
+        align-items: center;
+    }
+    .all-selected{grid-area:AA;}
+    .add-selected{grid-area:BB;}
+    .remove-selected{grid-area:CC;}
+    .all-selected{
+        a:hover{
+            color: $color-8;
         }
+    }
+    .remove-selected{
+        a:hover{
+            border-color: $color-8;
+        }
+    }
+}
 
-        .ems-grid-default-favorites {
-            .ems-grid-row {
-                grid-template-columns: 40px .5fr minmax(0, 2fr) 1fr 60px;
-                grid-gap: 10px;
-                padding: 10px 0;
-                min-height: inherit;
-
-                .ems-grid-select {
-                    position: inherit;
-                    top: inherit;
-                    left: inherit;
-                    margin-top: 0;
+.site-pages-member{
+    .ems-grid-default-favorites {
+        border: none;
+        border-radius: 0;
+        .ems-grid-header:first-child{display: none;}
+        .ems-grid-row {
+            grid-template-columns: 20px minmax(0, 70px) 1.5fr .5fr minmax(0, 80px) minmax(0, 120px) 40px;
+            grid-gap: 10px;
+            padding: 10px 0;
+            grid-gap: 10px;
+            min-height: inherit;
+    
+            .ems-grid-select {
+                position: inherit;
+                top: inherit;
+                left: inherit;
+                margin-top: 0;
+            }
+    
+            .ems-grid-img {
+                position: inherit;
+                top: inherit;
+                left: inherit;
+                margin-top: inherit;
+                width: inherit;
+                height: inherit;
+            }
+    
+            .ems-grid-name {
+                a {
+                    margin-right: $small-40;
                 }
-
-                .ems-grid-img {
-                    position: inherit;
-                    top: inherit;
-                    left: inherit;
-                    margin-top: inherit;
-                    width: inherit;
-                    height: inherit;
-
-                    a img {
-                        width: 80px;
-                    }
-                }
-
-                .ems-grid-name {
-                    a {
-                        font-size: 12px;
-                        line-height: 18px;
-                        letter-spacing: 0.3px;
-                    }
-                }
-
-                .ems-grid-remove {
-                    position: inherit;
-                    top: inherit;
-                    right: inherit;
-                }
+            }
+            .ems-grid-remove {
+                position: inherit;
+                top: inherit;
+                right: inherit;
+            }
+            &:last-child{
+                border-bottom: 1px solid $color-6;
             }
         }
     }

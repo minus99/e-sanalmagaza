@@ -51,6 +51,9 @@
         strong{
             font-family: $medium;
             font-weight: normal;
+            &:before{
+                content:'₺';
+            }
         }
         i{
             width: 60px;

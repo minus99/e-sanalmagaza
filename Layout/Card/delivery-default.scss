@@ -17,7 +17,9 @@
     .cart-section-left {
         display: none;
     }
-
+    .ems-cart-summary{
+        margin-top: $reset;
+    }
     .ems-cart-summarybottom {
         .bottom-step {
             display: block;

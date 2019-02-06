@@ -78,9 +78,11 @@
 @import 'Layout/MemberPages/address-list-default';
 @import 'Layout/MemberPages/grid-referances-default';
 @import 'Layout/MemberPages/grid-favorites-default';
+@import 'Layout/MemberPages/grid-favorites-group-default';
 @import 'Layout/MemberPages/grid-order-list-default';
 @import 'Layout/MemberPages/grid-order-detail-default';
 @import 'Layout/MemberPages/grid-password-change-default';
+@import 'Layout/MemberPages/grid-stock-list-default';
 
 // Corporate Brands
 @import 'Layout/Brands/swiper-default';
@@ -97,6 +99,7 @@
 @import 'Layout/Card/card-summary-default';
 @import 'Layout/Card/delivery-default';
 @import 'Layout/Card/delivery-address-default';
+@import 'Layout/Card/delivery-gift-cart-default';
 @import 'Layout/Card/payment-default';
 @import 'Layout/Card/payment-tab-default';
 @import 'Layout/Card/payment-option-contract-default';
@@ -173,9 +176,11 @@
         @import 'Layout/MemberPages/address-list-desktop';
         @import 'Layout/MemberPages/grid-referances-desktop';
         @import 'Layout/MemberPages/grid-favorites-desktop';
+        @import 'Layout/MemberPages/grid-favorites-group-desktop';
         @import 'Layout/MemberPages/grid-order-list-desktop';
         @import 'Layout/MemberPages/grid-order-detail-desktop';
         @import 'Layout/MemberPages/grid-password-change-desktop';
+        @import 'Layout/MemberPages/grid-stock-list-desktop';
 
         // Corporate Brands
         @import 'Layout/Brands/swiper-desktop';
@@ -192,6 +197,7 @@
         @import 'Layout/Card/card-summary-desktop';
         @import 'Layout/Card/delivery-desktop';
         @import 'Layout/Card/delivery-address-desktop';
+        @import 'Layout/Card/delivery-gift-cart-desktop';
         @import 'Layout/Card/payment-desktop';
         @import 'Layout/Card/payment-tab-desktop';
         @import 'Layout/Card/payment-option-contract-desktop';
