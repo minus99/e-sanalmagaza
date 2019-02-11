@@ -11,31 +11,28 @@
         @include transition(all .2s ease);
         position: relative;
         z-index: 11;
-
-        &:after {
-            @include transition(all .2s ease);
-            font-family: 'icomoon';
-            content: '\e91a';
-            width: 30px;
-            height: 30px;
-            color: $white;
-            text-align: center;
-            line-height: 30px;
-            font-size: 20px;
-            display: inline-block;
-            vertical-align: middle;
-        }
-
-        span {
+        display: block;
+        .mod-mini-login-member{display: none;}
+        .mod-mini-login-info{
             position: relative;
             z-index: 11;
             display: inline-block;
             vertical-align: middle;
-            margin-right: $small-10;
-            text-overflow: ellipsis;
-            width: 65%;
-            overflow: hidden;
-            white-space: nowrap
+            @include transition(all .2s ease);
+            &:after {
+                @include transition(all .2s ease);
+                font-family: 'icomoon';
+                content: '\e91a';
+                width: 30px;
+                height: 30px;
+                color: $white;
+                text-align: center;
+                line-height: 30px;
+                font-size: 20px;
+                display: inline-block;
+                vertical-align: middle;
+                margin-left: $small-10;
+            }
         }
     }
 
@@ -76,15 +73,25 @@
 .mod-mini-login.opened {
     .mod-mini-login-header {
         background: $white;
-
-        span,
-        &:after {
+        .mod-mini-login-info{
             color: $vivid-orange;
+            &:after {
+                color: $vivid-orange;
+            }   
         }
     }
 
     .mod-mini-login-body {
         max-height: 420px;
         overflow: visible;
+    }
+}
+
+body{
+    &.mobi-login-ready{
+        @include mobi-body-reset;
+        .mod-mini-login-body{
+            transform: none;
+        }
     }
 }

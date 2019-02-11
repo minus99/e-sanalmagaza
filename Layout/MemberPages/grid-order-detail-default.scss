@@ -141,6 +141,12 @@
             .ems-grid-name {
                 >a {
                     font-size: $small-15;
+                    br{display: none;}
+                    strong{display: none;}
+                    display: none;
+                    &:first-child{
+                        display: block;
+                    }
                 }
             }
 

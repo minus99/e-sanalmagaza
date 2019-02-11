@@ -19,6 +19,7 @@
 
 .site-pages-corporate{
     .ems-content-wrapper{
-        padding: $small-10;
+        .title{display: none;}
+        padding: $reset $small-10 $small-10 $small-10;
     }
 }

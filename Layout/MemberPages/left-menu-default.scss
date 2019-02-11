@@ -33,3 +33,39 @@
         }
     }
 }
+
+/* =====================
+Description: Message Page Message Tab Menu
+===================== */
+
+.swiper-container-member.swiper-container-message-menu{
+    margin-left: $small-20;
+    margin-bottom: $small-20;
+    border-bottom: none;
+    .swiper-wrapper{
+        flex-direction: inherit;
+    }
+    .swiper-slide{
+        width: auto;
+        margin-left: $small-10;
+        &:first-child{margin-left: 0;}
+        a{
+            font-family: $regular;
+            font-size: $small-14;
+            display:block;
+            text-align: center;
+            padding: $small-8 $small-10;
+            border-radius: 5px;
+            border: 1px solid $color-4;
+        }
+        &.selected{
+            a{
+                border-color: $color-8;
+                font-family: $bold;
+                &:before, &:after{
+                    display: none;
+                }
+            }
+        }
+    }
+}

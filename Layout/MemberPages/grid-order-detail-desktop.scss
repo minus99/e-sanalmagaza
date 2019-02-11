@@ -138,7 +138,7 @@
 
         >div {
             display: grid;
-            grid-template-columns: 1fr 2fr;
+            grid-template-columns: 1fr 1fr;
             grid-template-rows: minmax(0, auto);
             grid-gap: 10px;
 
@@ -152,6 +152,8 @@
     }
 
     .ems-grid-default-order-products {
+        border: none;
+        border-radius: 0;
         .ems-grid-header:first-child{display: none;}
         .ems-grid-row {
             display: block;

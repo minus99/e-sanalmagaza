@@ -25,11 +25,7 @@
 .mod-mini-login {
     &-header {
         @include transition(all .2s ease);
-
-        span {
-            display: none;
-        }
-
+        display: none;
         >span[id$="lbfKUTU_HESABIM"],
         >span[id$="lbfkutuUyeGiris1"] {
             display: block;

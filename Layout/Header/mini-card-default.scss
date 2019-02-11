@@ -136,6 +136,30 @@
     .cart-prd-left{
         width: 85px;
     }
+    .cart-prd-price-left{
+        > div{
+            display: inline-block;
+            vertical-align: middle;
+        }
+    }
+    .discount{
+        margin-right: $small-10;
+        background: $color-8;
+        border-radius: 3px;
+        color: $white;
+        font-size: $small-14;
+        font-family: $bold;
+        width: 23px;
+        padding: 3px;
+        text-align: left;
+        &:before{
+            content:'%';
+            display: block;
+        }
+        &:empty{
+            display: none;
+        }
+    }
     .cart-prd-right{
         width: calc(100% - 85px);
         padding-left: 10px;
@@ -176,6 +200,7 @@
         display: table;
         width: 100%;
         table-layout: fixed;
+        margin-top: $small-5;
         > div{
             display: inline-block;
             vertical-align: middle;

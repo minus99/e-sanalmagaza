@@ -185,17 +185,6 @@
     }
 }
 
-span.spr46{
-    @include Position(absolute, top 0 left 0);
-    z-index: 1;
-    background: $color-15;
-    @include space(padding, all, $xs);
-    font-size: $small-13;
-    letter-spacing: 0.5px;
-    border-radius: 3px;
-    display: none;
-}
-
 .urunListe_pnlIndirimOran {
     display: block !important;
 
@@ -363,6 +352,17 @@ Product Types
         span.spr46{
             display: inline-block;
         }
+    }
+    
+    span.spr46{
+        @include Position(absolute, top 0 left 0);
+        z-index: 1;
+        background: $color-15;
+        @include space(padding, all, $xs);
+        font-size: $small-13;
+        letter-spacing: 0.5px;
+        border-radius: 3px;
+        display: none;
     }
 }
 

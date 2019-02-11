@@ -53,6 +53,10 @@ a.btnAdresEkle:hover{
 .ems-page-new-address {
     max-width: 680px;
     margin: 50px auto;
+    .adresTip {
+        grid-column-start: span 2;    
+    }
+    
     .back-to-card{
         background: none;   
         padding: $reset;

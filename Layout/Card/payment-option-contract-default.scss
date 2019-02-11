@@ -126,6 +126,10 @@
         @include Position(absolute, top 50% left 0);
         @include space(margin, top, -9px);
     }
+    .btnSozlesme,
+    .btnOnbilgi{
+        text-decoration: underline;
+    }
 }
 
 .pageSiparisOnay_btnSatisSozlesmeOnizle,

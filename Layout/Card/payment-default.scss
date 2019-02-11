@@ -15,6 +15,23 @@
     .ems-cart-summary{
         margin-top: $reset;
     }
+    .pageErrorStokKontrol{
+        .uyariError{
+            font-size: 14px;
+            text-align: center;
+            line-height: 1.5;
+            border-width: 1px;
+            border-style: solid;
+            margin-bottom: $small-15;
+            padding: $small-10;
+            border-radius: 3px;
+            color: $alert-error-color;
+            background-color: $alert-error-background;
+            border-color: $alert-error-border;
+            display: block;
+            &:empty{display: none;}
+        }
+    }
 }
 
 .ems-page-payment-left{
@@ -157,6 +174,7 @@
             }
 
             .tableOdemeBilgiKrediKarti_thlbfbtnOdemeTaksit {
+                display: none;
                 .lnkOdemeTaksit {
                     font-size: $small-15;
                     position: relative;
@@ -201,6 +219,7 @@
 
 /*Paymeny Description*/
 .ems-pay-type-desc {
+    display: none;
     &:empty {
         display: none;
     }

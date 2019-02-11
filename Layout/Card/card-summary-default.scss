@@ -28,6 +28,11 @@
                     padding-left: $small-5;
                 }
             }
+            &.pnlDipToplam_kdvToplam,
+            &.pnlDipToplam_bankaKomisyon,
+            &.pnlDipToplam_kulBankaBonus{
+                display: none;
+            }
         }
 
         .pnlDipToplam_sipToplam {
@@ -53,6 +58,16 @@
     padding: $small-20;
     background: $color-17;
     margin-top: $small-30;
+}
+
+.ems-cart-summary-title{
+    span{
+        display: block;
+        padding: $reset $small-10 $small-10 $small-10;
+        font-family: $medium;
+        font-size: 18px;
+        color: $color-1;
+    }
 }
 
 .ems-cart-summary-coupon {
@@ -110,6 +125,12 @@
         @include space(padding, bottom, $small-14);
         @include space(margin, top, $small-15);
         border-radius: 5px;
+    }
+    .ems-message {
+        padding-left: $reset;
+        &:before{
+            display: none;
+        }
     }
 }
 

@@ -30,6 +30,7 @@
     .ems-grid-piece-wrapper {
         position: relative;
         display: inline-block;
+        margin-top: 10px;
         >span {
             &:empty {
                 display: none;
@@ -45,18 +46,20 @@
     }
 
     .brutFiyat,
-    .netFiyat {
+    .netFiyat,
+    .topFiyat{
         &:before {
             content: '₺';
             @include space(margin, right, -4px);
         }
     }
 
-    .brutFiyat {
+    .brutFiyat, .topFiyat {
         font-size: $small-12;
         text-decoration: line-through;
     }
-
+    .brutFiyat{display: none !important;}
+    
     .netFiyat {
         font-size: $small-16;
         font-family: $bold;
@@ -69,8 +72,8 @@
             display: inline-block;
             vertical-align: middle;
         }
-
-        .discountRatio {
+        .dvSepetKazancOran {
+            display: block;
             border-radius: 3px;
             background: $color-8;
             color: $white;
@@ -80,6 +83,7 @@
             line-height: 40px;
             @include space(padding, all, 2px $xs);
             @include space(margin, right, $small);
+            &:empty{display: none;}
         }
     }
 
@@ -88,20 +92,28 @@
         a{
             display: block;
             font-size: $small-15;
-            margin-bottom: $small-10;
             margin-right: $small-10;
             > span{
                 &:empty{display: none;}
             }   
         }
         .urnKisaAd{display: none;}
-        
+
+        .prom_ad{
+            margin-right: $small-5;
+        }
         .prom_ad,
         .prom_indtutar{
-            margin-top: 2px;
+            margin-top: 1px;
             color: $color-18;
-            display: block;
+            display: inline-block;
+            vertical-align: middle;
             &:empty{display: none;}
+        }
+        span{
+            ul li{
+                margin-top: $small-5;
+            }
         }
     }
 
@@ -169,4 +181,11 @@
             }
         }
     }
+}
+
+/*======================
+Grid Row Stock Empty
+======================*/
+.gridSepetStok{
+    display: none;
 }

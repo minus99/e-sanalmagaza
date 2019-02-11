@@ -17,7 +17,9 @@
         height: inherit;
         margin-top: inherit;
     }
-
+    .ems-grid-piece-wrapper {
+        margin-top: $reset;
+    }
     .ems-grid-price-total {
         width: auto;
         margin-top: $reset;

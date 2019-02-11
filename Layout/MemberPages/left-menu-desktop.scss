@@ -58,3 +58,27 @@
         }
     }
 }
+
+
+/* =====================
+Description: Message Page Message Tab Menu
+===================== */
+.swiper-container-member.swiper-container-message-menu{
+    margin-left: $reset;
+    .swiper-wrapper{
+        flex-direction: row;
+        padding-top: $reset;
+        padding-bottom: $reset;
+    }
+    .swiper-slide{
+        width: auto;
+        a{
+            padding-top: $small-11;
+            padding-bottom: $small-11;
+            &:hover{
+                border-color: $color-8;
+                color: $color-8;
+            }
+        }
+    }
+}

@@ -51,9 +51,6 @@
         min-height: 50px;
         grid-gap: $small-5;
         padding: $small-5 $small-20;
-        > span{
-            &.ems-grid-icon{display: none;}
-        }
         .ems-grid-links{
             text-align: right;
             @include grid;

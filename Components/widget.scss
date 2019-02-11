@@ -28,6 +28,23 @@
                 visibility: visible;
                 opacity: 1;
             }
+            &.no-result{
+                .tab-widget{display: none;}
+            }
+            &.ajx-loaded.no-result{
+                > .content{
+                    &:before{
+                        content: '';
+                        width: auto;
+                        height: 294px;
+                        background: url(/images/frontend/no-product.png) center center no-repeat;
+                        margin-left: auto;
+                        margin-right: auto;
+                        display: block;
+                    }
+                }
+                .ems-tab-footer{display: none;}
+            } 
             > .content{
                 margin-top: 40px;
             }

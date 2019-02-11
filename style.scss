@@ -83,6 +83,8 @@
 @import 'Layout/MemberPages/grid-order-detail-default';
 @import 'Layout/MemberPages/grid-password-change-default';
 @import 'Layout/MemberPages/grid-stock-list-default';
+@import 'Layout/MemberPages/grid-message-list-default';
+@import 'Layout/MemberPages/grid-subscriptions-default';
 
 // Corporate Brands
 @import 'Layout/Brands/swiper-default';
@@ -122,6 +124,11 @@
 
  @supports(grid-area: auto) {
     @media screen and (min-width: $breakpoint-medium) {
+
+        //-------------------------------------------//
+        //----- BASE
+        //-------------------------------------------//
+        @import 'Base/lbf-desktop';
 
         // Static Desktop
         @import 'Layout/Static/general-grid';
@@ -165,7 +172,6 @@
         // Corporate Desktop
         @import 'Layout/Corporate/grid-desktop';
         @import 'Layout/Corporate/left-menu-desktop';
-        @import 'Layout/Corporate/slider-desktop';
         @import 'Layout/Corporate/message-send-desktop';
         @import 'Layout/Corporate/sss-tab-desktop';
 
@@ -181,6 +187,8 @@
         @import 'Layout/MemberPages/grid-order-detail-desktop';
         @import 'Layout/MemberPages/grid-password-change-desktop';
         @import 'Layout/MemberPages/grid-stock-list-desktop';
+        @import 'Layout/MemberPages/grid-message-list-desktop';
+        @import 'Layout/MemberPages/grid-subscriptions-desktop';
 
         // Corporate Brands
         @import 'Layout/Brands/swiper-desktop';

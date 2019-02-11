@@ -261,7 +261,6 @@
 
 /*Group Product*/
 .ems-prd-detail-group {
-
     .sStylerWrp_select,
     .prd-list-group {
         display: none;
@@ -619,6 +618,13 @@
     @include space(padding, top, $small-15);
     @include space(padding, bottom, $small-15);
     background: $color-18;
+}
+span.btnAbonelikSepeteAt{
+    padding: 0;
+    margin: 0;
+    border: 0;
+    border-radius: 0;
+    background: none;
 }
 
 .ems-detail-desc-2 {

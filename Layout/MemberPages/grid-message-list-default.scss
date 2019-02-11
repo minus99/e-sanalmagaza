@@ -1,13 +1,44 @@
+/* =====================
+Description: Grid Default
+===================== */
 .site-pages-member {
-    .ems-page-default-member-order {
-        padding: $small-20;
-
-        >.page-top-title>span {
-            border-bottom: 0;
-        }
+    .ems-page-default-message{
+        padding:0 $small-20 $small-20 $small-20;
+        .message-tablink{display: none;}
+        .page-top-title{display: none;}
     }
 
-    .ems-grid-default-order{
+    /*Title Message*/
+    .page-top-title.page-top-title-2{display: block; padding: $small-20; text-align: right;}
+    .page-top-title.page-top-title-2 > span{display: none;}
+
+    .add-new-message{ 
+        a{
+            display: inline-block;
+            font-size: $small-15;
+            &:before{
+                font-family: 'icomoon';
+                content: '\e90c';
+                font-weight: normal;
+                width: 20px;
+                height: 20px;
+                text-align: center;
+                line-height: 20px;
+                font-size: 10px;
+                color: #9B9B9B;
+                display: inline-block;
+                vertical-align: middle;
+                margin-right: 10px;
+            }
+        }
+    }
+}
+
+/*====================
+Grid Row Layout Default
+====================*/
+.site-pages-member {
+    .ems-grid-default-message{
         .ems-grid-header {
             width: 50%;
             display: inline-block;
@@ -58,26 +89,28 @@
                         content: "-";
                     }
                 }
-            }
-            .ems-grid-status{
-                color: $frenchRose;
-            }
-            .ems-grid-cargo-no{
-                a{
-                    display: block;
-                    &:last-child{margin-top: 10px;}
-                }
-            }
-            .ems-grid-add-to-cart{
-                a{
-                    display: block;
-                    color: $color-36;
-                    font-size: $small-14;
-                    span{
-                        text-decoration: underline;
+                .lnkMesajOku{    
+                    &:empty{
+                        &:before{
+                            content: "-";
+                        }
                     }
                 }
+                .lnkPopupMesajOku {
+                    display: none;
+                }
             }
+        }
+    }
+}
+
+
+/*Message Send*/
+.site-pages-member{
+    .pageMesajGonder{
+        .pageHeaderMesaj{display: none;}
+        .ems-page-alternate{
+            .page-top-title{display: none;}
         }
     }
 }

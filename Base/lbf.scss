@@ -22,4 +22,12 @@ span[id$="lbfKUTU_URUN"] {
     .site-pages-member .ems-grid-default-favorites .ems-grid-row .ems-grid-piece-wrapper:after {
         content:'Ad.';;
     }
+     
+    //$Uye Favori Ekle Secim Text
+    .ems-grid-default-favorites .ems-grid-select .cStyler:before {
+        content: 'ÜRÜN SEÇ';
+    }
+    .ems-grid-default-favorites .ems-grid-select .cStyler.checked:before {
+        content: 'SEÇİLDİ';
+    }
 }

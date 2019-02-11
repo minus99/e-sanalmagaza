@@ -26,22 +26,33 @@
     /*Member Pages Empty Message reset div*/
     div[id$="plhFavoriKayitYok"],
     div[id$="plhSiparisYokLabel"],
+    div[id$="plhAbonelikKayitYokLabel"],
     span[id$="lbfKAYITYOK_FIYATHABERCI"]>.ems-message,
     span[id$="lbfKAYITYOK_STOKHABERCI"]>.ems-message,
+    span[id$="lbfUYM_KAYITYOK_MESAJ"]>.ems-message,
     .ems-page-coupon-empty{
         font-size: $small-24;
         text-align: left;
+        padding-left:$reset;
+        padding-right:$reset;
     }
     /*Member Pages Message*/
     .ems-page-favorites-empty,
     .ems-page-order-empty,
     .ems-page-coupon-empty,
-    .ems-page-follow-list-empty{
-        display: none;
+    .ems-page-follow-list-empty,
+    .ems-page-message-empty,
+    .ems-page-abonelik-empty{
         .img{
             margin-right: $small-50;
-            margin-bottom: $reset;
         }
+        .big-text-favorite{
+            display: inline-block;
+            vertical-align: middle;
+        }
+    }
+    .big-text-favorite{
+        font-size: $small-24;
     }
 }
 
@@ -52,7 +63,8 @@
 */
 .site-pages-member{
     .ems-grid-default{
-        border-radius: 5px; 
+        border: 1px solid $color-6;
+        border-radius: 3px; 
        .ems-grid-header{
            display: none;
            @include space(padding, all, $small-8 $small-20);

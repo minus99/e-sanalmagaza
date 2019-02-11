@@ -63,34 +63,31 @@
     .user-info {
         background: none;
         display: block;
-        padding: $small-10 40px $small-10 0;
         float: right;
-        position: relative;
-
-        &:after {
-            content: '\e91a';
-            font-family: 'icomoon';
-            position: absolute;
-            top: 50%;
-            right: 0;
-            width: 32px;
-            height: 32px;
-            line-height: 32px;
-            text-align: center;
-            margin-top: -16px;
-            font-size: $small-16;
-            color: $white;
-        }
-
-        span {
+        padding: $reset;
+        > a{
             color: $white;
             font-family: $medium;
             font-size: $small-15;
-        }
-
-        >span>span,
-        a {
-            display: none;
+            position: relative;
+            padding: $small-10 40px $small-10 0;
+            &:after {
+                content: '\e91a';
+                font-family: 'icomoon';
+                position: absolute;
+                top: 50%;
+                right: 0;
+                width: 32px;
+                height: 32px;
+                line-height: 32px;
+                text-align: center;
+                margin-top: -16px;
+                font-size: $small-16;
+                color: $white;
+            }
+            &:hover{
+                text-decoration: underline;
+            }
         }
     }
 }

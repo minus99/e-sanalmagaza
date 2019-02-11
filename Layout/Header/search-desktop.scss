@@ -181,29 +181,26 @@
         @include space(padding, bottom, $small);
         min-height: auto;
         @include grid;
-        grid-template-columns: 70px 2fr .5fr 1fr 1fr;
-        grid-gap: 10px;
+        grid-template-columns: 80px 2fr minmax(0,30px) minmax(auto,120px) 1fr;
         grid-template-areas:
-        "THI TD2 TD6 TD4 TD7";
-        grid-template-rows: minmax(0,auto);
+        "THI TD2 TD7 TD6 TD8"
+        "THI TD2 TD7 TD4 TD8";
         align-items: center;
         border-bottom-width:2px; 
 
         td:nth-child(2) {
             display: inherit;
-
             span {
                 @include space(margin, bottom, $reset);
                 min-height: inherit;
                 max-height: inherit;
                 overflow: visible;
+                padding-left: $small-10;
+                padding-right: $small-15;
             }
         }
-        td:nth-child(4),
-        td:nth-child(6){
-            width: auto;
-        }
         td{
+            width: auto;
             .suggest_urnsubscriptionprice{
                 position: relative;
                 bottom: inherit;
@@ -227,13 +224,18 @@
 
     .sHolder table tr td:nth-child(4) {
         grid-area: TD4;
+        align-self: flex-start;
     }
-
     .sHolder table tr td:nth-child(6) {
         grid-area: TD6;
+        align-self: flex-end;
     }
     .sHolder table tr td:nth-child(7) {
         grid-area: TD7;
+        align-self: center;
+    }
+    .sHolder table tr td:nth-child(8) {
+        grid-area: TD8;
     }
 
     .dvTumunuGoster {

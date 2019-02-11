@@ -1,8 +1,14 @@
-.kutuHeaderSolMenuTree,
-.kutuFooterSolMenuTree,
-.icerikTemplateListeContainer,
-.icerik_ratingbar {
-    display: none;
+/*===========================
+Description : Corporate Lef Menu
+*===========================*/
+
+.kutuSolMenuTree{
+    .kutuHeaderSolMenuTree{
+        display: none;
+    }
+    .kutuBodyDefault {
+        display: block;
+    }
 }
 
 .left-menu-title{
@@ -17,9 +23,8 @@
 .kutuSolMenuTree {
     height: 100%;
     position: relative;
-    .sStylerMainWrp {
-        display: none;
-    }
+    display: block;
+    
     .title{
         display: block;
         background: $color-17;

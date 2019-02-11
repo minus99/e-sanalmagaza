@@ -1,8 +1,14 @@
+/*===========================
+Description: Grid Subscriptions Desktop
+===========================*/
 .site-pages-member {
-    .ems-page-default-member-order {
+    
+    /*Page Layout Space Reset*/
+    .ems-page-default-abonelik{
         padding: $reset;
     }
-    .ems-grid-default-order{
+
+    .ems-grid-default-subscriptions{
         .ems-grid-header{
             background: none;
             width: 100%;
@@ -18,20 +24,15 @@
         }
         .ems-grid-header:first-child {
             @include grid;
-            grid-template-columns: 1.5fr 1fr 1fr 1.5fr 1.5fr 0.5fr;
+            grid-template-columns:2fr 1fr 1fr .5fr 2fr .5fr;
             grid-template-rows: minmax(0, auto);
-            >div {
-                &.ems-grid-img,
-                &.ems-grid-remove {
-                    span {
-                        display: none;
-                    }
-                }
+            .ems-grid-use{
+                span{display: none;}
             }
         }
         .ems-grid-row{
-            display: grid; 
-            grid-template-columns: 1.5fr 1fr 1fr 1.5fr 1.5fr 0.5fr;
+            @include grid;
+            grid-template-columns:2fr 1fr 1fr .5fr 2fr 0.5fr;
             min-height: 55px;
             width: 100%;
             margin-bottom: $reset;
@@ -42,18 +43,15 @@
             > div{
                 border-top: none;
                 padding: $reset;
+                white-space: inherit;
+                width: auto;max-height: inherit;
+                overflow: visible;
+                text-overflow: inherit;
             }
-            .ems-grid-date{
-                color: #000000;
-            }
-            .ems-grid-order-no{
-                font-weight: normal;
-            }
-            .ems-grid-add-to-cart{
+            .ems-grid-use{
                 a{
-                    color: $color-36;
+                @include transition(all .2s ease);
                     font-size: $small-12;
-                    @include transition(all .2s ease);
                     &:hover{
                         color: $color-8;
                     }

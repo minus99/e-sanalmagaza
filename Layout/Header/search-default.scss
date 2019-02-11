@@ -229,7 +229,7 @@
                     }
                     .suggest_urnsubscriptionprice {
                         display: inline-block;
-                        @include space(padding, all, 3px);
+                        @include space(padding, all, $small-5);
                         border-radius: 3px;
                         border: 1px solid $color-18;
                         @include Position(absolute, bottom 15px right 20px);
@@ -238,7 +238,7 @@
                             display: block;
                             color: $color-18;
                             &:first-child{
-                                font-size: 11px;
+                                font-size: $small-12;
                             }
                             &:last-child{
                                 font-family: $bold;
@@ -247,6 +247,31 @@
                                     content:'₺';
                                 }
                             }
+                        }
+                    }
+                    span.suggest_urndiscountrate.emos_invisible{
+                        display: block;
+                        span{
+                            display: block;
+                            background: $color-8;
+                            border-radius: 3px;
+                            color: $white;
+                            text-align: left;
+                            width: 24px;
+                            padding: 3px;
+                            font-family: $bold;
+                            font-size: $small-14;
+                            margin-right: $small-10;
+                            &:before{
+                                content:'%';
+                                display: block;
+                            }
+                            &:empty{
+                                display: none;
+                            }    
+                        }
+                        &:empty{
+                            display: none;
                         }
                     }
                     &:empty{display: none;}
@@ -264,7 +289,8 @@
                     span b{font-weight: normal;}
                 }
                 td:nth-child(3),
-                td:nth-child(5){display: none;}
+                td:nth-child(5),
+                td:nth-child(9){display: none;}
 
                 td:nth-child(4),
                 td:nth-child(6){

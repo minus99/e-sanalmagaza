@@ -44,7 +44,8 @@
  .site-pages-member{
      /*Add New Button*/
     .add-new-address{
-        width: auto;
+        width: 100%;
+        padding:$small-10 $small-20;
     }
     /*Grid Row*/
     .ems-grid-default-address{
@@ -52,6 +53,11 @@
         border: none;
         border-radius: 0;
         max-width: inherit;
+        max-height: 240px;
+        .ems-grid-adress-row{
+            margin-left: $small-20;
+            margin-right: $small-20;
+        }
     }
     .ems-address-buttons{
         a.btnDefault{
@@ -67,9 +73,19 @@
     .ems-page-new-address{
         max-width: 100%;
         @include space(margin, all, $reset);
+
+        /*Default Title Show*/
+        .page-top-title{
+            display: block;
+        }
+
         .back-to-card{
             display: inline-block;
             @include space(margin, bottom, $reset);
+            @include Position(fixed, top 0 left 0);
+            z-index: 35;
+            display: block;
+            width: 100%;
         }
     }
  }

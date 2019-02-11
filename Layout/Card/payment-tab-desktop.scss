@@ -6,6 +6,7 @@ Description : Ödeme seçenek tab sekmesi
         li{
             margin-right: $small-10;
             a{
+                @include transition(all .2s ease);
                 padding: $small-20 $small-20 $small-20 60px;
                 font-size: $small-15;
                 &:before{
@@ -15,6 +16,9 @@ Description : Ödeme seçenek tab sekmesi
                     left: 20px;
                     margin-top: -12px;
                     font-size: 24px;
+                }
+                &:hover{
+                    border-color: $color-19;
                 }
             }
         }

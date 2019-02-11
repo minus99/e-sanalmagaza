@@ -32,6 +32,11 @@ input:not([type="checkbox"]):not([type="radio"]){
 input[type="email"]:disabled {
     background: #ebebeb !important;
 }
+#plhUyelikRefEmail{
+    input[type="text"] {
+        background: #ebebeb !important;
+    }   
+}
 
 //-------------------------------------------//
 //----- TEXTAREA STYLE
@@ -247,7 +252,7 @@ input[type="radio"]:checked{
 
 .ems-form-err{
     .ems-form-label{
-        color: $black;
+        color: $color-34;
     }
 }
 
@@ -323,33 +328,55 @@ $alert-info-background:             $color-8;
 $alert-info-border:                 $color-9;
 .ems-message{
     width: 100%;
-    
     font-size: 14px;
     font-weight: 500;
     text-align: center;
-    line-height: 1.5;
-
+    line-height: 1.3;
     border-width: 1px;
     border-style: solid;
     margin: 15px 0;
-    padding: 10px;
+    padding: 10px 10px 10px 40px;
     border-radius: 3px;
-    &:empty{
-        display: none;
+    position: relative;
+    &:before{
+        font-family: 'icomoon';
+        position: absolute;
+        top: 5px;
+        left: 5px;
+        width: 30px;
+        height: 30px;
+        line-height: 30px;
+        text-align: center;
+        font-size: 10px;
     }
     &.ems-message-error{
         color: $alert-error-color;
         background-color: $alert-error-background;
         border-color: $alert-error-border;
+        &:before{
+            content:'\e90d';
+            color: $color-34;
+        }
     }
     &.ems-message-success{
         color: $alert-success-color;
         background-color: $alert-success-background;
         border-color: $alert-success-border;
+        &:before{
+            content:'\e90b';
+            color: $color-31;
+        }
     }
     &.ems-message-info{
         color: $alert-info-color;
         background-color: $alert-info-background;
         border-color: $alert-info-border;
+        &:before{
+            content:'\e90d';
+            color: $alert-info-color;
+        }
+    }
+    &:empty{
+        display: none;
     }
 }
