@@ -51,6 +51,13 @@
     }
     .ems-user-pages{
         position: relative;
+        .scroll-control{
+            position: static;
+            top: 0;
+            width: 100%;
+            height: auto;
+            overflow-y: visible;
+        }
         .ems-col {
             a {
                 @include space(padding, all, 6px 20px);

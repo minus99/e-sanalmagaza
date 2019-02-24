@@ -14,7 +14,7 @@
     border-top: 1px solid $color-6;
     .ems-grid-row {
         position: relative;
-        @include space(padding, all, $small-15 $small-30 $small-15 100px);
+        @include space(padding, all, $small-15 $small-20 $small-15 100px);
         border-bottom: 1px solid $color-6;
     }
 
@@ -26,7 +26,10 @@
         height: 70px;
         margin-top: -35px;
     }
-
+    .unit-ttl{
+        font-size: $small-12;
+        color: #8E8E8E;
+    }
     .ems-grid-piece-wrapper {
         position: relative;
         display: inline-block;
@@ -45,6 +48,8 @@
         }
     }
 
+    .brFiyat,
+    .satBrFiyat,
     .brutFiyat,
     .netFiyat,
     .topFiyat{
@@ -54,25 +59,28 @@
         }
     }
 
-    .brutFiyat, .topFiyat {
+    .brutFiyat, .topFiyat, .brFiyat{
         font-size: $small-12;
         text-decoration: line-through;
     }
     .brutFiyat{display: none !important;}
     
-    .netFiyat {
+    .netFiyat, .satBrFiyat{
         font-size: $small-16;
         font-family: $bold;
     }
 
     .ems-grid-price-total {
-        margin-top: $small-10;
-        width: 50%;
+        margin-top: $small-5;
         >div {
             display: inline-block;
             vertical-align: middle;
         }
         .dvSepetKazancOran {
+            display: block;
+            &:empty{display: none;}
+        }
+        .sepet_KazancOran {
             display: block;
             border-radius: 3px;
             background: $color-8;
@@ -80,9 +88,16 @@
             font-size: $small-14;
             font-family: $bold;
             height: 40px;
-            line-height: 40px;
-            @include space(padding, all, 2px $xs);
+            min-width: 25px;
+            @include space(padding, all, $xs $xs);
             @include space(margin, right, $small);
+            &:before{
+                content:'%';
+                display: block;
+                color: $white;
+                font-size: $small-14;
+                font-family: $bold;
+            }
             &:empty{display: none;}
         }
     }
@@ -102,21 +117,26 @@
         .prom_ad{
             margin-right: $small-5;
         }
-        .prom_ad,
-        .prom_indtutar{
+        .prom_ad{
             margin-top: 1px;
             color: $color-18;
             display: inline-block;
             vertical-align: middle;
             &:empty{display: none;}
         }
+        .prom_indtutar{display: none;}
         span{
             ul li{
                 margin-top: $small-5;
             }
         }
     }
-
+    .price-unit{
+        vertical-align: top !important;
+    }
+    .basket-prc-wrp{
+        margin-right: $small-20;
+    }
     .ems-grid-add-remove{
         position: absolute;
         top:10px;
@@ -140,14 +160,11 @@
     }
 
     .ems-grid-subscriptions {
-        float: right;
-        margin-top: $small-10;
-        text-align: center;
+        margin-top: $small-5;
         &:empty{display: none;}
         .baslik {
             display: none;
         }
-
         .abonelikUrun {
             display: inline-block;
             border-radius: 3px;

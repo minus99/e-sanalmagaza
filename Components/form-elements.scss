@@ -115,12 +115,12 @@ select{
     }
 }
 
-.sStylerWrp_checkbox{
+.sStylerWrp_checkbox, .sStylerWrp_radio{
     display: inline-flex;
     align-items: center;
     margin-right: 10px;
     cursor: pointer;
-    .cStyler{
+    .cStyler, .rStyler{
         border: 1px solid $very-dark-g;
         border-radius: 3px;
         width: 17px;
@@ -225,7 +225,7 @@ input[type="radio"]:checked{
         display: flex;
         align-items: flex-start;
         .checkbox{
-            display: inline-flex;
+            display: inline-block;
         }
         .sStylerWrp_checkbox{
             position: relative;
@@ -368,12 +368,11 @@ $alert-info-border:                 $color-9;
         }
     }
     &.ems-message-info{
-        color: $alert-info-color;
-        background-color: $alert-info-background;
+        color: $alert-info-color; 
         border-color: $alert-info-border;
+        padding-left: $small-10;
         &:before{
-            content:'\e90d';
-            color: $alert-info-color;
+            display: none;
         }
     }
     &:empty{

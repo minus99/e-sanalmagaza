@@ -1,4 +1,5 @@
 .pageFavoriGrupListemWrp{
+    padding: $small-20;
     .ems-new-favorite-group{
         text-align: right;
         a{
@@ -30,19 +31,34 @@
 /*====================
     Grid Row Layout
 ====================*/
-
 .ems-grid-default-favorite-group{
+    > div{
+        border:1px solid $color-6;
+        border-radius: 5px;
+        margin-bottom: $small-20;
+    }
+
     .uk-accordion-content{display: none;}
     .uk-accordion-title{
         > span{
             &.ems-grid-icon{display: none;}
         }
+        .ems-grid-name{
+            display: block;
+            @include space(padding, all, $small-14 $small-20);
+        }
         .ems-grid-links{
+            border-top: 2px solid $color-6;
+            > span{
+                @include column-double;
+                text-align: center;
+                @include space(padding, all, $small-14 $small-5);
+            }
             a{
                 color: $color-36;
                 font-size: $small-14;
                 text-decoration: underline;
             }
         }
-    }   
+    }
 }

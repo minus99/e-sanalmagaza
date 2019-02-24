@@ -22,7 +22,7 @@
         >li {
             display: inline-block;
             vertical-align: middle;
-            margin-left: 30px;
+            margin-left: $small-20;
 
             /*Mobile Reset*/
             border-bottom: none;
@@ -40,7 +40,7 @@
                 overflow: hidden;
 
                 /*Mobile Reset*/
-                @include space(padding, all, 16px 0);
+                @include space(padding, all, 16px $small-5);
 
                 &:after {
                     content: '';
@@ -85,9 +85,12 @@
                 background: none;
 
                 >a {
-                    @include space(padding, left, $reset);
-                    @include space(padding, right, $reset);
+                    @include space(padding, left, 2px);
+                    @include space(padding, right, 2px);
                 }
+            }
+            &.ma-lft-50{
+                margin-left: $small-50;
             }
         }
     }
@@ -206,6 +209,7 @@
             }
 
             &.cover {
+                @include grid;
                 grid-template-columns: 1fr;
             }
         }
@@ -247,11 +251,5 @@
 
     .level-1>li.selected .level-2 {
         @include grid;
-    }
-}
-
-body.main-menu-ready {
-    .sub-nav-header-menu {
-        display: block;
     }
 }

@@ -38,7 +38,12 @@
         .ems-grid-row{
             border-bottom: none;
         }
-        .ems-grid-piece{display: none;}
+        .ems-grid-piece{
+            &:after{
+                content:'Adet';
+            }
+        }
+        .ems-grid-add-remove{display: none;}
         .ems-grid-subscriptions .abonelikUrun{
             border: none;
             text-align: left;

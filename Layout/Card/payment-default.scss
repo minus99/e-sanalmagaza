@@ -61,13 +61,20 @@
     .ems-card-wrapper{
         display: none;
     }
+    .izy-mainContainer{
+        display: block;
+    }
 }
+
+/*Payment Other*/
 .ems-pay-other{
     padding-left: $small-20;
     padding-right: $small-20;
 }
 
-/*Kredi Kartı*/
+/*******
+Kredi Kartı
+*******/
 .tableTitleOdemeBilgiKrediKarti {
     display: none;
 }
@@ -206,9 +213,47 @@
     }
 }
 
+/******
+    IzyPay Payment
+******/
+.izy-mainContainer {
+    .izyNewCreditCard{
+        > span{
+            vertical-align: middle;
+        }
+    }
+}
+.izy-dvCardList {
+    padding: $small-15 $small-15 $small-15 $small-15;
+    border-radius: 3px; 
+    border: 2px solid $color-6;
+    margin-bottom: $small-20;
+}
+.deleteCreditCard{
+    margin-bottom: $small-15;
+    padding-bottom: $small-10;
+    border-bottom: 1px solid $color-6;
+    display: none;
+}
+.izyCard.cardItem{
+    position: relative;
+    margin-bottom: $small-10;
+    .lnkDeleteIyziPayCard{
+        display: inline-block;
+        border-radius: 3px;
+        border: 2px solid $color-6;
+        padding: $small-7 $small-10;
+        font-family: $medium;
+        font-size: $small-12;
+        margin-top: $small-10;
+        color: $color-36;
+        min-width: 80px;
+        text-align: center;
+    }
+}
+
 /*Adress*/
 .ems-cart-pay-inner {
-
     .ems-delivery-address {
         border-radius: 3px;
         border: 1px solid $color-4;

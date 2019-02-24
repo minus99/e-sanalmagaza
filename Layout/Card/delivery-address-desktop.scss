@@ -78,6 +78,7 @@ a.btnAdresEkle:hover{
     .ems-form-inner {
         @include grid;
         grid-template-columns: 1fr 1fr;
+        align-items: center;
         grid-gap: $small-20;
         padding: $reset;
 

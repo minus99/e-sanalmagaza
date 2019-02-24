@@ -23,7 +23,7 @@
 //-------------------------------------------//
 //----- LAYOUTS
 //-------------------------------------------//
-@import 'Layout/_import';
+
 
 // Header Static Default
 @import 'Layout/Static/aside-menu-default';
@@ -81,10 +81,14 @@
 @import 'Layout/MemberPages/grid-favorites-group-default';
 @import 'Layout/MemberPages/grid-order-list-default';
 @import 'Layout/MemberPages/grid-order-detail-default';
+@import 'Layout/MemberPages/grid-order-cancel-default';
 @import 'Layout/MemberPages/grid-password-change-default';
 @import 'Layout/MemberPages/grid-stock-list-default';
 @import 'Layout/MemberPages/grid-message-list-default';
 @import 'Layout/MemberPages/grid-subscriptions-default';
+@import 'Layout/MemberPages/grid-coupon-list-default';
+@import 'Layout/MemberPages/grid-message-detail-default';
+@import 'Layout/MemberPages/grid-subscriptions-detail-default';
 
 // Corporate Brands
 @import 'Layout/Brands/swiper-default';
@@ -185,10 +189,14 @@
         @import 'Layout/MemberPages/grid-favorites-group-desktop';
         @import 'Layout/MemberPages/grid-order-list-desktop';
         @import 'Layout/MemberPages/grid-order-detail-desktop';
+        @import 'Layout/MemberPages/grid-order-cancel-desktop';
         @import 'Layout/MemberPages/grid-password-change-desktop';
         @import 'Layout/MemberPages/grid-stock-list-desktop';
         @import 'Layout/MemberPages/grid-message-list-desktop';
         @import 'Layout/MemberPages/grid-subscriptions-desktop';
+        @import 'Layout/MemberPages/grid-coupon-list-desktop';
+        @import 'Layout/MemberPages/grid-message-detail-desktop';
+        @import 'Layout/MemberPages/grid-subscriptions-detail-desktop';
 
         // Corporate Brands
         @import 'Layout/Brands/swiper-desktop';

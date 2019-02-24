@@ -309,7 +309,9 @@ body[class*=jconfirm-no-scroll-] {
     -webkit-animation-iteration-count: infinite;
     animation-iteration-count: infinite;
 }
-
+.jconfirm .jconfirm-content{
+    min-height: 350px !important;
+}
 
 .jconfirm .jconfirm-box div.jconfirm-content-pane{
     height: auto;

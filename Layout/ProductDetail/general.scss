@@ -4,6 +4,8 @@
         background: none;
         > span{
             &:first-child{
+                display: inline-block;
+                vertical-align: middle;
                 @include space(padding, left, $reset);
                 @include space(padding, right, $reset);
             }
@@ -19,6 +21,9 @@
                 @include space(margin, right, $xs);
             }
         }
+        a:hover{
+            color: $color-8;
+        }
         .nav-prd-name{
             margin-left: $reset;
             &:before{
@@ -29,13 +34,4 @@
             }
         }
     }
-}
-
-.ratingOzet{
-    width: 85px;
-    height: 17px;
-    position: relative;   
-}
-.urunDetay_btnAboneOl.emos_invisible{
-    display: block;
 }

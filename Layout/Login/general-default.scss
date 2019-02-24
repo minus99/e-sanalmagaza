@@ -27,11 +27,23 @@
     .ems-form-inner{
         .sign-or{
             > span{
+                cursor: pointer;
                 display: block;
                 @include space(margin, top, 30px);
                 &:empty{display: none;}
             }
         }
+        .ems-field-double{
+            @include table-cell;
+            table-layout: fixed;
+        }    
+        #lnkSifremiUnuttum{
+            font-size: 13px;
+            color: #8E8E8E;
+        }
+    }
+    .obj-forget{
+        text-align: right;
     }
     .ems-form-obj{
         position: relative;
@@ -106,4 +118,8 @@ body.ems-signup-body{
             display: none;
         }
     }
+}
+
+.swiper-container-login{
+    display: none;
 }

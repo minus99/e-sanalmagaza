@@ -61,6 +61,12 @@ table{
                         color: $color-10;
                         background: $white;
                         font-size: $small-18;
+                        width: auto;
+                        height: auto;
+                        position: relative;
+                        top: 0;
+                        left: 0;
+                        transform: none;
                     }
                     &.checked{
                         &:before{

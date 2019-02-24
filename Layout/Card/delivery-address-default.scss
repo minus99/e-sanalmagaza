@@ -164,6 +164,9 @@ a.btnAdresEkle {
 ==========================
 */
 .ems-page-new-address {
+    .ems-form-inner{
+        padding: $small-20 $small-20 $small-30 $small-20;
+    }
     .adresTip {
         a{
             text-align: center;
@@ -204,12 +207,26 @@ a.btnAdresEkle {
             }
         }
     }
-    .ems-form-inner{
-        padding: $small-20 $small-20 $small-30 $small-20;
-    }
     .ems-field {
         textarea {
             height: 65px;
+        }
+        &.vergNoCheck,
+        &.vergCheck,
+        &.tcCheck,
+        &.tcCheck-2{
+            display: none;
+        }
+        &.tcCheck-2 {
+            .ems-form-obj{
+                display: inline-block;
+                vertical-align: middle;
+            }   
+            .ems-form-label{
+                margin-bottom: $reset;
+                display: inline-block;
+                vertical-align: middle;
+            } 
         }
     }
     .ems-field.button{
@@ -223,6 +240,24 @@ a.btnAdresEkle {
             background: none;
             color: $color-1;
             border-color: $color-6;
+        }
+    }
+}
+
+.bireysel{
+    .ems-page-new-address{
+        .ems-field.tcCheck,
+        .ems-field.tcCheck-2 {
+            display: block;
+        }
+    }
+}
+
+.kurumsal{
+    .ems-page-new-address{
+        .ems-field.vergNoCheck,
+        .ems-field.vergCheck {
+            display: block;
         }
     }
 }

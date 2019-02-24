@@ -15,7 +15,8 @@
         "PYT PYT"
         "BRD BRD"
         "GRD PYM"
-        "BRR BRR";
+        "BRR BRR"
+        "BTN BTN";
         padding-left: $reset;
 
         .order-cancel{
@@ -71,6 +72,10 @@
         }
         .bottom-step{
             grid-area: BTN;
+            text-align: left;
+            .btnSipIptal{
+                max-width: 190px;
+            }
         }
         .border-line-2{
             display: block;
@@ -158,7 +163,8 @@
         .ems-grid-row {
             display: block;
             position: relative;
-            padding: $small-5 $small-5 $small-5 100px;
+            padding: $small-10 $small-5 $small-10 100px;
+            min-height: 110px;
         }
     }
 }

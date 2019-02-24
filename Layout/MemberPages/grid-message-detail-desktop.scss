@@ -1,0 +1,47 @@
+.ems-page-default-message-detail{
+    .page-top-title{
+        display: none;
+    }
+    .ems-message-detail-form{
+        max-width: 680px;
+    }
+    .msgDtList{
+        @include grid;
+        grid-template-columns: 1fr 1fr;
+        border-radius: 3px;
+        .msgDtHeader{ 
+            border: 1px solid #E7E7E7;
+            border-right: none;
+        }
+        .msgDtContent{
+            border: 1px solid #E7E7E7;
+            border-left: none;
+        }
+        ul {
+            li{
+                border-top: 1px solid #E7E7E7;
+                &:first-child{border-top: none;}
+                padding: $small-10;
+            }
+        }
+    }
+    
+    .msgDtListBtn{
+        @include grid;
+        grid-template-columns: minmax(0,220px) minmax(0,220px);
+        grid-gap: 20px;
+        margin-top: 30px;
+        justify-content: flex-start;
+    }
+}
+
+/*
+Message Send
+===============================
+*/
+.pageMesajGonder{
+    .ems-form-inner{
+        padding-left: $reset;
+        padding-right: $reset;
+    }
+}

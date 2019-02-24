@@ -19,6 +19,7 @@
                 text-align: center;
                 display: inline-block;
                 @include space(margin, top, $xs);
+                position: relative;
             }
 
             i,
@@ -29,7 +30,18 @@
             i:before {
                 color: $vivid-orange;
             }
-
+            .icon-return{
+                small{
+                    position: absolute;
+                    bottom: 13px;
+                    left: 8px;
+                    font-size: 12px;
+                    height: auto;
+                    line-height: 1;
+                    font-family: bold;
+                    color: $color-8;
+                }
+            }
             .fm-r,
             .fm-m {
                 @extend .m-t-10;
@@ -37,8 +49,7 @@
 
             .fm-r {
                 color: #5a5a5a;
-                overflow: hidden;
-                max-height: 45px;
+                min-height: 50px;
             }
         }
     }

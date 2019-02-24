@@ -29,16 +29,31 @@
         }
     }
     .icon-mb-card{
-        small{display: none;}
+        position: relative;
+        small{
+            @include Position(absolute, top 0 right 0);
+            color: $color-8;
+            font-family: $regular;
+            font-size: $small-10;
+            width: $small-17;
+            height: $small-17;
+            line-height: $small-17;
+            text-align: center;
+            border-radius: $small-17;
+            background: $white;
+        }
     }
     .navbar-item-logo{
-        width: 40%;
+        width: 45%;
         @include space(padding, all, $xMedium $xs $xMedium $xs);
         vertical-align: middle;
+        h1{vertical-align: middle;}
         h1 img{height:30px;}
+        .ems-back-to-site {display: none;}
     }
+    
     .navbar-item-mini-member{
-        width: 60%;
+        width: 55%;
         vertical-align: middle;
         @include space(padding, all, $xMedium $xMedium $xMedium $reset);
     }

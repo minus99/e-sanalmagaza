@@ -9,7 +9,7 @@
     grid-template-areas:
         "ONE TWO"
         "ONE TRE";
-
+    grid-template-columns: minmax(0,680px) minmax(0,480px);
     .mt-10 {
         margin-top: 0;
     }
@@ -69,6 +69,7 @@
 
     /*Tekli Banner*/
     &-single {
+        @include grid;
         grid-column-gap: 0;
         grid-row-gap: 0;
         grid-template-columns: 1fr;
@@ -83,8 +84,8 @@
                     width: 100%;
                     max-width: 300px;
                     bottom: inherit;
-                    top: 50%;
-                    @include setTransform(translateY(-50%));
+                    top: 150px;
+                    //@include setTransform(translateY(-50%));
                     height: auto;
                 }
             }
@@ -125,6 +126,21 @@
         }
     }
 }
+
+/*Banner Other Type*/
+.grid-banner-box.lr{
+    grid-template-areas:
+    "TWO ONE"
+    "TRE ONE";
+}
+
+.grid-banner-box-single.lt{
+    > div:nth-child(1) .grid-banner-box-text{
+        left: 0;
+        right: inherit;
+    }
+}
+
 .btnBannerDefault {
     @include space(margin, top, 30px);
 }

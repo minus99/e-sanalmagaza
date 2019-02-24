@@ -154,14 +154,22 @@
                 i{
                     line-height: $small-32;
                     display: block;
+                    &:before{
+                        color: $gray;
+                    }
                 }
                 i.icon-view-3:before{
-                    font-size:$small-19;
-                    color: $gray; 
+                    font-size:$small-19; 
                 }
                 i.icon-view-4:before{
                     font-size:$small-26;
-                    color: #152b3c;
+                }
+            }
+            &.selected{
+                a{
+                    i:before{
+                        color: #152b3c;
+                    }
                 }
             }
         }

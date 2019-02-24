@@ -20,6 +20,7 @@
     div[id$="plhFavoriKayitYok"],
     div[id$="plhSiparisYokLabel"],
     div[id$="plhAbonelikKayitYokLabel"],
+    div[id$="plhFavoriGrupKayitYokLabel"],
     span[id$="lbfKAYITYOK_FIYATHABERCI"]>.ems-message,
     span[id$="lbfKAYITYOK_STOKHABERCI"]>.ems-message,
     span[id$="lbfUYM_KAYITYOK_MESAJ"]>.ems-message,
@@ -60,32 +61,40 @@
     }
 
     /*Member Pages Message*/
-    .ems-page-default-favorites-empty{
+    
+    /*Favorites*/
+    .ems-page-default-favorites-empty,
+    .ems-page-default-favorites-group-empty{
         .ems-page-favorites-empty {
             display: block;
         }
         .select-cfg{display: none;} 
     }
+    /*Order*/
     .ems-page-default-member-order-empty {
         .ems-page-order-empty {
             display: block;
         }
     }
+    /*Followed*/
     .ems-page-default-follow-list-empty {
         .ems-page-follow-list-empty {
             display: block;
         }
     }
+    /*Coupon*/
     .ems-page-default-coupon-empty{
         .ems-page-coupon-empty{
             display: block;
         }
     }
+    /*Message*/
     .ems-page-default-message-empty{
         .ems-page-message-empty{
             display: block;
         }
     }
+    /*Abone*/
     .ems-page-default-abonelik-empty{
         .ems-page-abonelik-empty{
             display: block;
@@ -179,6 +188,7 @@
  .site-pages-member {
 
     .urunPaging {
+        display: none;
         table>tbody>tr>td {
             width: auto;
 

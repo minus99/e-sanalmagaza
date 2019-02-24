@@ -18,6 +18,7 @@
     }
     /*Add New Address*/
     .ems-page-new-address{
+        max-width: 680px;
         .back-to-card{
             display: inline-block;
             @include Position(relative, top inherit left inherit);

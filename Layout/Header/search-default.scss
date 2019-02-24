@@ -174,13 +174,19 @@
         }
     }
     .prd{
-        padding-top: 50px;
         h3{
             display: none;
         }
     }
+    .cat{
+        .suggest_link{
+            .fullCatImage,
+            .fullCatLink {display: none;}
+        }
+    }
     .sHolder{
         .suggest_link{
+            cursor: pointer;
             > a{
                 display: block;
                 font-size: $small-15;
@@ -279,33 +285,39 @@
                 td:nth-child(2){
                     display: block;
                     span{
-                        font-size: $small-15;
+                        font-size: $small-14;
                         display: block;
-                        @include space(margin, bottom, $small);
+                        @include space(margin, bottom, $small right 80px);
                         min-height: 37px;
                         max-height: 37px;
                         overflow: hidden;
+                        b{display: none;}
                     }
                     span b{font-weight: normal;}
                 }
                 td:nth-child(3),
-                td:nth-child(5),
-                td:nth-child(9){display: none;}
+                td:nth-child(6),
+                td:nth-child(8){display: none;}
 
-                td:nth-child(4),
-                td:nth-child(6){
+                td:nth-child(5),
+                td:nth-child(7){
                     display: block;
-                    width: 60%;
+                    width: 85%;
+                }
+                td:nth-child(4){
+                    float: left;
+                    width: 35px;
                 }
             }
         }
     }
     .prdCount{
-        position: absolute;
-        top: $small-20;
-        left: $small-20;
-        z-index: 1;
-        display: inline-block;
+        background: #fff;
+        display: block; 
+        padding-left: $small-30;
+        padding-top: $small-15;
+        padding-bottom: $small-15;
+        border-top: 2px solid $color-6;
         h3{
             font-family: $regular;
             font-size: $small-15;

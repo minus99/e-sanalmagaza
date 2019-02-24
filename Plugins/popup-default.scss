@@ -17,9 +17,12 @@ a.btnMinPpCl{
     Login Popup 
 ==================== */
 .login-popup{
-    text-align: center;
+    text-align: left;
     img{
         max-width: 224px;
+        margin-left: auto;
+        margin-right: auto;
+        display: block;
     }
     .minPpBdy{
         padding: 20px;

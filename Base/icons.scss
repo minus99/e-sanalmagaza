@@ -14,6 +14,10 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+
+.icon-wallet:before {
+  content: "\e934";
+}
 .icon-hearth-active:before {
   content: "\e933";
   color: none;

@@ -211,7 +211,7 @@
     background: $white;
     border-color: $color-8;
     color: $color-8;
-    @include space(margin, top, $large);
+    @include space(margin, top, $small-10);
 }
 
 /*Popup*/
@@ -259,7 +259,7 @@
     .emosInfinitePopup {
         max-height: 285px;
         overflow-y: auto;
-
+        margin-top: $small-10;
         &:empty {
             display: none;
         }
@@ -347,7 +347,6 @@
     font-family: $medium;
     font-size: $small-13;
     display: block;
-    padding-bottom: $small-10;
 }
 
 .emosInfinitePopup {

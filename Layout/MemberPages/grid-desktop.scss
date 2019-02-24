@@ -1,5 +1,4 @@
 .site-pages-member{
-
     .ems-page-default{
         position: relative;
     }
@@ -8,7 +7,7 @@
         padding-right: 120px;
     }
     /*Pages Title*/
-    .page-top-title {
+    .page-top-title, .pageHeaderSifremiUnuttum{
         display: block;
         padding-top: $small-12;
         padding-bottom: $small-12;
@@ -27,6 +26,7 @@
     div[id$="plhFavoriKayitYok"],
     div[id$="plhSiparisYokLabel"],
     div[id$="plhAbonelikKayitYokLabel"],
+    div[id$="plhFavoriGrupKayitYokLabel"],
     span[id$="lbfKAYITYOK_FIYATHABERCI"]>.ems-message,
     span[id$="lbfKAYITYOK_STOKHABERCI"]>.ems-message,
     span[id$="lbfUYM_KAYITYOK_MESAJ"]>.ems-message,

@@ -32,14 +32,16 @@
 .ems-grid-payment-wrapper {
     .ems-grid-default-cart {
         .ems-grid-row{
-            grid-template-columns: 70px 1fr 1fr;
+            grid-template-columns: 70px 50px 1fr;
             grid-template-areas:
             "IMG NAM NAM"
-            "IMG TTL SBR";
+            "IMG PIC TTL"
+            ". . SBR";
             padding-left: $reset;
             padding-right: $reset;
             border-bottom: none;
-            align-items: flex-start;
+            align-items: center;
+            grid-gap: 5px;
         }
         .ems-grid-name a{
             min-height: 36px;
@@ -51,8 +53,12 @@
         .ems-grid-name{
             grid-area: NAM;
         }
+        .ems-grid-piece{
+            grid-area: PIC;
+        }
         .ems-grid-subscriptions{
             grid-area: SBR;
+            text-align: right;
         }
         .ems-grid-price-total {
             grid-area: TTL;

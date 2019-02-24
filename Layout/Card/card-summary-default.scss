@@ -45,7 +45,12 @@
                 font-family: $bold;
                 padding-top: $small-15;
             }
-
+            td{
+                padding-left: $reset;
+            }
+            span.ib-el{
+                margin-right: $small-5;
+            }
             small {
                 font-family: $regular;
                 font-size: $small-13;
@@ -77,6 +82,13 @@
         cursor: pointer;
         display: block;
         @include space(padding, all, $small);
+    }
+}
+.ems-cart-cancel-coupon{
+    text-align: right;
+    a.btnHediyeCekiIptal{
+        margin-top: $small-10;
+        width: 100%;
     }
 }
 

@@ -31,6 +31,9 @@
     .mb-mt-20 {
         @include space(margin, top, $large);
     }
+    &-single{
+        display: none;
+    }
 }
 
 .fm-r {

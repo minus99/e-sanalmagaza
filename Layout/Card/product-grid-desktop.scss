@@ -2,7 +2,7 @@
     border-top: none;
     .ems-grid-row {
         @include grid;
-        grid-template-columns:70px 1.5fr minmax(0,60px) 1fr 1fr 30px;
+        grid-template-columns:70px 1fr minmax(0,100px) 1fr .5fr 30px;
         grid-template-rows: minmax(0, auto);
         align-items: center;
         grid-gap: 10px;
@@ -24,13 +24,22 @@
         width: auto;
         margin-top: $reset;
     }
+    .price-unit{
+        align-self: baseline;
+    }
     .ems-grid-subscriptions {
-
-        float: none;
         margin-top: $reset;
         &:empty{
             display: inherit;
         }
+    }
+    .basket-prc-wrp{
+        margin-right: $reset;
+    }
+    .ems-grid-price-total{
+        @include grid;
+        grid-template-columns: 35px 1fr 1fr;
+        align-items: center;
     }
 
     .ems-grid-delete{

@@ -149,20 +149,24 @@
     }
 }
 
-.urunListe_urunStokUyari{
-    position: absolute; 
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: auto;
-    background: #fff;
-    z-index: 3;
-    &:empty{
-        display: none;
-    }
-    span{
+.urunListe_sonKacUrun{
+    display: inline-block !important;
+    > span{
+        position: absolute; 
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: auto;
+        background: #fff;
+        z-index: 3;
         color: $dark-lime-green;
         font-size: $small-15;
+        &:empty{
+            display: none;
+        }
+    }
+    &:empty{
+        display: none !important;
     }
 }
 
@@ -249,6 +253,10 @@
     img {
         display: none;
     }
+}
+
+.ems-prd-list-cart-add{
+    display: none;
 }
 
 .urunListe_sepetGrup {

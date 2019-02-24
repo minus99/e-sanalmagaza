@@ -5,7 +5,7 @@
     ". A A A ."
     ". . . B ."
     ". D . C .";
-    @include space(padding, top, 70px);
+    @include space(padding, top, $small-50);
     @include space(padding, left, $small);
     @include space(padding, right, $small);
     @include space(padding, bottom, 50px);
@@ -16,7 +16,7 @@
         max-width: 380px;
         position: relative;
         z-index: 2;
-        @include space(margin, top, 70px);
+        @include space(margin, top, 40px);
         @include space(margin, left, auto);
         @include space(margin, right, auto);
         @include space(padding, left, $reset);
@@ -60,6 +60,9 @@
                 @include space(margin, top, 40px);
             }
         }
+        #lnkSifremiUnuttum:hover{
+            text-decoration: underline;
+        }
     }
     .logo{
         text-align: left;
@@ -87,4 +90,8 @@
     background: $white;
     border: 1px solid $da-light-gray;
     border-radius: 3px;
+}
+
+.swiper-container-login{
+    display: block;
 }

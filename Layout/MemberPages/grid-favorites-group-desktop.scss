@@ -2,6 +2,7 @@
     Grid Layout
 ====================*/
 .pageFavoriGrupListemWrp{
+    padding: $reset;
     .uk-container{
         @include grid;
         grid-template-columns:1fr 1fr;
@@ -38,7 +39,9 @@
 
 .ems-grid-default-favorite-group{
     > div{
-        border-top:1px solid $color-6;
+        border-width:1px 0 0 0;
+        border-radius: 0;
+        margin-bottom: $reset;
         &:first-child{
             border-top: none;
         }
@@ -51,11 +54,20 @@
         min-height: 50px;
         grid-gap: $small-5;
         padding: $small-5 $small-20;
+        .ems-grid-name{
+            @include space(padding, all, $reset);
+        }
         .ems-grid-links{
             text-align: right;
             @include grid;
             grid-template-columns: 1fr 1fr;
             justify-items: center;
+            border-top:none;
+            > span{
+                @include column-reset;
+                text-align: left;
+                @include space(padding, all, $reset);
+            }
             a{
                 @include transition(all .2s ease);
                 font-size: $small-12;

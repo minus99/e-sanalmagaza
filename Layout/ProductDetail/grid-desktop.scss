@@ -11,9 +11,6 @@
     ". RW1 . RW2 ."
     ". RW3 . RW2 ."
     "RW4 RW4 RW4 RW4 RW4";
-    max-width: 1200px;
-    margin-left: auto;
-    margin-right: auto;
 }
 .inner-row-1{
     grid-area:RW1;
@@ -34,7 +31,13 @@
     .inner-row-1{
         @include space(padding, all, $reset);
     }
+    .inner-row-2-holder{
+        position: -webkit-sticky;
+        position: sticky;
+        top: 130px;
+    }
 }
+
 
 /*Template*/
 .ems-detail-prd-landing{

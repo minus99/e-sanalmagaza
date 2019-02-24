@@ -27,10 +27,7 @@
 
     input:not([type="checkbox"]):not([type="radio"]) {
         height: 60px;
-        background: $color-9;
         font-size: $small-17;
-        color: $white;
-        border-color: $color-9;
         border-radius: 3px;
     }
 }
@@ -61,11 +58,6 @@
 
 .urunDetay_urunAdet .counter-btn.bottom-btn {
     bottom: 15px;
-}
-
-.urunDetay_urunAdet .counter-btn.top-btn:after,
-.urunDetay_urunAdet .counter-btn.bottom-btn:after {
-    color: $white;
 }
 
 .grid-triple-bts {
@@ -152,7 +144,6 @@
         }
     }
 }
-
 
 .btnAbonelikSepeteAt{
     @include space(padding, top, $small-16);
