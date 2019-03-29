@@ -73,7 +73,8 @@
         .bottom-step{
             grid-area: BTN;
             text-align: left;
-            .btnSipIptal{
+            .btnSipIptal,
+            .btnSipIade{
                 max-width: 190px;
             }
         }

@@ -55,6 +55,6 @@
     .navbar-item-mini-member{
         width: 55%;
         vertical-align: middle;
-        @include space(padding, all, $xMedium $xMedium $xMedium $reset);
+        @include space(padding, all, $xMedium $small $xMedium $reset);
     }
 }

@@ -151,10 +151,7 @@
 }
 
 .ems-detail-desc {
-    border: 1px solid #dddddd;
-    border-radius: 3px;
     @include space(margin, top, $xMedium);
-    @include space(padding, all, $small-15 $small-20);
     display: none;
 
     &:empty {
@@ -164,10 +161,35 @@
     >div {
         border-top: 1px solid #dddddd;
         font-size: $small-15;
-        @include space(padding, all, $small-15 $small-20);
-
+        
         &:first-child {
             border-top: none;
+        }
+    }
+    table{
+        width: 100%;
+        tbody tr{
+            border-top: 1px solid #dddddd;
+            @include space(margin, top, $small-20);
+            display: block;
+            border-radius: 3px;
+            border: 1px solid #dddddd;
+            &:empty{display: none;}
+            td{
+                @include space(padding, all, $small-15 $small-20);
+                font-size: $small-15;
+                display: block;
+                &:empty{
+                    &:before{
+                        content:'-';
+                    }
+                }
+                &:first-child{
+                    background: #f5f5f5;
+                    font-family: $medium;
+                    border-bottom: 1px solid #dddddd;
+                }
+            }
         }
     }
 }
@@ -354,7 +376,8 @@
         position: relative;
         min-width: 100px;
         max-width: 120px;
-        min-height: 40px;
+        min-height: 60px;
+        vertical-align: top;
         @include space(padding, all, $small-15 $small-10 $small-15 45px);
 
         &:before {
@@ -438,6 +461,7 @@
         .urunDetay_urunStokUyari {
             display: inline-block;
         }
+        .urunDetay_urunStokUyari{display: none !important;}
     }
 
     &.spr38 {
@@ -517,8 +541,6 @@
 }
 
 .ems-detail-promotion {
-    display: none;
-
     .promosyonBilgi {
 
         span.promo {
@@ -534,6 +556,8 @@
             overflow: visible;
             width: 100%;
             max-width: 150px;
+            display: inline-block;
+            &:empty{display: none;}
 
             &:before {
                 font-family: 'icomoon';
@@ -587,6 +611,22 @@
     }
 }
 
+.ems-detail-subscriber-price-discount{
+    > span{
+        font-family: $regular;
+        font-size: 22px;
+        display: block;
+        margin-top: 5px;
+        &:empty{
+            display: none;
+        }
+        &:before {
+            content: '₺';
+            font-size: 20px;
+        }
+    }
+}
+
 .ems-subscriptions-clone {
     display: none;
 }
@@ -604,6 +644,7 @@
 .abonelikSureItem {
     display: inline-block;
     vertical-align: middle;
+    margin-right: $small-10;
 
     a {
         display: block;

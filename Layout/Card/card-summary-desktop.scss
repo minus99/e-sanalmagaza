@@ -3,5 +3,16 @@
 }
 .ems-cart-summary{
     padding: $reset;
-    margin-top: $reset;
+}
+.ems-cart-summarybottom{
+    position: inherit;
+    bottom: inherit;
+    width: inherit;
+    left: inherit;
+    padding: $reset;
+    z-index: inherit;
+    background: inherit;
+    a.btnDefault{
+        margin-top: $small-15;
+    }
 }

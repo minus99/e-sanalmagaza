@@ -133,7 +133,6 @@
         > .ems-col{
             display: table;
             width: 100%;
-            table-layout: fixed;
             @include space(padding, all, 15px 20px);
             border-bottom: 1px solid $pinkish-grey;
         }

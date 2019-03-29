@@ -6,6 +6,14 @@
             font-size: $small-20;
             letter-spacing: 8px;
             color: #535353;
+            text-align: center;
+            padding-left: 3px;
+            padding-right: 3px;
+        }
+        &.selected{
+            a{
+                color: $color-8;
+            }
         }
     }
 }
@@ -18,6 +26,12 @@
             font-size: $small-15;
             color: #535353;
             @include space(padding, all, 15px);
+        }
+        &.select {
+            a{
+                color: $color-8;
+                font-family: $medium;
+            }
         }
     }
 }

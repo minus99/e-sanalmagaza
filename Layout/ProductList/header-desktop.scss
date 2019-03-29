@@ -3,7 +3,7 @@
 }
 .urunKiyaslamaOzellik_secimler{
     a{
-        width: auto;
+        max-width: initial;
         @include space(margin, left, $reset);
         @include space(margin, right, $small);
     }

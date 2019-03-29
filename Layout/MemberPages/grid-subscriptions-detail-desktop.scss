@@ -84,9 +84,15 @@
             }
         }
         .bottom-step {
+            @include grid;
+            grid-template-columns: minmax(0,260px) minmax(0,260px);
+            grid-gap: 20px;
             .btnDefault {
                 margin-left: 0;
                 margin-right: 0;
+            }
+            .btnAbuIptalEt:hover{
+                border-color: $color-8;
             }
         }
     }

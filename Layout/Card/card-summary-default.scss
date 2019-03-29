@@ -60,7 +60,7 @@
     }
 }
 .ems-cart-summary{
-    padding: $small-20;
+    padding: $small-20 $small-20 90px $small-20;
     background: $color-17;
     margin-top: $small-30;
 }
@@ -94,48 +94,53 @@
 
 .ems-cart-summary-coupon-body {
     position: relative;
-
+    display: none;
     input {
-        width: 100% !important;
+        width: 72% !important;
+        display: inline-block;
+        vertical-align: middle;
+        margin-right: 3%;
     }
 
     table {
-        position: absolute;
-        top: 2px;
-        right: 5px;
-        display: block !important;
+        display: inline-block !important;
+        vertical-align: middle;
+        width: 25%;
+        tbody{
+            width: 100%;
+            display: table;
+        }
+        th{
+            font-weight: normal;
+        }
     }
 
     .btnHediyeCekiKullan {
-        background: none;
-
-        i:before {
-            font-size: $small-14;
-            color: #8E8E8E;
-        }
-
-        &:hover {
-            background: none;
-        }
+        display: block;
     }
     span[id$="lblHCK_HATA"]{
-        color:$alert-error-color;
-        background-color: $alert-error-background;
-        border:1px solid $alert-error-color;
-        display: block;
-        padding: 12px;
-        margin-top: 15px;
-        border-radius: 3px;
         &:empty{display: none;}
+        .ems-message{
+            margin-bottom: $small-5;
+        }
     }
+}
+.ems-cart-summary-coupon.opened {
+    .ems-cart-summary-coupon-body{display: block;}
 }
 
 .ems-cart-summarybottom {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    left: 0;
+    padding: 20px;
+    z-index: 5;
+    background: $color-17;
     a.btnDefault {
         display: block;
         @include space(padding, top, $small-14);
         @include space(padding, bottom, $small-14);
-        @include space(margin, top, $small-15);
         border-radius: 5px;
     }
     .ems-message {

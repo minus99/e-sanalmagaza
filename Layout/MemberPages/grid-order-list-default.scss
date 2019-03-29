@@ -59,6 +59,11 @@
                     }
                 }
             }
+            .ems-grid-order-no{
+                > a{
+                    text-decoration: underline;
+                }
+            }
             .ems-grid-status{
                 color: $frenchRose;
             }

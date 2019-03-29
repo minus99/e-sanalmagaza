@@ -6,12 +6,13 @@
         padding: $small-20;
 
         .btn-holder-1 {
+            display: none;
             .btnDefault {
                 width: 48%;
                 max-width: 48%;
                 display: inline-block;
                 vertical-align: top;
-                font-size: 14px; 
+                font-size: 14px;
                 font-family:$regular;
                 text-align: center;
                 padding: 8px 10px;

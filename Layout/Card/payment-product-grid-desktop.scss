@@ -26,20 +26,21 @@
     .ems-grid-default-cart{
         display: block;
     }
+    .ems-grid-header:first-child{display: none;}
 }
 
 /*Product card*/
 .ems-grid-payment-wrapper {
     .ems-grid-default-cart {
         .ems-grid-row{
-            grid-template-columns: 70px 50px 1fr;
+            grid-template-columns: 70px minmax(0,auto)1fr;
             grid-template-areas:
             "IMG NAM NAM"
-            "IMG PIC TTL"
-            ". . SBR";
+            "IMG PIC PRC"
+            ". SBR .";
             padding-left: $reset;
             padding-right: $reset;
-            border-bottom: none;
+            border-bottom: 1px solid #E7E7E7;
             align-items: center;
             grid-gap: 5px;
         }
@@ -53,6 +54,9 @@
         .ems-grid-name{
             grid-area: NAM;
         }
+        .ems-grid-price{
+            grid-area: PRC;
+        }
         .ems-grid-piece{
             grid-area: PIC;
         }
@@ -62,6 +66,7 @@
         }
         .ems-grid-price-total {
             grid-area: TTL;
+            display: none;
         }
     }
 }

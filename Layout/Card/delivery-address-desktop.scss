@@ -17,7 +17,9 @@
     max-height: inherit;
     overflow: inherit;
 }
-
+.ems-grid-address-name{
+    width: calc(100% - 150px);
+}
 .ems-grid-address-select {
     a.btnDefault {
         &:hover {

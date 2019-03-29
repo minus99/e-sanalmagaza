@@ -39,3 +39,19 @@ a.btnMinPpCl{
         color: $color-1;
     }
 }
+
+.mapPopup{
+    .jconfirm-title{
+        display: block;
+        margin-bottom: $small-20;
+    }
+    .jconfirm-type-default{
+        padding: $small-30 $small-40;
+    }
+    .fm-b{
+        margin-bottom: $small-10;
+    }
+    .fm-r {
+        max-width: 300px;
+    }
+}

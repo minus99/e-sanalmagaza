@@ -8,10 +8,11 @@ Description: Grid Desktop
     }
 
     .add-new-message {
-        float: right;
-
-        a:hover {
-            text-decoration: underline;
+        a{
+            padding:2px 0;
+            &:hover {
+                text-decoration: underline;
+            }
         }
     }
 

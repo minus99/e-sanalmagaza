@@ -35,7 +35,7 @@
         float: right;
         @include space(padding, top, 2px);
         @include space(padding, bottom, 2px);
-        max-width: 120px;
+        max-width: 60px;
         width: 40%;
         text-overflow: ellipsis;
         overflow: hidden;
@@ -138,12 +138,14 @@
 
 .pnlUrunKiyasSecim{
     .urunKiyaslamaOzellik_secimler{
-        display: inline-block;
+        display:block;
         vertical-align: middle;
+        text-align: left;
     }
     .urunKiyaslamaOzellik_tumunuTemizle{
-        display: inline-block !important;
+        display: block !important;
         vertical-align: bottom;
+        text-align: center;
         a{
             display: inline-block;
             @include space(padding, top, 8px);

@@ -5,7 +5,7 @@
 // Breakpoints
 // ========================================================================
 $breakpoint-small:                              640px !default;  // Phone landscape
-$breakpoint-medium:                             960px !default;  // Tablet Landscape
+$breakpoint-medium:                             1025px !default;  // Tablet Landscape
 $breakpoint-large:                              1200px !default; // Desktop
 $breakpoint-xlarge:                             1600px !default; // Large Screens
 
@@ -26,10 +26,10 @@ $roboto:                                          'roboto' ;
 
 // Layout
 // ========================================================================
-$defaultMaxWidth:                               960px;
+$defaultMaxWidth:                               1150px;
 $siteContainerSmallWidth:                       1175px;
 $containerWidth:                                1200px;
-$siteContainerWidthFull:                        1366px;
+$siteContainerWidthFull:                        1024px;
 
 
 

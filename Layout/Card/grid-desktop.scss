@@ -95,3 +95,18 @@
         }
     }
 }
+
+/*Empty Layout*/
+.basket-empty{
+    .ems-page-cart-step0{
+        .ems-page-default-order-cart{
+            grid-template-columns: 1fr;
+            grid-template-areas: "LFT";
+        }
+        .cart-section-left-inner{
+            padding-right: 0;
+            display: table;
+            margin: 0 auto;
+        }
+    }
+}

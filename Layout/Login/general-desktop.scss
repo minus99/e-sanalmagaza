@@ -9,6 +9,7 @@
     @include space(padding, left, $small);
     @include space(padding, right, $small);
     @include space(padding, bottom, 50px);
+    height: 100vh;
     .logo{
         height: 50px;
     }

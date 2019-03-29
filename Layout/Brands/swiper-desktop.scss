@@ -1,5 +1,13 @@
 .swiper-container-brands{
     @include space(margin, top, $large);
+    .swiper-wrapper{
+        display: table;
+    }
+    .swiper-slide{
+        display: table-cell;
+        vertical-align: middle;
+        text-align: center;
+    }
 }
 .swiper-container-corporate{
     border-bottom: none;
@@ -20,7 +28,7 @@
                 color: $color-8;
             }
         }
-        &.selected{
+        &.selected, &.select{
             > a{
                 color: $color-8;
                 &:after{

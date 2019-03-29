@@ -1,7 +1,8 @@
 .site-pages-login{
     @include space(padding, top, $xlarge);
     @include space(padding, bottom, 70px);
-    background-image: linear-gradient(rgba(254,240,235,0) 1% ,rgba(254,240,235,1) 50%);
+    background: #fef0eb;
+    background: linear-gradient(rgba(254,240,235,0) 1% ,rgba(254,240,235,1) 50%);
     .login-title{
         @include space(padding, left, $small);
         @include space(padding, right, $small);

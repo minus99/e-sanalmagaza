@@ -232,10 +232,6 @@
     }
 }
 
-.ems-prd-promo{
-    display: none;
-}
-
 .promosyonBilgi {
     &:empty {
         display: none;
@@ -245,7 +241,6 @@
         display: block;
         color: $dark-lime-green;
         font-size: $small-15;
-        padding-top: 8px;
         max-height: 26px;
         overflow: hidden;
     }
@@ -306,6 +301,7 @@
     .btnStokHaberci {
         display: block;
         border-radius:3px;
+        background: #5a5a5a;
     }
 }
 
@@ -381,8 +377,8 @@ Product Types
             width: 100%;
 
             &-inner {
-                @include space(padding, left, $large);
-                @include space(padding, right, $large);
+                @include space(padding, left, $small-8);
+                @include space(padding, right, $small-8);
             }
         }
 

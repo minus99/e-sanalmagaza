@@ -106,7 +106,7 @@
 
 /* Media Query
 ========================================================================== */
-@supports(grid-area: auto) {
+//@supports(grid-area: auto) {
     @media screen and (min-width: $breakpoint-medium) {
         .widget {
             @include space(padding, left, $reset);
@@ -137,4 +137,4 @@
             max-width: 230px;
         }
     }
-}
+//}

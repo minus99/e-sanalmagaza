@@ -22,4 +22,19 @@
         .title{display: none;}
         padding: $reset $small-10 $small-10 $small-10;
     }
+    .mapPopup{
+        font-family: $regular;
+        margin-top: $small-10;
+        img, span{
+            display: inline-block;
+            vertical-align: middle;
+        }
+        span{
+            text-decoration: underline;
+        }
+        img{
+            margin-right: $small-5;
+            max-width: 30px;
+        }
+    }
 }

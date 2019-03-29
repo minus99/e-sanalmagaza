@@ -9,13 +9,19 @@ Description: Grid Default
     }
 
     /*Title Message*/
-    .page-top-title.page-top-title-2{display: block; padding: $small-20; text-align: right;}
-    .page-top-title.page-top-title-2 > span{display: none;}
+    .page-top-title.page-top-title-2{
+        display: block;
+    }
+    .page-top-title.page-top-title-2>span {
+        display: none;
+    }
 
     .add-new-message{ 
+        float: right;
         a{
             display: inline-block;
             font-size: $small-15;
+            padding:20px 20px;
             &:before{
                 font-family: 'icomoon';
                 content: '\e90c';
@@ -89,7 +95,8 @@ Grid Row Layout Default
                         content: "-";
                     }
                 }
-                .lnkMesajOku{    
+                .lnkMesajOku{   
+                    text-decoration: underline;
                     &:empty{
                         &:before{
                             content: "-";

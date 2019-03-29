@@ -167,10 +167,20 @@ Kredi Kartı
                     bottom: 0;
                     left: 0;
                     right: 0;
-                    padding: 12px;
+                    padding: $small-10 $small-20;
                     font-size: 13px;
                     color: #8E8E8E;
-                    line-height: 1.1
+                    line-height: 1.1;
+                    text-align: left;
+                    &:after{
+                        font-family:'icomoon';
+                        content:'\e90e';
+                        width: $small-10;
+                        height: $small-10;
+                        font-size: $small-10;
+                        color: #8E8E8E;
+                        @include Position(absolute, top $small-15 right $small-15);
+                    }
                 }
 
                 &.opened {
@@ -290,6 +300,10 @@ Kredi Kartı
         font-size: $small-13;
         line-height: 20px;
     }
+}
+
+.pageOdemeBilgi_chkBankaBonus{
+    display: none !important;
 }
 
 .tableTitleOdemeBilgiPesinDiger{

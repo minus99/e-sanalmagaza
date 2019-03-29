@@ -1,8 +1,40 @@
-.ratingOzet{
-    width: 85px;
-    height: 17px;
-    position: relative;   
-    cursor: pointer;
+.yorumOrtalamaPuan{
+    .toplamPuan{display: none;}
+    .toplamYorum{font-size: 13px;}
+    > span{
+        vertical-align: middle;
+    }
+}
+
+.ems-detail-comment-stars{
+    .ratingOzet,
+    .current-rating{
+        background: url(/images/frontend/stars.png) repeat-x;
+    }
+    .ratingOzet{
+        width: 85px;
+        height: 17px;
+        position: relative;   
+        cursor: pointer;
+        position: relative;
+        background-position: top left;
+        margin-right: 5px;
+        display: inline-block;
+        vertical-align: middle;
+        .current-rating{
+            z-index: 1;
+            background-position: left bottom;
+            width: 0;
+            position: absolute;
+            display: inline-block;
+            text-indent: -999em;
+            height: 16px;
+            line-height: 16px;
+            outline: 0;
+            overflow: hidden;
+            border: 0;
+        }
+    }
 }
 
 .yorumListe_main{
@@ -21,59 +53,59 @@
     .dvYorum,
     .dvYorumBaslik,
     .yorumFiltre{display: none;}
-    
+
+
+    .yorumRating,
+    .yorumRating ul li.filtreSelected a,
+    .current-rating{
+        background: url(/images/frontend/star-big.png) repeat-x;
+    }
+    .yorumRating {
+        width: 170px;
+        height: 33px;
+        position: relative;
+        background-position: top left;
+        display: inline-block;
+        vertical-align: middle;
+        a:hover, a:active, .current-rating{
+            background-position: left bottom;
+        }
+        ul {
+            li{
+                a{
+                    display: inline-block;
+                    text-indent: -999em;
+                    height: 33px;
+                    outline: none;
+                    overflow: hidden;
+                    position: absolute;
+                    left: 0;
+                }
+                a.puan1{width:20%;z-index: 6;}
+                a.puan2{width:40%;z-index: 5;}
+                a.puan3{width:60%; z-index: 4;}
+                a.puan4{width:80%; z-index: 3;}
+                a.puan5{width:100%; z-index: 2;}
+            }
+            li.filtreSelected{
+                a{
+                    background-position: left bottom;
+                }
+            }
+        }
+    }
+    .yorumDurum{
+        border-radius: 3px;
+        border: 1px solid #00941e;
+        color: #00941e;
+        background: #e5f4e7;
+        @include space(padding, all, $small-5);  
+        @include space(margin, top, $large);
+        text-align: center;
+        &:empty{display: none;}
+    }
 }
 
-.yorumRating,
-.yorumRating ul li.filtreSelected a,
-.current-rating{
-    background:url(/images/frontend/star-big.png) repeat-x;
-}
-
-.yorumRating {
-    width: 170px;
-    height: 33px;
-    position: relative;
-    background-position: top left;
-    display: inline-block;
-    vertical-align: middle;
-    a:hover, a:active, .current-rating{
-        background-position: left bottom;
-    }
-    ul {
-        li{
-            a{
-                display: inline-block;
-                text-indent: -999em;
-                height: 33px;
-                outline: none;
-                overflow: hidden;
-                position: absolute;
-                left: 0;
-            }
-            a.puan1{width:20%;z-index: 6;}
-            a.puan2{width:40%;z-index: 5;}
-            a.puan3{width:60%; z-index: 4;}
-            a.puan4{width:80%; z-index: 3;}
-            a.puan5{width:100%; z-index: 2;}
-        }
-        li.filtreSelected{
-            a{
-                background-position: left bottom;
-            }
-        }
-    }
-}
-.yorumDurum{
-    border-radius: 3px;
-    border: 1px solid #00941e;
-    color: #00941e;
-    background: #e5f4e7;
-    @include space(padding, all, $small-5);  
-    @include space(margin, top, $large);
-    text-align: center;
-    &:empty{display: none;}
-}
 #lnkIlkYorum{
     display: inline-block;
     font-size: $small-15;
@@ -106,8 +138,7 @@ a.btnYorumGonder{
     > li{
         &:nth-child(1),
         &:nth-child(2){display: none;}
-    }
-   
+    }  
 }
 
 a[name="yorumEkle"]{display: none;}
@@ -115,6 +146,7 @@ a[name="yorumEkle"]{display: none;}
 .yorumEkleDegerlendir{
     @include space(margin, top, $large);
 }
+
 .ems-login{
     .yorumEkle span[id$="lbfYORUM_EKLE"] {display: none;}
 }

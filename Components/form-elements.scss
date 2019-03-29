@@ -32,11 +32,6 @@ input:not([type="checkbox"]):not([type="radio"]){
 input[type="email"]:disabled {
     background: #ebebeb !important;
 }
-#plhUyelikRefEmail{
-    input[type="text"] {
-        background: #ebebeb !important;
-    }   
-}
 
 //-------------------------------------------//
 //----- TEXTAREA STYLE
@@ -181,6 +176,10 @@ input[type="checkbox"]:checked{
 }
 .sRadio{display: none;}
 
+input[type="text"]:disabled {
+    background: #ebebeb;
+  }
+
 /*Styler*/
 input.sCheckbox { display: none !important; }
 
@@ -256,7 +255,8 @@ input[type="radio"]:checked{
     }
 }
 
-.zorunluFont{
+.zorunluFont,
+.opsiyonelzorunlu{
     &:after{
         content: "*";
         margin-left: 2px;

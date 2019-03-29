@@ -13,12 +13,16 @@
     border-collapse: collapse;
     @include space(margin, top, $large);
 
-    >tbody>tr {
-        display: block;
-        background: $white;
-        position: relative;
-        min-height: 80px;
-        @include space(padding, all, $small 100px $small 80px);
+    >tbody {
+        width: 100%;
+        display: table;
+        >tr{
+            display: block;
+            background: $white;
+            position: relative;
+            min-height: 80px;
+            @include space(padding, all, $small 100px $small 80px);
+        }
     }
 
     .resim {

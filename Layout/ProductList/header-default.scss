@@ -32,13 +32,14 @@
 }
 .urunKiyaslamaOzellik_secimler{
     a{
-        width: 46%;
+        width: auto;
+        max-width: 46%;
         display: inline-block;
         vertical-align: middle;
         border-radius: 15px;
         border:1px solid $pinkish-grey;
         @include space(padding, all, $xSmall $small);
-        @include space(margin, top, $xSmall);
+        @include space(margin, top, $small-10);
         @include space(margin, right, 2%);
         @include space(margin, left, 2%);
         &:before{
@@ -62,6 +63,8 @@
 .grid-colmn {
     &-mobile-filter{
         @include Position(relative, null);
+        height: 45px;
+        background: $color-17;
         .btn-filter{
             @include Position(absolute, top 50% right $xMedium);
             @include setTransform(translateY(-50%));

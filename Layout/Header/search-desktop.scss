@@ -64,6 +64,7 @@
     position: absolute !important;
     height: auto;
     overflow-y: inherit;
+    padding-bottom: $reset;
 }
 
 .searchSuggestDivHolder {
@@ -72,8 +73,7 @@
     grid-template-areas:
         "COU CAT"
         "PRD BRN"
-        "BTN .";
-    grid-template-rows: minmax(0,auto);
+        "BTN ."; 
     background: $very-light-gray;
     overflow-x:inherit;
     overflow-y: inherit;
@@ -130,22 +130,28 @@
         max-height: 345px;
         overflow-y: auto;
         overflow-x: hidden;
-        @include space(padding, top, $xMedium);
+        @include space(padding, top, $small-5);
+        @include space(padding, bottom, $small-5);
+        grid-row-start: 2;
+        grid-row-end: span 3;
     }
 
     .cat {
         grid-area: CAT;
+        grid-row-start: 1;
+        grid-row-end: span 2;
     }
     .prdCount{
         grid-area: COU;
-        padding-bottom: $reset;
-    }
-    .dvTumunuGoster {
-        grid-area: BTN;
+        padding-bottom: $small-15;
+        grid-row-start: 1;
+        grid-row-end: span 1;
     }
     .brand {
         grid-area: BRN;
         padding-top: 0;
+        grid-row-start: 3;
+        grid-row-end: span 4;
         .spnBrand{
             a{
                 display: inline-block;
@@ -159,6 +165,11 @@
                 }
             }
         }
+    }
+    .dvTumunuGoster {
+        grid-area: BTN;
+        grid-row-start: 5;
+        grid-row-end: span 5;
     }
 
     .wordSearch {
@@ -182,17 +193,14 @@
         @include space(padding, left, $reset);
         @include space(padding, right, $reset);
         @include space(padding, bottom, $small);
-        min-height: auto;
-        @include grid;
-        grid-template-columns: 80px 2fr minmax(0,30px) minmax(auto,120px) minmax(0,30px) 1fr;
+        grid-template-columns: 80px 1fr minmax(0,auto) 1fr 1fr;
         grid-template-areas:
-        "THI TD2 TD4 TD7 TD8 TD9"
-        "THI TD2 TD4 TD5 TD8 TD9";
+        "THI TD2 TD4 TD6 TD8"
+        "THI TD2 TD4 TD5 TD8";
         align-items: center;
         border-bottom-width:2px; 
 
-        td:nth-child(2) {
-            display: inherit;
+        td.suggest_urnsname_con {
             span {
                 @include space(margin, bottom, $reset);
                 min-height: inherit;
@@ -202,8 +210,13 @@
                 padding-right: $small-15;
             }
         }
+        td.suggest_urnprice_con{
+            align-self: flex-end;
+        }
+        td.suggest_urnnormalprice_con{
+            align-self: flex-start;
+        }
         td{
-            width: auto;
             .suggest_urnsubscriptionprice{
                 position: relative;
                 bottom: inherit;
@@ -212,51 +225,19 @@
         }
     }
 
-    .sHolder table tr th {
-        grid-area: THI;
-        left: 0;
-        position: static;
-        top: 0;
-        left: 0;
-        margin-top: 0;
-    }
-
-    .sHolder table tr td:nth-child(2) {
-        grid-area: TD2;
+    .sHolder table tr td.suggest_urnsname_con {
         span{
             margin-right: $reset;
+            padding-left: $reset;
         }
     }
 
-    .sHolder table tr td:nth-child(4) {
-        grid-area: TD4;
-    }
-    .sHolder table tr td:nth-child(5) {
-        grid-area: TD5;
-        align-self: flex-start;
-        display: inline-block;
-        width: auto;
-    }
-    .sHolder table tr td:nth-child(7) {
-        grid-area: TD7;
-        align-self: flex-end;
-        display: inline-block;
-        width: auto;
-    }
-    .sHolder table tr td:nth-child(8) {
-        grid-area: TD8;
-    }
-    .sHolder table tr td:nth-child(9) {
-        grid-area: TD9;
-    }
-
     .dvTumunuGoster {
-        display: block !important;
         @include space(padding, bottom, $xxlarge);
+        position: relative;
+        bottom: 0;
         .btnArama{
-            @include space(padding, all, 12px $xs);
             @include space(margin, top, $xxlarge);
-            border:2px solid $color-6;
             &:hover{
                 border-color: $color-8;
             }

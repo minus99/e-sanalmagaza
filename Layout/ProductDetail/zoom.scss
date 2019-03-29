@@ -20,6 +20,13 @@
         position: initial;
         margin-top: 20px;
     }
+    .swiper-button-prev,
+    .swiper-button-next{
+        background: #F5F5F5;
+        i:before{
+            color: $color-1;
+        }
+    }
 
     .sticky-thumb{display: none;}
 }

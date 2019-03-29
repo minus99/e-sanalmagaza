@@ -126,7 +126,8 @@
 //----- Media Query
 //-------------------------------------------//
 
- @supports(grid-area: auto) {
+ //@supports(grid-area: auto) {
+
     @media screen and (min-width: $breakpoint-medium) {
 
         //-------------------------------------------//
@@ -231,7 +232,7 @@
         @import 'Layout/ErrorPages/site-404-error-desktop';
 
     }
-    /*Akışdaki ara değer için verildi*/
+    /*Akıştaki ara değer için verildi*/
     @media only screen and (max-width: $siteContainerWidthFull) and (min-width: $defaultMaxWidth){
         // Pape List Desktop
         @import 'Layout/ProductList/product-card-controll';
@@ -239,4 +240,4 @@
         // Header Search
         @import 'Layout/Header/search-flow-setting';
     }
-}
+//}

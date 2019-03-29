@@ -54,6 +54,13 @@
     .big-text-favorite{
         font-size: $small-24;
     }
+    /*Member Back Button*/
+    .backToMember{
+        display: inline-block;
+    }
+    .backToMemberMsg{
+        display: none;
+    }
 }
 
 

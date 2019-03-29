@@ -76,6 +76,28 @@
 }
 .ems-detail-desc{
     display: block;
+    border: 1px solid #dddddd;
+    border-radius: 3px;
+    table{
+        tbody tr{
+            @include grid;
+            grid-template-columns: minmax(0,160px) 1fr;
+            @include space(margin, top, $reset);
+            border-radius: 0;
+            border-left-width: 0;
+            border-right-width: 0;
+            border-bottom-width: 0;
+            &:first-child{border-top: 0; }
+            td{
+                display: inherit;
+                @include space(padding, left $small-15 right $small-15);
+                &:first-child{
+                    border-right: 1px solid #dddddd;
+                    border-bottom: 0;
+                }
+            }
+        }
+    }
 }
 .ems-prd-detail-label {
     @include space(margin, top, 60px);

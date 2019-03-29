@@ -68,3 +68,13 @@
         }
     }
 }
+
+.pnlUrunKiyasSecim{
+    .urunKiyaslamaOzellik_secimler{
+        display: inline-block;
+    }
+    .urunKiyaslamaOzellik_tumunuTemizle{
+        display: inline-block !important;
+        text-align: left;
+    }
+}

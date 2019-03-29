@@ -74,18 +74,16 @@ a.btnAdresEkle {
     display: none;
 }
 
-.ems-address-buttons {
-    position: absolute;
-    top: 20px;
-    right: 20px;
-    width: auto;
-    z-index: 1;
+.ems-address-buttons,
+.ems-grid-address-name{
+    display: inline-block;
+    vertical-align: middle;
 }
 
 .ems-grid-address-name {
     font-family: $medium;
     font-size: $small-15;
-    width: 65%;
+    width: 50%;
 }
 
 .ems-grid-address {
@@ -180,6 +178,7 @@ a.btnAdresEkle {
                 color: $color-8;
             }
         }
+        a#lnkAdrTip_1{display: none;}
     }
     
     .back-to-card{

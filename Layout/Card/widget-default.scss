@@ -16,12 +16,30 @@
         overflow: visible;
     }
     .swiper-slide{
-        width: 240px;
+        width: 200px;
     }
     .swiper-button-prev,
     .swiper-button-next{
         margin-top: 22px;
         display: none;
+    }
+    .ems-prd-list-cart-add{
+        display: block;
+        margin-top: $small-10;
+        .urunListe_adet{display: none;}
+    }
+
+    .urunListe_sepetGrup,
+    .urunListe_stokHaberci{
+        .btnSepeteAt{
+            border-radius:3px;
+        }
+        .btnSepeteAt,
+        .btnStokHaberci{
+            background: none;
+            border-color: $color-8;
+            color: $color-8;
+        }
     }
 }
 

@@ -86,7 +86,7 @@
         width: inherit;
 
         @include grid;
-        grid-template-columns: 1fr 1fr 1fr 1fr 260px;
+        grid-template-columns:minmax(0,1.5fr) 1fr 1fr 1fr 100px;
         grid-template-areas:
             "FEA FEA SRL . VIW";
         max-width: $containerWidth;
