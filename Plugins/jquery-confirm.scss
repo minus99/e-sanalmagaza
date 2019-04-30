@@ -310,7 +310,7 @@ body[class*=jconfirm-no-scroll-] {
     animation-iteration-count: infinite;
 }
 .jconfirm .jconfirm-content{
-    min-height: 350px !important;
+  height: 450px !important;
 }
 
 .jconfirm .jconfirm-box div.jconfirm-content-pane{
@@ -337,6 +337,9 @@ body[class*=jconfirm-no-scroll-] {
 .popup_abonelikleAl .minPpIframe{
     height: 450px !important;
 }
+
+.popup_3dOnay.type-iframe .jconfirm .jconfirm-box div.jconfirm-content-pane{height: 500px !important;}
+.popup_3dOnay.type-iframe .jconfirm .jconfirm-content{min-height: 500px !important;}
 
 //@supports(grid-area: auto) {
     @media screen and (min-width: $breakpoint-medium) {

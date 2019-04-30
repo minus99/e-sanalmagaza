@@ -4,7 +4,8 @@
     grid-template-areas:
     ". A A A ."
     ". . . B ."
-    ". D . C .";
+    ". D . C ."
+    ". D . . .";
     @include space(padding, top, $small-50);
     @include space(padding, left, $small);
     @include space(padding, right, $small);
@@ -73,6 +74,12 @@
     }
     .column-double{
         width: inherit;
+    }
+}
+
+body.ems-signup-body{
+    .site-pages-login{
+        height: 100%;
     }
 }
 

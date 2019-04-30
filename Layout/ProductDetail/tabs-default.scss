@@ -24,6 +24,7 @@
             @include Position(absolute, top 50% right 15px);
             @include space(margin, top, -16px);
             color: $color-10;
+            display: none;
         }
         a{
             &:empty{display: none;}
@@ -49,6 +50,7 @@
             }
         }
     }
+    li.tab-2{display: none;}
     li.tab-2.selected{
         border-top-color: $color-18;
     }
@@ -57,10 +59,22 @@
         min-height: 50px;
     }
 }
-
+.ems-tab-detail-product.abone-active{
+    .product-tab-head{
+        li{
+            &:after{
+                display: inline-block;
+            }
+            &.tab-2{
+                display: table-cell;
+            }
+        }
+    }
+}
 .ems-tab-detail-product.ems-no-subscriptions{
     .product-tab-head li:after{display: none;}
 }
+
 .product-tab-wrap{
     border-radius:3px;
     border: 1px solid $color-4;
